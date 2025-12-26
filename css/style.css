@@ -35,6 +35,9 @@ img {
 
 /* menu.html
 ------------------------------ */
+.c-section-title+* {
+    margin-block-start: 16px
+}
 
 
 /* menu-b-XX.html
