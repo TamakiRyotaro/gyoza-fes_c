@@ -71,7 +71,6 @@ img {
 }
 
 /* footer */
-.l-footer {}
 
 
 /* index.html
@@ -80,10 +79,58 @@ img {
 
 /* menu.html
 ------------------------------ */
+/*  menu一覧の共通部分 */
+
+.l-main-menu {
+    background: var(--childPage-bg);
+}
+
 .c-section-title+* {
     margin-block-start: 16px
 }
 
+.shop-map+* {
+    margin-block-start: 40px
+}
+
+/*  menu一覧コンポーネント */
+.c-card {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-inline: auto;
+    line-height: 1.5;
+}
+
+.c-card .wrapper {
+    background-color: var(--black);
+    width: 92%;
+    gap: 10px;
+}
+
+.c-card__menu-name {
+    font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+    font-weight: bold;
+}
+
+.c-card .c-card__share a {
+    color: #EB8E3A;
+}
+
+.c-card__btn {
+    width: 252;
+    height: 44px;
+    background: var(--black);
+    border: var(--white) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: drop-shadow(4px 4px 0 var(--black));
+    text-align: center;
+}
 
 /* menu-b-XX.html
 ------------------------------ */
