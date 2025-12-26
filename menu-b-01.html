@@ -30,8 +30,22 @@
 </head>
 
 <body>
-    <header>
-
+    <header class="l-header">
+        <div class="c-header__title"><img src="./img/logo_line_01.png" alt="ふくおか餃子FES"></div>
+        <nav class="l-header__nav">
+            <ul class="l-header__sns-list">
+                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"></a>
+                </li>
+                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_instagram.png"
+                            alt="福岡餃子フェス 公式Instagram"></a></li>
+                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE"></a>
+                </li>
+            </ul>
+            <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
+            <div class="c-header__hamburger-menu">
+                <img src="./img/hamburger_menu_open.png" alt="ハンバーガーメニューアイコン">
+            </div>
+        </nav>
     </header>
     <main class="l-menu menu-b-n">
         <div class="c-main-container c-menu-card">
@@ -46,18 +60,15 @@
                 <p>香ばしく焼き上げた皮の中には、あふれんばかりの肉汁がぎっしり。厳選された国産豚とキャベツの旨味が広がる、満足感たっぷりの一品です。一口噛めば、ジュワッとした肉汁が口いっぱいに広がります。</p>
                 <p>6個入り 580円（税込）</p>
                 <!-- 共有btn -->
-                <div class="c-share-btn">
-                    <a href="#">「#ふくおか餃子FES」で共有</a>
-                </div>
+                <a class="c-share-btn" href="#">「#ふくおか餃子FES」で共有</a>
                 <!-- 店舗詳細 -->
                 <p>博多ぎょうざ堂</p>
                 <p>福岡を代表する老舗餃子専門店。国産豚とキャベツを使用し、ひとつひとつ手包みで仕上げています。外はカリッと、中は肉汁たっぷりの博多スタイルが人気。</p>
             </div>
         </div>
         <!-- メニュー一覧btn -->
-        <div class="c-btn">
-            <a href="menu.html">メニュー一覧へ</a>
-        </div>
+        <a class="c-btn" href="menu.html">メニュー一覧へ</a>
+
 
 
     </main>

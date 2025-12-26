@@ -29,6 +29,7 @@ img {
 
 /* 斜めボタン */
 .c-btn {
+
     width: 179px;
     height: 56px;
     color: var(--white2);
@@ -36,21 +37,71 @@ img {
     background-color: var(--red);
     clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
 .c-btn::after {
-    content: "";
+    content: " ";
+    width: 179px;
+    height: 56px;
     background-color: var(--yellow);
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: -10;
 }
 
 
 
+/* header */
+.c-header__title {
+    aspect-ratio: 35 / 3;
+    width: clamp(175px, 3.961rem + 29.765vw, 492px);
+}
+
+.c-header__sns-icon img {
+    aspect-ratio: 1 / 1;
+    width: clamp(30px, 22.958px + 1.878vw, 50px);
+}
+
+.c-header__hamburger-menu img {
+    aspect-ratio: 1 / 1;
+    width: clamp(32px, 22.141px + 2.629vw, 60px);
+}
+
+.l-header__nav {
+    display: flex;
+    gap: clamp(15px, 6.197px + 2.347vw, 40px);
+    align-items: center;
+}
+
+.l-header__sns-list {
+    display: flex;
+    gap: clamp(10px, 4.014px + 1.596vw, 27px);
+    align-items: center;
+}
+
+.l-header {
+    display: flex;
+    height: 97px;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0 15px;
+
+    justify-content: space-between;
+}
+
+.l-header+* {
+    /* TODO: 仮値 */
+    margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
+}
+
+/* footer */
+.l-footer {}
 
 
 /* index.html
@@ -59,6 +110,9 @@ img {
 
 /* menu.html
 ------------------------------ */
+.c-section-title+* {
+    margin-block-start: 16px
+}
 
 
 /* menu-b-XX.html
@@ -101,22 +155,20 @@ main.l-menu {
     background: var(--white2);
     border: var(--black) solid 1px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     filter: drop-shadow(4px 4px 0 var(--white2));
 }
 
-.c-share-btn a {
+a.c-share-btn {
     font-weight: bold;
     font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     color: var(--black);
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.c-share-btn a::after {
+a.c-share-btn::after {
     content: url(../img/menu-b/share_black.png);
 }
 
