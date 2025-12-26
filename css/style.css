@@ -28,10 +28,12 @@ img {
 ------------------------------ */
 
 /* 斜めボタン */
+/* c-btnはaタグの親につけてください */
 .c-btn {
     filter: drop-shadow(10px 10px 0 var(--yellow));
 }
 
+/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
 
     width: 179px;
@@ -113,18 +115,16 @@ img {
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
-
     background: var(--childPage-bg);
 }
 
-.menu-b-n * {
-
+main.l-menu-b * {
     color: var(--white2);
 
 }
 
 /* メインコンテンツの幅・配置 */
-.menu-b-n .c-main-container {
+main.l-menu-b .c-main-container {
     width: 100%;
     margin-inline: auto;
 }
@@ -209,7 +209,7 @@ a.c-share-btn::after {
 
     /* menu-b-XX.html
 ------------------------------ */
-    .menu-b-n .c-main-container {
+    main.l-menu-b .c-main-container {
         width: min(60%, 960px);
         margin-inline: auto;
     }
