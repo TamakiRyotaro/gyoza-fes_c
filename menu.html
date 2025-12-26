@@ -38,7 +38,19 @@ git
 
     <main class="l-main">
         <h2 class="c-section-title" data-sub-title="Menu">メニュー</h2>
-        <img src="img/menu/menu-shopMap.svg" alt="店舗の地図">
+        <div class="shop-map">
+            <img src="img/menu/menu-shopMap.png" usemap="#ImageMap" alt="店舗の地図" />
+            <map name="ImageMap">
+                <area shape="rect" coords="24,150,79,203" href="#" alt="ブース1の詳細ページへとぶ" />
+                <area shape="rect" coords="80,131,129,183" href="#" alt="ブース2の詳細ページへとぶ" />
+                <area shape="rect" coords="139,126,184,179" href="#" alt="ブース3の詳細ページへとぶ" />
+                <area shape="rect" coords="160,184,218,222" href="#" alt="ブース4の詳細ページへとぶ" />
+                <area shape="rect" coords="141,225,190,271" href="#" alt="ブース5の詳細ページへとぶ" />
+                <area shape="rect" coords="90,230,133,277" href="#" alt="ブース6の詳細ページへとぶ" />
+                <area shape="rect" coords="41,207,88,252" href="#" alt="ブース7の詳細ページへとぶ" />
+            </map>
+        </div>
+
         <div class="c-card">
             <div class="c-card c-card--b01">
                 <p class="c-card__menu-name">肉汁あふれる焼き餃子</p>
