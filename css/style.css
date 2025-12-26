@@ -29,7 +29,7 @@ img {
 
 /* 斜めボタン */
 .c-btn {
-    filter: drop-shadow(-10px 10px 0 var(--yellow));
+    filter: drop-shadow(10px 10px 0 var(--yellow));
 }
 
 .c-btn_link {
@@ -112,7 +112,7 @@ img {
 /* menu-b-XX.html
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
-main.l-menu {
+main.l-menu-b {
 
     background: var(--childPage-bg);
 }
@@ -132,13 +132,13 @@ main.l-menu {
 
 /* コンポーネント */
 
-.c-menu-card {
+.c-menu-b-card {
     display: flex;
     flex-direction: column;
     background-color: var(--black);
 }
 
-.c-menu-card .c-share-btn {
+.c-menu-b-card .c-share-btn {
     margin-inline: auto;
 }
 
@@ -214,7 +214,7 @@ a.c-share-btn::after {
         margin-inline: auto;
     }
 
-    .c-menu-card {
+    .c-menu-b-card {
         flex-direction: row;
     }
 
