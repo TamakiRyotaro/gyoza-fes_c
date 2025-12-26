@@ -27,6 +27,51 @@ img {
 /* 共通
 ------------------------------ */
 
+/* header */
+.c-header__title {
+    aspect-ratio: 35 / 3;
+    width: clamp(175px, 3.961rem + 29.765vw, 492px);
+}
+
+.c-header__sns-icon img {
+    aspect-ratio: 1 / 1;
+    width: clamp(30px, 22.958px + 1.878vw, 50px);
+}
+
+.c-header__hamburger-menu img {
+    aspect-ratio: 1 / 1;
+    width: clamp(32px, 22.141px + 2.629vw, 60px);
+}
+
+.l-header__nav {
+    display: flex;
+    gap: clamp(15px, 6.197px + 2.347vw, 40px);
+    align-items: center;
+}
+
+.l-header__sns-list {
+    display: flex;
+    gap: clamp(10px, 4.014px + 1.596vw, 27px);
+    align-items: center;
+}
+
+.l-header {
+    display: flex;
+    height: 97px;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0 15px;
+
+    justify-content: space-between;
+}
+
+.l-header+* {
+    /* TODO: 仮値 */
+    margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
+}
+
+/* footer */
+.l-footer {}
 
 
 /* index.html
