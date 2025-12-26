@@ -10,6 +10,7 @@
     --white:#FFF7F7;
     --black:#131A12;
     --white2:#fff;
+    --childPage-bg:linear-gradient(90deg, #fff,#FFF8F2,#FFDEBF);
 }
 
 body{
@@ -38,7 +39,15 @@ img{
 
 /* menu-b-XX.html
 ------------------------------ */
+/* メニュ―詳細ページ内の共通項 */
+main.l-main{
+    background: var(--childPage-bg);
+}
 
+.menu-b-n *{
+    color: var(--white2);
+    
+}
 
 
 
