@@ -3,23 +3,23 @@
 /* ベース
 ------------------------------ */
 
-:root{
+:root {
     /* 色スタイル */
-    --red:#E22A00;
-    --yellow:#FFE100;
-    --white:#FFF7F7;
-    --black:#131A12;
-    --white2:#fff;
-    --childPage-bg:linear-gradient(90deg, #fff,#FFF8F2,#FFDEBF);
+    --red: #E22A00;
+    --yellow: #FFE100;
+    --white: #FFF7F7;
+    --black: #131A12;
+    --white2: #fff;
+    --childPage-bg: linear-gradient(90deg, #fff, #FFF8F2, #FFDEBF);
 }
 
-body{
+body {
     font-family: "Zen Maru Gothic", sans-serif;
-    color: var(--black);  
+    color: var(--black);
 
 }
 
-img{
+img {
     max-width: 100%;
 }
 
@@ -40,13 +40,39 @@ img{
 /* menu-b-XX.html
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
-main.l-main{
+main.l-main {
     background: var(--childPage-bg);
 }
 
-.menu-b-n *{
+.menu-b-n * {
     color: var(--white2);
-    
+
+}
+
+/* メインコンテンツの幅・配置 */
+.menu-b-n .c-main-container {
+    width: min(60%, 960px);
+    margin-inline: auto;
+}
+
+
+/* コンポーネント */
+
+.c-menu-card {
+    display: flex;
+    background-color: var(--black);
+}
+
+/* 共有ボタン */
+.c-share-btn {
+    width: 420px;
+    background: var(--white2);
+}
+
+.c-share-btn a {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--black);
 }
 
 
