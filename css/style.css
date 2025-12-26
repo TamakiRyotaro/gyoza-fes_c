@@ -41,17 +41,19 @@ img {
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu {
+
     background: var(--childPage-bg);
 }
 
 .menu-b-n * {
+
     color: var(--white2);
 
 }
 
 /* メインコンテンツの幅・配置 */
 .menu-b-n .c-main-container {
-    width: min(60%, 960px);
+    width: 100%;
     margin-inline: auto;
 }
 
@@ -64,9 +66,12 @@ main.l-menu {
     background-color: var(--black);
 }
 
+.c-menu-card .c-share-btn {
+    margin-inline: auto;
+}
+
 /* 共有ボタン */
 .c-share-btn {
-
     width: 87%;
     height: 62px;
     background: var(--white2);
@@ -74,10 +79,9 @@ main.l-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     filter: drop-shadow(4px 4px 0 var(--white2));
 }
-
-
 
 .c-share-btn a {
     font-weight: bold;
@@ -85,7 +89,8 @@ main.l-menu {
     color: var(--black);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 .c-share-btn a::after {
@@ -110,6 +115,9 @@ main.l-menu {
 /* privacy.html
 ------------------------------ */
 
+
+
+
 @media (min-width:768px) {
 
 
@@ -132,6 +140,11 @@ main.l-menu {
 
     /* menu-b-XX.html
 ------------------------------ */
+    .menu-b-n .c-main-container {
+        width: min(60%, 960px);
+        margin-inline: auto;
+    }
+
     .c-menu-card {
         flex-direction: row;
     }
