@@ -12,6 +12,16 @@
     --white2:#fff;
 }
 
+body{
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: var(--black);  
+
+}
+
+img{
+    max-width: 100%;
+}
+
 
 /* 共通
 ------------------------------ */
@@ -28,6 +38,7 @@
 
 /* menu-b-XX.html
 ------------------------------ */
+
 
 
 
