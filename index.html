@@ -48,15 +48,15 @@
         </div>
 
         <p class="l-mv-hero-address">
-        <h3 class="l-mv-hero-address-title">開催会場</h3>長浜公園
+        <span class="l-mv-hero-address-title">開催会場</span>長浜公園
         </p>
     </div>
 
     <div class="l-mv-schedule">
         <p class="l-mv-schedule-date">
-            <h3 class="c-mv-schedule-title c-mv-schedule-title--date">
+            <span class="c-mv-schedule-title c-mv-schedule-title--date">
                 開催日程
-            </h3>
+            </span>
 
             <span class="c-mv-schedule-detail c-mv-schedule-detail--date">
                 2030年<br>
@@ -65,9 +65,9 @@
         </p>
         
         <p class="l-mv-schedule-time">
-            <h3 class="c-mv-schedule-title c-mv-schedule-title--time">
+            <span class="c-mv-schedule-title c-mv-schedule-title--time">
                 営業時間
-            </h3>
+            </span>
                     
             <span class="c-mv-schedule-detail c-mv-schedule-detail--time">
                 平日 16:00 ~ 22:00<br>
@@ -101,19 +101,85 @@
     </div>
 
     <section class="l-menu-sec">
-        <h2 class="c-sec-title l-sec-title--menu"></h2>
+        <h2 class="c-sec-title l-sec-title--menu">メニュー</h2>
         <ul class="l-menu-list">
-            <li class="c-card c-card--b01">
-
+            <li class="c-menu-card c-menu-card--b01">
+                <h3>肉汁あふれる焼き餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-01.png" alt="肉汁あふれる焼き餃子">
+                <p class="c-menu-card-price">6個入り 580円（税込）</p>
+                <p class="c-menu-card-shopname">博多ぎょうざ堂</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-01.html">詳細はこちら</a>
             </li>
-            <li class="c-card c-card--b02">
-                aa
+            <li class="c-menu-card c-menu-card--b02">
+                <h3>ふっくら蒸しあげ餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-02.png" alt="ふっくら蒸しあげ餃子">
+                <p class="c-menu-card-price">5個入り 600円（税込）</p>
+                <p class="c-menu-card-shopname">中華食堂 蒸々屋</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-02.html">詳細はこちら</a>
             </li>
-            <li class="c-card c-card--b03"></li>
-            <li class="c-card c-card--b04"></li>
-            <li class="c-card c-card--b05"></li>
-            <li class="c-card c-card--b06"></li>
-            <li class="c-card c-card--b07"></li>
+            <li class="c-menu-card c-card--b03">
+                <h3>中華風スープ餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-03.png" alt="中華風スープ餃子">
+                <p class="c-menu-card-price">5個入り 680円（税込）</p>
+                <p class="c-menu-card-shopname">餃子茶寮 彩香</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-03.html">詳細はこちら</a>
+            </li>
+            <li class="c-menu-card c-card--b04">
+                <h3>カリもち！揚げ餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-04.png" alt="カリもち！揚げ餃子">
+                <p class="c-menu-card-price">5個入り 600円（税込）</p>
+                <p class="c-menu-card-shopname">餃子バル 風雷坊</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-04.html">詳細はこちら</a>
+            </li>
+            <li class="c-menu-card c-card--b05">
+                <h3>お口に広がる地中海の風</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-05.png" alt="お口に広がる地中海の風">
+                <p class="c-menu-card-price">5個入り 720円（税込）</p>
+                <p class="c-menu-card-shopname">Mediterraneo Gyoza</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-05.html">詳細はこちら</a>
+            </li>
+            <li class="c-menu-card c-card--b06">
+                <h3>素材の旨味ひきたつ水餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-06.png" alt="素材の旨味ひきたつ水餃子">
+                <p class="c-menu-card-price">6個入り 580円（税込）</p>
+                <p class="c-menu-card-shopname">餃子処 湯心</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-06.html">詳細はこちら</a>
+            </li>
+            <li class="c-menu-card c-card--b07">
+                <h3>しびうまラー油餃子</h3>
+                <img class="c-menu-card-img" src="./img/menu/menu-07.png" alt="しびうまラー油餃子">
+                <p class="c-menu-card-price">6個入り 620円（税込）</p>
+                <p class="c-menu-card-shopname">辛味房 赤龍</p>
+                <!-- 共有リンク(attention:神飛行機ロゴは::beforeで入れる！) -->
+                <a class="c-share-link" href="#">「#ふくおか餃子FES」で共有</a>
+                <!-- 商品詳細へ飛ぶボタン(attention:三角ロゴは::beforeで入れる！) -->
+                <!-- todo:このボタンだけは中央ぞろえなのでCSSで「align-self:center;」を書く -->
+                <a class="c-button-goto-booth" href="./menu-b-07.html">詳細はこちら</a>
+            </li>
         </ul>
     </section>
 
