@@ -86,7 +86,7 @@ img {
     width: clamp(32px, 22.141px + 2.629vw, 60px);
 }
 
-.l-header__nav {
+.l-header__icons {
     display: flex;
     gap: clamp(15px, 6.197px + 2.347vw, 40px);
     align-items: center;
