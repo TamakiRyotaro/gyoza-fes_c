@@ -40,7 +40,7 @@ img {
 /* menu-b-XX.html
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
-main.l-main {
+main.l-menu {
     background: var(--childPage-bg);
 }
 
@@ -60,12 +60,13 @@ main.l-main {
 
 .c-menu-card {
     display: flex;
+    flex-direction: column;
     background-color: var(--black);
 }
 
 /* 共有ボタン */
 .c-share-btn {
-    /* width: min(420px, 87%); */
+
     width: 87%;
     height: 62px;
     background: var(--white2);
@@ -108,3 +109,48 @@ main.l-main {
 
 /* privacy.html
 ------------------------------ */
+
+@media (min-width:768px) {
+
+
+    /* ベース
+------------------------------ */
+
+
+    /* 共通
+------------------------------ */
+
+
+
+    /* index.html
+------------------------------ */
+
+
+    /* menu.html
+------------------------------ */
+
+
+    /* menu-b-XX.html
+------------------------------ */
+    .c-menu-card {
+        flex-direction: row;
+    }
+
+
+
+    /* faq.html
+------------------------------ */
+
+
+    /* contact.html
+------------------------------ */
+
+
+    /* news.html
+------------------------------ */
+
+
+    /* privacy.html
+------------------------------ */
+
+}
