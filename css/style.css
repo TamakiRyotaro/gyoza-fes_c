@@ -27,15 +27,44 @@ img {
 /* 共通
 ------------------------------ */
 
+/* 斜めボタン */
+.c-btn {
+    filter: drop-shadow(10px 10px 0 var(--yellow));
+}
+
+.c-btn_link {
+
+    width: 179px;
+    height: 56px;
+    color: var(--white2);
+    font-weight: bold;
+    background-color: var(--red);
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
 /* header */
 .c-header__title {
     aspect-ratio: 35 / 3;
     width: clamp(175px, 3.961rem + 29.765vw, 492px);
 }
 
-.c-header__sns-icon img {
+.c-sns-icon img {
     aspect-ratio: 1 / 1;
     width: clamp(30px, 22.958px + 1.878vw, 50px);
+}
+
+.c-sns-icon--footer img {
+    aspect-ratio: 1 / 1;
+    width: 50px;
 }
 
 .c-header__hamburger-menu img {
@@ -49,10 +78,14 @@ img {
     align-items: center;
 }
 
-.l-header__sns-list {
+.l-sns-list {
     display: flex;
     gap: clamp(10px, 4.014px + 1.596vw, 27px);
     align-items: center;
+}
+
+.l-sns-list--footer {
+    gap: 25px;
 }
 
 .l-header {
@@ -71,6 +104,73 @@ img {
 }
 
 /* footer */
+.l-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    padding: 60px 0;
+
+    background-color: var(--white);
+}
+
+.l-footer__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.l-footer__relevant-parties-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.c-footer__relevant-parties-list-item {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.c-footer__term {
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.c-footer__details {
+    width: 214px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.c-footer__contact-item {
+    font-size: 14px;
+}
+
+.c-privacy {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.c-copyright {
+    font-size: 12px;
+}
+
+/* TODO: nagata くそみたいな名前つけたので後で変えます */
+.l-footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.l-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
 
 
 /* index.html
@@ -135,7 +235,7 @@ img {
 /* menu-b-XX.html
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
-main.l-menu {
+main.l-menu-b {
 
     background: var(--childPage-bg);
 }
@@ -155,13 +255,13 @@ main.l-menu {
 
 /* コンポーネント */
 
-.c-menu-card {
+.c-menu-b-card {
     display: flex;
     flex-direction: column;
     background-color: var(--black);
 }
 
-.c-menu-card .c-share-btn {
+.c-menu-b-card .c-share-btn {
     margin-inline: auto;
 }
 
@@ -172,23 +272,20 @@ main.l-menu {
     background: var(--white2);
     border: var(--black) solid 1px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-
     filter: drop-shadow(4px 4px 0 var(--white2));
 }
 
-.c-share-btn a {
+a.c-share-btn {
     font-weight: bold;
     font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     color: var(--black);
-    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.c-share-btn a::after {
+a.c-share-btn::after {
     content: url(../img/menu-b/share_black.png);
 }
 
@@ -240,7 +337,7 @@ main.l-menu {
         margin-inline: auto;
     }
 
-    .c-menu-card {
+    .c-menu-b-card {
         flex-direction: row;
     }
 

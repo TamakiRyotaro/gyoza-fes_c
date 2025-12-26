@@ -33,12 +33,12 @@
     <header class="l-header">
         <div class="c-header__title"><img src="./img/logo_line_01.png" alt="ふくおか餃子FES"></div>
         <nav class="l-header__nav">
-            <ul class="l-header__sns-list">
-                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"></a>
+            <ul class="l-sns-list">
+                <li class="c-sns-icon"><a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"></a>
                 </li>
-                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_instagram.png"
+                <li class="c-sns-icon"><a href="#"><img src="./img/sns_icon_instagram.png"
                             alt="福岡餃子フェス 公式Instagram"></a></li>
-                <li class="c-header__sns-icon"><a href="#"><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE"></a>
+                <li class="c-sns-icon"><a href="#"><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE"></a>
                 </li>
             </ul>
             <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
@@ -49,31 +49,88 @@
     </header>
     <main>
         <section>
-            <h2>お知らせ</h2>
-            <div class="c-news-content">
-                <p class="c-news-data">2030.2.16（土）</p>
+            <h1>お知らせ</h1>
+            <div class="c-news__item">
+                <p class="c-news__data"><time datetime="2030-02-25">2030.2.25（月）</time></p>
                 <details>
-                    <summary class="">ふくおか餃子FES開催決定！</summary>
-                    ふくおか餃子FES開催決定！
+                    <summary class="c-news__title">
+                        出店者インタビュー　博多区で人気の「博多ぎょうざ堂」
+                    </summary>
+                    <div class="c-news__detail">
+                        <p class="c-news__text"></p>
+                    </div>
                 </details>
             </div>
-            <div class="c-news-content">
-                <p class="c-news-data">2030.2.16（土）</p>
+            <div class="c-news__item">
+                <p class="c-news__data"><time datetime="2023-02-23">2030.2.23（土）</time></p>
                 <details>
-                    <summary>出店企業様募集中！</summary>
-                    <img src="" alt="">
-                    <p>
-                        テキストテキストテキストテキストテキストテキストテキストテキスト
-                        テキストテキストテキストテキストテキストテキストテキスト
-                        テキストテキストテキストテキストテキスト
-                    </p>
+                    <summary class="c-news__title">
+                        出店企業様募集中！
+                    </summary>
+                    <div class="c-news__detail">
+                        <img class="c-news__img" src="./img/news/news-sample-image-s.png" alt="">
+                        <p class="c-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキスト</p>
+                    </div>
                 </details>
             </div>
-
-
+            <div class="c-news__item">
+                <p class="c-news__data"><time datetime="2023-02-16">2030.2.16（土）</time></p>
+                <details>
+                    <summary class="c-news__title">
+                        ふくおか餃子FES開催決定！
+                    </summary>
+                    <div class="c-news__detail">
+                        <img class="c-news__img" src="./img/news/news-sample-image-l.png" alt="">
+                        <p class="c-news__text">テキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキスト</p>
+                    </div>
+                </details>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="l-footer">
+        <div class="l-footer__title">
+            <img src="./img/logo_01.png" alt="">
+            <dl class="l-footer__relevant-parties-list">
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">主催</dt>
+                    <dd class="c-footer__details">ふくおか餃子FES実行委員会</dd>
+                </div>
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">協賛</dt>
+                    <dd class="c-footer__details">九州餃子部</dd>
+                </div>
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">制作協力</dt>
+                    <dd class="c-footer__details">創造社リカレントスクール 福岡校</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="l-footer__content">
+            <div class="l-footer__contact">
+                <p class="c-footer__contact-item">ふくおか餃子FES実行委員会</p>
+                <p class="c-footer__contact-item">(tel:) 000-0000-0000</p>
+                <p class="c-footer__contact-item">xxxxxxxxxxx@xxx.com</p>
+            </div>
+            <ul class="l-sns-list l-sns-list--footer">
+                <li class="c-sns-icon c-sns-icon--footer"><a href="#"><img src="./img/sns_icon_x.png"
+                            alt="福岡餃子フェス 公式X"></a>
+                </li>
+                <li class="c-sns-icon c-sns-icon--footer"><a href="#"><img src="./img/sns_icon_instagram.png"
+                            alt="福岡餃子フェス 公式Instagram"></a>
+                </li>
+                <li class="c-sns-icon c-sns-icon--footer"><a href="#"><img src="./img/sns_icon_line.png"
+                            alt="福岡餃子フェス 公式LINE"></a>
+                </li>
+            </ul>
+        </div>
+        <p class="c-privacy">プライバシーポリシー</p>
+        <small class="c-copyright">©Copyright 2025 ふくおか餃子FES実行委員会</small>
+    </footer>
 </body>
 
 </html>
