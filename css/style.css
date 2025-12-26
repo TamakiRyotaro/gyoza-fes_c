@@ -28,12 +28,13 @@ img {
 ------------------------------ */
 
 /* 斜めボタン */
+/* c-btnはaタグの親につけてください */
 .c-btn {
-    filter: drop-shadow(10px 10px 0 var(--yellow));
+    filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
+/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
-
     width: 179px;
     height: 56px;
     color: var(--white2);
@@ -45,10 +46,23 @@ img {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 10;
+
 }
 
+/* 斜めボタン　白メイン・赤影 */
+.c-btn--redWhite {
+    filter: drop-shadow(-10px 10px 0 var(--red));
+}
 
+.c-btn_link--redWhite {
+    color: var(--red);
+    background-color: var(--white);
+
+}
+
+.c-btn_link--redWhite a {
+    color: var(--red);
+}
 
 
 /* header */
@@ -188,18 +202,16 @@ img {
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
-
     background: var(--childPage-bg);
 }
 
-.menu-b-n * {
-
+main.l-menu-b p {
     color: var(--white2);
 
 }
 
 /* メインコンテンツの幅・配置 */
-.menu-b-n .c-main-container {
+main.l-menu-b .c-main-container {
     width: 100%;
     margin-inline: auto;
 }
@@ -284,7 +296,7 @@ a.c-share-btn::after {
 
     /* menu-b-XX.html
 ------------------------------ */
-    .menu-b-n .c-main-container {
+    main.l-menu-b .c-main-container {
         width: min(60%, 960px);
         margin-inline: auto;
     }
