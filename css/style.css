@@ -3,6 +3,25 @@
 /* ベース
 ------------------------------ */
 
+:root{
+    /* 色スタイル */
+    --red:#E22A00;
+    --yellow:#FFE100;
+    --white:#FFF7F7;
+    --black:#131A12;
+    --white2:#fff;
+}
+
+body{
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: var(--black);  
+
+}
+
+img{
+    max-width: 100%;
+}
+
 
 /* 共通
 ------------------------------ */
@@ -19,6 +38,8 @@
 
 /* menu-b-XX.html
 ------------------------------ */
+
+
 
 
 /* faq.html
