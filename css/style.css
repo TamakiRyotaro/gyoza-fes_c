@@ -30,12 +30,11 @@ img {
 /* 斜めボタン */
 /* c-btnはaタグの親につけてください */
 .c-btn {
-    filter: drop-shadow(10px 10px 0 var(--yellow));
+    filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
 /* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
-
     width: 179px;
     height: 56px;
     color: var(--white2);
@@ -47,10 +46,23 @@ img {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 10;
+
 }
 
+/* 斜めボタン　白メイン・赤影 */
+.c-btn--redWhite {
+    filter: drop-shadow(-10px 10px 0 var(--red));
+}
 
+.c-btn_link--redWhite {
+    color: var(--red);
+    background-color: var(--white);
+
+}
+
+.c-btn_link--redWhite a {
+    color: var(--red);
+}
 
 
 /* header */
@@ -193,7 +205,7 @@ main.l-menu-b {
     background: var(--childPage-bg);
 }
 
-main.l-menu-b * {
+main.l-menu-b p {
     color: var(--white2);
 
 }
