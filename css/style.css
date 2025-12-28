@@ -4,25 +4,23 @@
 ------------------------------ */
 
 :root {
-    /* 色スタイル */
-    --red: #E22A00;
-    --yellow: #FFE100;
-    --white: #FFF7F7;
-    --black: #131A12;
-    --white2: #fff;
-    --childPage-bg: linear-gradient(90deg, #fff, #FFF8F2, #FFDEBF);
+  /* 色スタイル */
+  --red: #e22a00;
+  --yellow: #ffe100;
+  --white: #fff7f7;
+  --black: #131a12;
+  --white2: #fff;
+  --childPage-bg: linear-gradient(90deg, #fff, #fff8f2, #ffdebf);
 }
 
 body {
-    font-family: "Zen Maru Gothic", sans-serif;
-    color: var(--black);
-
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: var(--black);
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
-
 
 /* 共通
 ------------------------------ */
@@ -30,178 +28,169 @@ img {
 /* 斜めボタン */
 /* c-btnはaタグの親につけてください */
 .c-btn {
-    filter: drop-shadow(-10px 10px 0 var(--yellow));
+  filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
 /* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
-    width: 179px;
-    height: 56px;
-    color: var(--white2);
-    font-weight: bold;
-    background-color: var(--red);
-    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
+  width: 179px;
+  height: 56px;
+  color: var(--white2);
+  font-weight: bold;
+  background-color: var(--red);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* 斜めボタン　白メイン・赤影 */
 .c-btn--redWhite {
-    filter: drop-shadow(-10px 10px 0 var(--red));
+  filter: drop-shadow(-10px 10px 0 var(--red));
 }
 
 .c-btn_link--redWhite {
-    color: var(--red);
-    background-color: var(--white);
-
+  color: var(--red);
+  background-color: var(--white);
 }
-
-.c-btn_link--redWhite a {
-    color: var(--red);
-}
-
 
 /* header */
 .c-header__title {
-    aspect-ratio: 35 / 3;
-    width: clamp(175px, 3.961rem + 29.765vw, 492px);
+  aspect-ratio: 35 / 3;
+  width: clamp(175px, 3.961rem + 29.765vw, 492px);
 }
 
 .c-sns-icon img {
-    aspect-ratio: 1 / 1;
-    width: clamp(30px, 22.958px + 1.878vw, 50px);
+  aspect-ratio: 1 / 1;
+  width: clamp(30px, 22.958px + 1.878vw, 50px);
 }
 
 .c-sns-icon--footer img {
-    aspect-ratio: 1 / 1;
-    width: 50px;
+  aspect-ratio: 1 / 1;
+  width: 50px;
 }
 
 .c-header__hamburger-menu img {
-    aspect-ratio: 1 / 1;
-    width: clamp(32px, 22.141px + 2.629vw, 60px);
+  aspect-ratio: 1 / 1;
+  width: clamp(32px, 22.141px + 2.629vw, 60px);
 }
 
 .l-header__icons {
-    display: flex;
-    gap: clamp(15px, 6.197px + 2.347vw, 40px);
-    align-items: center;
+  display: flex;
+  gap: clamp(15px, 6.197px + 2.347vw, 40px);
+  align-items: center;
 }
 
 .l-sns-list {
-    display: flex;
-    gap: clamp(10px, 4.014px + 1.596vw, 27px);
-    align-items: center;
+  display: flex;
+  gap: clamp(10px, 4.014px + 1.596vw, 27px);
+  align-items: center;
 }
 
 .l-sns-list--footer {
-    gap: 25px;
+  gap: 25px;
 }
 
 .l-header {
-    display: flex;
-    height: 97px;
-    align-items: center;
-    background-color: var(--white);
-    padding: 0 15px;
+  display: flex;
+  height: 97px;
+  align-items: center;
+  background-color: var(--white);
+  padding: 0 15px;
 
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-.l-header+* {
-    /* TODO: 仮値 */
-    margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
+.l-header + * {
+  /* TODO: 仮値 */
+  margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
 /* footer */
 .l-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
-    padding: 60px 0;
+  padding: 60px 0;
 
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .l-footer__title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .l-footer__relevant-parties-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .c-footer__relevant-parties-list-item {
-    display: flex;
-    font-size: 14px;
-    gap: 10px;
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
 }
 
 .c-footer__term {
-    width: 75px;
-    height: 30px;
-    line-height: 30px;
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .c-footer__details {
-    width: 214px;
-    height: 30px;
-    line-height: 30px;
+  width: 214px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .c-footer__contact-item {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .c-privacy {
-    font-size: 12px;
-    text-decoration: underline;
+  font-size: 12px;
+  text-decoration: underline;
 }
 
 .c-copyright {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* TODO: nagata くそみたいな名前つけたので後で変えます */
 .l-footer__content {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .l-footer__contact {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
-
 
 /* index.html
 ------------------------------ */
 
 /* 斜めボタン　赤メイン・白影 */
 .c-btn--whitered {
-    filter: drop-shadow(-10px 10px 0 var(--white2));
+  filter: drop-shadow(-10px 10px 0 var(--white2));
 }
 .c-btn_link--whitered {
-    color: var(--white2);
-    background-color: var(--red);
+  color: var(--white2);
+  background-color: var(--red);
 }
 
-
-.l-news-sec-bg{
-    background-color: #EB8E3A;
+.l-news-sec-bg {
+  background-color: #eb8e3a;
 }
 
 /* menu.html
@@ -209,178 +198,154 @@ img {
 /*  menu一覧の共通部分 */
 
 .l-main-menu {
-    background: var(--childPage-bg);
+  background: var(--childPage-bg);
 }
 
-.c-section-title+* {
-    margin-block-start: 16px
+.c-section-title + * {
+  margin-block-start: 16px;
 }
 
-.shop-map+* {
-    margin-block-start: 40px
+.shop-map + * {
+  margin-block-start: 40px;
 }
 
 /*  menu一覧コンポーネント */
 .c-card {
-    display: flex;
-    flex-direction: column;
-    color: var(--white);
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    margin-inline: auto;
-    line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-inline: auto;
+  line-height: 1.5;
 }
 
 .c-card .wrapper {
-    background-color: var(--black);
-    width: 92%;
-    gap: 10px;
+  background-color: var(--black);
+  width: 92%;
+  gap: 10px;
 }
 
 .c-card__menu-name {
-    font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
-    font-weight: bold;
+  font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+  font-weight: bold;
 }
 
 .c-card .c-card__share a {
-    color: #EB8E3A;
+  color: #eb8e3a;
 }
 
 .c-card__btn {
-    width: 252;
-    height: 44px;
-    background: var(--black);
-    border: var(--white) solid 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    filter: drop-shadow(4px 4px 0 var(--black));
-    text-align: center;
+  width: 252;
+  height: 44px;
+  background: var(--black);
+  border: var(--white) solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  filter: drop-shadow(4px 4px 0 var(--black));
+  text-align: center;
 }
 
 /* menu-b-XX.html
 ------------------------------ */
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
-    background: var(--childPage-bg);
+  background: var(--childPage-bg);
 }
 
 main.l-menu-b p {
-    color: var(--white2);
-
+  color: var(--white2);
 }
 
 /* メインコンテンツの幅・配置 */
 main.l-menu-b .c-main-container {
-    width: 100%;
-    margin-inline: auto;
+  width: 100%;
+  margin-inline: auto;
 }
-
 
 /* コンポーネント */
 
 .c-menu-b-card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
 }
 
 .c-menu-b-card .c-share-btn {
-    margin-inline: auto;
+  margin-inline: auto;
 }
 
 /* 共有ボタン */
 .c-share-btn {
-    width: 87%;
-    height: 62px;
-    background: var(--white2);
-    border: var(--black) solid 1px;
-    display: flex;
-    justify-content: center;
-    filter: drop-shadow(4px 4px 0 var(--white2));
+  width: 87%;
+  height: 62px;
+  background: var(--white2);
+  border: var(--black) solid 1px;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(4px 4px 0 var(--white2));
 }
 
 a.c-share-btn {
-    font-weight: bold;
-    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
-    color: var(--black);
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  font-weight: bold;
+  font-size: clamp(16px, 15.296px + 0.188vw, 18px);
+  color: var(--black);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 a.c-share-btn::after {
-    content: url(../img/menu-b/share_black.png);
+  content: url(../img/menu-b/share_black.png);
 }
-
-
-
 
 /* faq.html
 ------------------------------ */
 
-
 /* contact.html
 ------------------------------ */
-
 
 /* news.html
 ------------------------------ */
 
-
 /* privacy.html
 ------------------------------ */
 
-
-
-
-@media (min-width:768px) {
-
-
-    /* ベース
+@media (min-width: 768px) {
+  /* ベース
 ------------------------------ */
 
-
-    /* 共通
+  /* 共通
 ------------------------------ */
 
-
-
-    /* index.html
+  /* index.html
 ------------------------------ */
 
-
-    /* menu.html
+  /* menu.html
 ------------------------------ */
 
-
-    /* menu-b-XX.html
+  /* menu-b-XX.html
 ------------------------------ */
-    main.l-menu-b .c-main-container {
-        width: min(60%, 960px);
-        margin-inline: auto;
-    }
+  main.l-menu-b .c-main-container {
+    width: min(60%, 960px);
+    margin-inline: auto;
+  }
 
-    .c-menu-b-card {
-        flex-direction: row;
-    }
+  .c-menu-b-card {
+    flex-direction: row;
+  }
 
-
-
-    /* faq.html
+  /* faq.html
 ------------------------------ */
 
-
-    /* contact.html
+  /* contact.html
 ------------------------------ */
 
-
-    /* news.html
+  /* news.html
 ------------------------------ */
 
-
-    /* privacy.html
+  /* privacy.html
 ------------------------------ */
-
 }
