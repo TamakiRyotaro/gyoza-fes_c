@@ -190,6 +190,19 @@ img {
 /* index.html
 ------------------------------ */
 
+/* 斜めボタン　赤メイン・白影 */
+.c-btn--whitered {
+    filter: drop-shadow(-10px 10px 0 var(--white2));
+}
+.c-btn_link--whitered {
+    color: var(--white2);
+    background-color: var(--red);
+}
+
+
+.l-news-sec-bg{
+    background-color: #EB8E3A;
+}
 
 /* menu.html
 ------------------------------ */
