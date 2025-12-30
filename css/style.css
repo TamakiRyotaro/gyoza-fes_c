@@ -156,8 +156,7 @@ img {
   justify-content: space-between;
 }
 
-.l-header + * {
-  /* TODO: 仮値 */
+.l-header+* {
   margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
@@ -166,9 +165,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: clamp(20px, 15.070px + 1.315vw, 34px);
 
-  padding: 60px 0;
+  padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
 
   background-color: var(--white);
 }
@@ -177,48 +176,47 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: clamp(20px, 12.958px + 1.878vw, 40px);
 }
 
 .l-footer__relevant-parties-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: clamp(4px, 3.296px + 0.188vw, 6px);
 }
 
 .c-footer__relevant-parties-list-item {
   display: flex;
-  font-size: 14px;
+  font-size: clamp(14px, 13.296px + 0.188vw, 16px);
   gap: 10px;
 }
 
 .c-footer__term {
-  width: 75px;
-  height: 30px;
-  line-height: 30px;
+  width: clamp(75px, 67.606px + 1.972vw, 96px);
+  height: clamp(30px, 27.887px + 0.563vw, 36px);
+  line-height: clamp(30px, 27.887px + 0.563vw, 36px);
 }
 
 .c-footer__details {
-  width: 214px;
-  height: 30px;
-  line-height: 30px;
+  width: clamp(214px, 186.535px + 7.324vw, 292px);
+  height: clamp(30px, 27.887px + 0.563vw, 36px);
+  line-height: clamp(30px, 27.887px + 0.563vw, 36px);
 }
 
 .c-footer__contact-item {
-  font-size: 14px;
+  font-size: clamp(14px, 12.592px + 0.376vw, 18px);
 }
 
 .c-privacy {
-  font-size: 12px;
+  font-size: clamp(12px, 11.296px + 0.188vw, 14px);
   text-decoration: underline;
 }
 
 .c-copyright {
-  font-size: 12px;
+  font-size: clamp(12px, 11.296px + 0.188vw, 14px);
 }
 
-/* TODO: nagata くそみたいな名前つけたので後で変えます */
-.l-footer__content {
+.l-footer__info {
   display: flex;
   flex-direction: column;
   gap: 25px;
