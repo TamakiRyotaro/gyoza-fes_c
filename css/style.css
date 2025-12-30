@@ -230,9 +230,21 @@ img {
   gap: 7px;
 }
 
-/* index.html
+/* index.html(kansp)
 ------------------------------ */
+.l-content-wrap{
+  width: min(92vw, 960px);
+  margin-inline: auto;
+}
 
+body{
+}
+
+.l-rest-image {
+  aspect-ratio: 4 / 1;
+  width: 100vw;
+  object-fit: cover;
+}
 /* 斜めボタン　赤メイン・白影 */
 .c-btn--whitered {
   filter: drop-shadow(-10px 10px 0 var(--white2));
@@ -240,6 +252,10 @@ img {
 .c-btn_link--whitered {
   color: var(--white2);
   background-color: var(--red);
+}
+.l-googlemap {
+  width: min(92vw, 960px);
+  height: 300px;
 }
 
 .l-news-sec-bg {
@@ -374,7 +390,7 @@ a.c-share-btn::after {
 ------------------------------ */
   /* 斜めボタン */
 
-  /* index.html
+  /* index.html(kanpc)
 ------------------------------ */
 
   /* menu.html
