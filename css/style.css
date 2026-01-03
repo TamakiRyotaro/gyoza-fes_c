@@ -156,7 +156,7 @@ img {
   justify-content: space-between;
 }
 
-.l-header+* {
+.l-header + * {
   margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
@@ -165,7 +165,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(20px, 15.070px + 1.315vw, 34px);
+  gap: clamp(20px, 15.07px + 1.315vw, 34px);
 
   padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
 
@@ -230,12 +230,12 @@ img {
 
 /* index.html(kansp)
 ------------------------------ */
-.l-content-wrap{
+.l-content-wrap {
   width: min(92vw, 960px);
   margin-inline: auto;
 }
 
-body{
+body {
 }
 
 .l-rest-image {
@@ -320,6 +320,8 @@ body{
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
   background: var(--childPage-bg);
+  padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
+  z-index: 10;
 }
 
 main.l-menu-b p {
@@ -333,11 +335,28 @@ main.l-menu-b .c-main-container {
 }
 
 /* コンポーネント */
+.c-menu-b-card-cnt h1 {
+  color: var(--white);
+  font-size: clamp(24px, 21.183px + 0.751vw, 32px);
+  font-weight: bold;
+}
+.c-menu-b-card-cnt h1 span {
+  color: var(--black);
+  background: var(--white);
+  font-size: clamp(16px, 13.887px + 0.563vw, 22px);
+  width: clamp(52px, 47.423px + 1.221vw, 65px);
+  height: clamp(25px, 20.775px + 1.127vw, 37px);
+  padding-inline: 8px;
+  padding-block-end: 0.5px;
+  letter-spacing: 0.96px;
+  vertical-align: middle;
+}
 
 .c-menu-b-card {
-  display: flex;
-  flex-direction: column;
   background-color: var(--black);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .c-menu-b-card .c-share-btn {
@@ -402,7 +421,8 @@ a.c-share-btn::after {
   }
 
   .c-menu-b-card {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   /* faq.html
