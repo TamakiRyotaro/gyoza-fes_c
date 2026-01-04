@@ -236,22 +236,25 @@ img {
   margin-inline: auto;
 }
 
-body {
-}
+
+body {}
 
 .l-rest-image {
   aspect-ratio: 4 / 1;
   width: 100vw;
   object-fit: cover;
 }
+
 /* 斜めボタン　赤メイン・白影 */
 .c-btn--whitered {
   filter: drop-shadow(-10px 10px 0 var(--white2));
 }
+
 .c-btn_link--whitered {
   color: var(--white2);
   background-color: var(--red);
 }
+
 .l-googlemap {
   width: min(92vw, 960px);
   height: 300px;
@@ -264,47 +267,53 @@ body {
 /* menu.html
 ------------------------------ */
 /*  menu一覧の共通部分 */
-
 .l-main-menu {
   background: var(--childPage-bg);
 }
 
-.c-section-title + * {
+.c-section-title+* {
   margin-block-start: 16px;
 }
 
-.shop-map + * {
+.shop-map+* {
   margin-block-start: 40px;
 }
 
+.l-menu-list {
+  width: 92%;
+  margin: 0 auto;
+}
+
 /*  menu一覧コンポーネント */
-.c-card {
+.c-menu-card {
   display: flex;
   flex-direction: column;
   color: var(--white);
   justify-content: center;
-  gap: 10px;
+  gap: 2px;
   width: 100%;
   margin-inline: auto;
   line-height: 1.5;
 }
 
-.c-card .wrapper {
-  background-color: var(--black);
-  width: 92%;
-  gap: 10px;
-}
-
-.c-card__menu-name {
+.c-menu-card h2 {
   font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
   font-weight: bold;
 }
 
-.c-card .c-card__share a {
-  color: #eb8e3a;
+.c-menu-card--b01,
+.c-menu-card--b02,
+.c-menu-card--b03,
+.c-menu-card--b04,
+.c-menu-card--b05,
+.c-menu-card--b06,
+.c-menu-card--b07 {
+  background-color: var(--black);
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.c-card__btn {
+.c-menu-card .c-button-goto-booth {
   width: 252;
   height: 44px;
   background: var(--black);
