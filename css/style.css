@@ -236,8 +236,8 @@ img {
   margin-inline: auto;
 }
 
-
-body {}
+body {
+}
 
 .l-rest-image {
   aspect-ratio: 4 / 1;
@@ -271,11 +271,11 @@ body {}
   background: var(--childPage-bg);
 }
 
-.c-section-title+* {
+.c-section-title + * {
   margin-block-start: 16px;
 }
 
-.shop-map+* {
+.shop-map + * {
   margin-block-start: 40px;
 }
 
@@ -342,8 +342,6 @@ main.l-menu-b p {
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
   background: var(--childPage-bg);
-  padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
-  z-index: 10;
 }
 
 main.l-menu-b p {
@@ -364,6 +362,8 @@ main.l-menu-b .c-main-container {
   display: flex;
   flex-direction: column;
   margin: auto 0;
+  gap: 8px;
+  padding-block-end: 16px;
 }
 .c-menu-b-card h1 span {
   color: var(--black);
@@ -372,14 +372,15 @@ main.l-menu-b .c-main-container {
   width: clamp(52px, 47.423px + 1.221vw, 65px);
   height: clamp(25px, 20.775px + 1.127vw, 37px);
   padding-inline: 8px;
-
   letter-spacing: 0.96px;
+  display: flex;
+  align-items: center;
 }
 
 .c-menu-b-card {
   background-color: var(--black);
   display: grid;
-  grid-template-rows: 96px 310px auto;
+  grid-template-rows: 76px 310px auto;
   grid-template-columns: 1fr;
 
   padding-block: 20px;
@@ -479,6 +480,9 @@ a.c-share-btn::after {
 
   /* menu-b-XX.html
 ------------------------------ */
+  main.l-menu-b {
+    padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
+  }
   main.l-menu-b .c-main-container {
     width: min(60%, 960px);
     margin-inline: auto;
@@ -488,10 +492,6 @@ a.c-share-btn::after {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 33px;
-  }
-
-  .c-menu-b-card h1 {
-    flex-direction: row;
   }
 
   .c-menu-b-img-pc {
