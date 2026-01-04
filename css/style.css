@@ -60,6 +60,7 @@ img {
 /* 斜めボタン2(transform版...borderを使えるが、7文字限定用) */
 /* c-btnはc-btm_boxとc-btn_linkをまとめる親にしてください */
 .c-btn2 {
+  margin-inline: auto;
   padding-block: 10px 0;
   position: relative;
   width: 179px;
@@ -317,6 +318,18 @@ body {
 
 /* menu-b-XX.html
 ------------------------------ */
+/* 共通cssで代替される？ */
+.c-menu-b-wrapper {
+  /* width: clamp(365px, 155.493px + 55.869vw, 960px); */
+  padding-inline: clamp(15px, 13.239px + 0.469vw, 20px);
+  max-width: 960px;
+}
+
+main.l-menu-b p {
+  letter-spacing: 1.6px;
+  line-height: 1.2;
+}
+
 /* メニュ―詳細ページ内の共通項 */
 main.l-menu-b {
   background: var(--childPage-bg);
@@ -335,28 +348,57 @@ main.l-menu-b .c-main-container {
 }
 
 /* コンポーネント */
-.c-menu-b-card-cnt h1 {
+.c-menu-b-card h1 {
   color: var(--white);
   font-size: clamp(24px, 21.183px + 0.751vw, 32px);
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
 }
-.c-menu-b-card-cnt h1 span {
+.c-menu-b-card h1 span {
   color: var(--black);
   background: var(--white);
   font-size: clamp(16px, 13.887px + 0.563vw, 22px);
   width: clamp(52px, 47.423px + 1.221vw, 65px);
   height: clamp(25px, 20.775px + 1.127vw, 37px);
   padding-inline: 8px;
-  padding-block-end: 0.5px;
+
   letter-spacing: 0.96px;
-  vertical-align: middle;
 }
 
 .c-menu-b-card {
   background-color: var(--black);
   display: grid;
+  grid-template-rows: 96px 310px auto;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  gap: 33px;
+}
+
+.c-menu-b-card-cnt_title {
+  place-content: center;
+}
+
+.c-menu-b-card img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+.c-menu-b-img-pc {
+  display: none;
+}
+
+.c-menu-b-card-cnt_desc :last-child {
+  font-weight: bold;
+  margin-block-start: 10px;
+}
+
+.c-menu-b-card-cnt_shop {
+  margin-block-end: 20px;
+}
+.c-menu-b-card-cnt_shop :first-child {
+  font-weight: bold;
+  margin-block-end: 10px;
 }
 
 .c-menu-b-card .c-share-btn {
@@ -385,6 +427,15 @@ a.c-share-btn {
 
 a.c-share-btn::after {
   content: url(../img/menu-b/share_black.png);
+}
+
+/* 余白 */
+.mt40to50 {
+  margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
+}
+
+.pb80tp140 {
+  padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
 }
 
 /* faq.html
@@ -423,6 +474,45 @@ a.c-share-btn::after {
   .c-menu-b-card {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+  }
+
+  .c-menu-b-card h1 {
+    flex-direction: row;
+  }
+
+  .c-menu-b-img-pc {
+    display: block;
+  }
+
+  .c-menu-b-img-sp {
+    display: none;
+  }
+
+  .c-menu-b-card-cnt_title {
+    grid-row: ;
+    grid-column: 2 / 3;
+  }
+
+  .c-menu-b-card-cnt_img {
+    grid-row: 1 / 5;
+    grid-column: ;
+    place-content: center;
+    place-items: center;
+  }
+
+  .c-menu-b-card-cnt_desc {
+    grid-row: ;
+    grid-column: ;
+  }
+
+  .c-menu-b-card-cnt_link {
+    grid-row: ;
+    grid-column: 2 / 3;
+  }
+
+  .c-menu-b-card-cnt_shop {
+    grid-row: ;
+    grid-column: 2 / 3;
   }
 
   /* faq.html
