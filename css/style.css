@@ -372,7 +372,8 @@ main.l-menu-b .c-main-container {
   display: grid;
   grid-template-rows: 96px 310px auto;
   grid-template-columns: 1fr;
-  gap: 33px;
+
+  padding-block: 20px;
 }
 
 .c-menu-b-card-cnt_title {
@@ -387,6 +388,9 @@ main.l-menu-b .c-main-container {
 .c-menu-b-img-pc {
   display: none;
 }
+.c-menu-b-card-cnt_desc {
+  padding-block: 20px;
+}
 
 .c-menu-b-card-cnt_desc :last-child {
   font-weight: bold;
@@ -394,7 +398,7 @@ main.l-menu-b .c-main-container {
 }
 
 .c-menu-b-card-cnt_shop {
-  margin-block-end: 20px;
+  padding-block-start: 20px;
 }
 .c-menu-b-card-cnt_shop :first-child {
   font-weight: bold;
@@ -474,6 +478,7 @@ a.c-share-btn::after {
   .c-menu-b-card {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    column-gap: 33px;
   }
 
   .c-menu-b-card h1 {
@@ -491,6 +496,7 @@ a.c-share-btn::after {
   .c-menu-b-card-cnt_title {
     grid-row: ;
     grid-column: 2 / 3;
+    place-content: start;
   }
 
   .c-menu-b-card-cnt_img {
