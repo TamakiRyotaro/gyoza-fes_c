@@ -45,24 +45,69 @@
   </head>
 
   <body>
-    <header></header>
-    <main class="l-menu-b">
-      <article class="c-main-container c-menu-b-card">
-        <div class="c-menu-b-card-img">
-          <img src="./img/menu-b/menu-b-01.png" alt="肉汁あふれる焼き餃子" />
+    <header class="l-header">
+      <div class="c-header__title">
+        <img src="./img/logo_line_01.png" alt="ふくおか餃子FES" />
+      </div>
+      <div class="l-header__icons">
+        <ul class="l-sns-list">
+          <li class="c-sns-icon">
+            <a href="#"
+              ><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"
+            /></a>
+          </li>
+          <li class="c-sns-icon">
+            <a href="#"
+              ><img
+                src="./img/sns_icon_instagram.png"
+                alt="福岡餃子フェス 公式Instagram"
+            /></a>
+          </li>
+          <li class="c-sns-icon">
+            <a href="#"
+              ><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE"
+            /></a>
+          </li>
+        </ul>
+        <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
+        <div class="c-header__hamburger-menu">
+          <img
+            src="./img/hamburger_menu_open.png"
+            alt="ハンバーガーメニューアイコン"
+          />
         </div>
-        <div class="c-menu-b-card-cnt">
-          <h1>
-            <span>B-01</span>
-            肉汁あふれる焼き餃子
-          </h1>
+      </div>
+    </header>
+    <main class="l-menu-b">
+      <article class="c-main-container c-menu-b-card c-menu-b-wrapper">
+        <h1 class="c-menu-b-card-cnt_title">
+          <span>B-01</span>
+          肉汁あふれる焼き餃子
+        </h1>
+        <div class="c-menu-b-card-img c-menu-b-card-cnt_img">
+          <img
+            src="./img/menu-b/menu-b-01-sp.png"
+            alt="肉汁あふれる焼き餃子"
+            class="c-menu-b-img-sp"
+          />
+          <img
+            src="./img/menu-b/menu-b-01.png"
+            alt="肉汁あふれる焼き餃子"
+            class="c-menu-b-img-pc"
+          />
+        </div>
+        <div class="c-menu-b-card-cnt_desc">
           <p>
             香ばしく焼き上げた皮の中には、あふれんばかりの肉汁がぎっしり。厳選された国産豚とキャベツの旨味が広がる、満足感たっぷりの一品です。一口噛めば、ジュワッとした肉汁が口いっぱいに広がります。
           </p>
           <p>6個入り 580円（税込）</p>
-          <!-- 共有btn -->
-          <a class="c-share-btn" href="#">「#ふくおか餃子FES」で共有</a>
-          <!-- 店舗詳細 -->
+        </div>
+        <!-- 共有btn -->
+        <a class="c-share-btn c-menu-b-card-cnt_link" href="#"
+          >「#ふくおか餃子FES」で共有</a
+        >
+        <!-- 店舗詳細 -->
+        <div class="c-menu-b-card-cnt_shop">
           <p>博多ぎょうざ堂</p>
           <p>
             福岡を代表する老舗餃子専門店。国産豚とキャベツを使用し、ひとつひとつ手包みで仕上げています。外はカリッと、中は肉汁たっぷりの博多スタイルが人気。
@@ -70,11 +115,13 @@
         </div>
       </article>
       <!-- メニュー一覧へbtn -->
-      <div class="c-btn2 c-btn2--red">
+      <div class="c-btn2 c-btn2--red mt40to50 pb80tp140">
         <div class="c-btn2_box"></div>
         <a class="c-btn2_link" href="menu.html">メニュー一覧へ</a>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <p>仮テキスト</p>
+    </footer>
   </body>
 </html>
