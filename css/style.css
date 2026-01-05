@@ -260,6 +260,20 @@ img {
     font-weight: bold;
 }
 
+
+.l-mv-hero-title{
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(175, 175, 175, 0));
+}
+.l-mv-hero-address {
+    display: inline-block;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(175, 175, 175, 0));
+}
+
+.l-mv-hero-address-title{
+    display: block;
+}
+
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #fff;
@@ -267,6 +281,15 @@ img {
     background: url(../img/top-mainvisual.png) no-repeat center center/cover;
     /* kantodo:背景画像が縦横いい感じになるようにする */
     height: clamp(11.875rem, 7.804rem + 17.371vw, 23.438rem);
+}
+
+.c-mv-schedule-title{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white2);
+    padding: 5px 5px;
+    background-color: #E22A00;
 }
 
 .l-catchcopy-flex {
