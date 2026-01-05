@@ -493,19 +493,18 @@ a.c-share-btn::after {
     display: flex;
     font-size: 18px;
     font-weight: bold;
-}
 
-.c-privacy__content-index {
-    width: 20px;
+    /* TODO: 適切な数字を設定する */
+    padding-left: 1.3em;
+    text-indent: -1.3em;
 }
-
-.c-privacy__content-name {}
 
 .c-privacy__content-desc {
     font-size: 16px;
 }
 
 .c-privacy__desc-in-list {
+    /* TODO: 適切な数字を設定する */
     padding-left: 1.3em;
     text-indent: -1.3em;
 }
