@@ -176,7 +176,8 @@ img {
 }
 
 .l-header+* {
-    margin-top: clamp(20px, 5.915px + 3.756vw, 60px);
+    /* ヘッダーの直下に空白作るのはページ個別で。後で消します */
+    /* margin-top: clamp(20px, 5.915px + 3.756vw, 60px); */
 }
 
 /* footer */
