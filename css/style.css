@@ -608,14 +608,13 @@ a.c-share-btn::after {
     border-bottom: 1px solid var(--black);
 }
 
-.c-privacy-content {
+.c-privacy-list {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-bottom: 60px;
 }
 
-.c-privacy-content__title {
+.c-privacy-list__title {
     display: flex;
     font-size: 18px;
     font-weight: bold;
@@ -626,14 +625,14 @@ a.c-share-btn::after {
     text-indent: -1em;
 }
 
-.c-privacy-content__desc {
+.c-privacy-list__desc {
     font-size: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
     margin-bottom: 20px;
 }
 
-.c-privacy-content__desc-in-list {
+.c-privacy-list__desc-in-list {
     /* TODO nagata: 適切な数字を設定する */
     padding-left: 1.4em;
     text-indent: -1.4em;
@@ -641,19 +640,22 @@ a.c-share-btn::after {
 
 .l-privary {
     /* TODO nagata: 持っていけるならあとで共通化 */
+    background: var(--childPage-bg);
+}
+
+.l-privary-content {
+    /* TODO nagata: 持っていけるならあとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
-    background-color: var(--childPage-bg);
-
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 
     /* TODO nagata: 共通化できる？ */
     line-height: 1.2;
 }
 
 /* TODO nagata: 共通化できるならやる */
-.l-privary>.c-section-title {
-    margin-top: 20px;
+.l-privary-content>.c-section-title {
+    padding-top: 20px;
 }
 
 @media (min-width: 768px) {
