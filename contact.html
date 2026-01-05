@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Zen+Maru+Gothic&display=swap"
         rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
@@ -18,41 +18,29 @@
 
 <body>
     <header class="l-header">
-      <div class="c-header__title">
-        <img src="./img/logo_line_01.png" alt="ふくおか餃子FES" />
-      </div>
-      <div class="l-header__icons">
-        <ul class="l-sns-list">
-          <li class="c-sns-icon">
-            <a href="#"
-              ><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"
-            /></a>
-          </li>
-          <li class="c-sns-icon">
-            <a href="#"
-              ><img
-                src="./img/sns_icon_instagram.png"
-                alt="福岡餃子フェス 公式Instagram"
-            /></a>
-          </li>
-          <li class="c-sns-icon">
-            <a href="#"
-              ><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE"
-            /></a>
-          </li>
-        </ul>
-        <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
-        <div class="c-header__hamburger-menu">
-          <img
-            src="./img/hamburger_menu_open.png"
-            alt="ハンバーガーメニューアイコン"
-          />
+        <div class="c-header__title">
+            <img src="./img/logo_line_01.png" alt="ふくおか餃子FES" />
         </div>
-      </div>
+        <div class="l-header__icons">
+            <ul class="l-sns-list">
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X" /></a>
+                </li>
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_instagram.png" alt="福岡餃子フェス 公式Instagram" /></a>
+                </li>
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE" /></a>
+                </li>
+            </ul>
+            <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
+            <div class="c-header__hamburger-menu">
+                <img src="./img/hamburger_menu_open.png" alt="ハンバーガーメニューアイコン" />
+            </div>
+        </div>
     </header>
     <main class="l-main">
-        <p class="c-title-deco">Contact Us</p>
-        <h1 class="c-pagetitle">お問い合わせ</h1>
+        <h1 class="c-section-title" data-sub-title="Contact Us">お問い合わせ</h1>
         <P class="c-describe">お問い合わせは、以下のメールフォームをご利用ください。</P>
         <p class="c-caution">※回答に数日を要する場合がございますこと予めご了承ください。</p>
         <form class="l-form" action="send.php" method="post">
