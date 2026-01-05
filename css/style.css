@@ -331,6 +331,7 @@ body {}
 main.l-menu-b p {
     letter-spacing: 1.6px;
     line-height: 1.2;
+    padding-block-start: 13px;
 }
 
 /* メニュ―詳細ページ内の共通項 */
@@ -344,8 +345,8 @@ main.l-menu-b p {
 
 /* メインコンテンツの幅・配置 */
 main.l-menu-b .c-main-container {
-    width: 100%;
-    margin-inline: auto;
+    /* width: 100%; */
+    /* margin-inline: auto; */
     background-color: var(--black);
 }
 
@@ -394,9 +395,11 @@ main.l-menu-b .c-main-container {
 }
 
 .c-menu-b-card img {
-    width: 100%;
+    width: 100vw;
     height: 310px;
     object-fit: cover;
+    position: absolute;
+    right: 0;
 }
 
 .c-menu-b-img-pc {
@@ -427,13 +430,13 @@ main.l-menu-b .c-main-container {
 
 /* 共有ボタン */
 .c-share-btn {
-    width: 100%;
+    width: calc(100% - 4px);
     height: 62px;
     background: var(--white2);
     border: var(--black) solid 1px;
     display: flex;
-    justify-content: center;
-    filter: drop-shadow(4px 4px 0 var(--white2));
+    gap: clamp(12px, 9.183px + 0.751vw, 20px);
+    box-shadow: 4px 4px 0 var(--white2);
 }
 
 a.c-share-btn {
@@ -442,8 +445,7 @@ a.c-share-btn {
     color: var(--black);
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 
 a.c-share-btn::after {
@@ -508,6 +510,7 @@ a.c-share-btn::after {
 
     .c-menu-b-img-pc {
         display: block;
+        align-self: anchor-center;
     }
 
     .c-menu-b-img-sp {
@@ -521,10 +524,10 @@ a.c-share-btn::after {
     }
 
     .c-menu-b-card-cnt_img {
+        width: 100%;
+        position: relative;
+        padding-block: 50%;
         grid-row: 1 / 5;
-
-        place-content: center;
-        place-items: center;
     }
 
 
