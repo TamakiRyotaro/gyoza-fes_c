@@ -303,7 +303,10 @@ img {
 .c-access-list-button::before{
   content: url(../img/top-ruto-sp.svg);
 }
+/* kantodo:PCとレイアウトを変える */
 .c-access-list-button{
+  font-size: 12px;
+  font-weight: light;
   display: inline-block;
   border: 0.5px solid var(--black);
   padding: 3px 2px;
