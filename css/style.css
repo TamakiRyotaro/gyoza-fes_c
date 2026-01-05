@@ -236,7 +236,28 @@ img {
   margin-inline: auto;
 }
 
-body {
+/* kantodo:PCと変更する（可変させてもいい） */
+.c-sec-title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.l-mv-hero {
+  font-family: "Zen Antique Soft", serif;
+  color: #fff;
+  background-color: red;
+  background: url(../img/top-mainvisual.png) no-repeat center center/cover;
+ /* kantodo:背景画像が縦横いい感じになるようにする */
+  height: clamp(11.875rem, 7.804rem + 17.371vw, 23.438rem);
+}
+
+.l-catchcopy-flex{
+  display: flex;
+}
+
+.l-catchcopy-img{
+  height: 120px;
+  width: 120px;
 }
 
 .l-rest-image {
@@ -255,13 +276,60 @@ body {
   background-color: var(--red);
 }
 
+.c-info-list-title{
+  display: inline-block;
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 15px;
+}
+
+.c-info-list-desc{
+  border-bottom: 1px solid #BEBEBE;
+  margin-bottom: 30px;
+}
+
 .l-googlemap {
   width: min(92vw, 960px);
   height: 300px;
 }
+/* kantodo:見出し文の「・」の方法を考える */
+.c-access-list-title::before {
+  content: "・";
+}
+.c-access-list-title{
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-block;
+}
+.c-access-list-button::before{
+  content: url(../img/top-ruto-sp.svg);
+}
+.c-access-list-button{
+  display: inline-block;
+  border: 0.5px solid var(--black);
+  padding: 3px 2px;
+  background-color: transparent;
+  box-shadow: 2px 2px 0 0 var(--black);
+}
 
 .l-news-sec-bg {
   background-color: #eb8e3a;
+}
+
+.c-news-list-date{
+  font-size: 16px;
+  font-weight: bold;
+}
+.c-news-list-content::before {
+  content: "▷";
+}
+.c-news-list-content{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.c-news-list{
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 16px;
 }
 
 /* menu.html
