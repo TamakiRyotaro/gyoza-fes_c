@@ -17,7 +17,28 @@
 </head>
 
 <body>
-    <header></header>
+    <header class="l-header">
+        <div class="c-header__title">
+            <img src="./img/logo_line_01.png" alt="ふくおか餃子FES" />
+        </div>
+        <div class="l-header__icons">
+            <ul class="l-sns-list">
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X" /></a>
+                </li>
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_instagram.png" alt="福岡餃子フェス 公式Instagram" /></a>
+                </li>
+                <li class="c-sns-icon">
+                    <a href="#"><img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE" /></a>
+                </li>
+            </ul>
+            <!-- TODO: ハンバーガーメニューの実装は後で。画像仮置のみ -->
+            <div class="c-header__hamburger-menu">
+                <img src="./img/hamburger_menu_open.png" alt="ハンバーガーメニューアイコン" />
+            </div>
+        </div>
+    </header>
     <main>
         <p class="c-title-deco">FAQ</p>
         <h1 class="c-pagetitle">よくあるご質問</h1>
@@ -30,78 +51,127 @@
         </nav>
         <section id="event" class="c-section">
             <h2 class="c-section-title">イベントについて</h2>
-            <ul class="l-qa-list">
-                <li class="c-qa">
-                    <p class="c-question">入場料はかかりますか？</p>
-                    <p class="c-answer">入場は無料です。どなたでもご自由にお楽しみいただけます。飲食の購入は各店舗でお支払いください。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">開催時間を教えてください。</p>
-                    <p class="c-answer">平日は16:00 ~ 22:00、土日祝は11:00 ~ 22:00です。各日最終入場受付は21:00、ラストオーダーは21:15です。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">雨天の場合も開催されますか？</p>
-                    <p class="c-answer">雨天決行ですが、荒天の場合は安全を考慮し中止となる場合があります。最新情報はSNSでお知らせします。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">支払い方法を教えてください。</p>
-                    <p class="c-answer">現金のほか、主要な電子マネー・QRコード決済がご利用いただけます。</p>
-                </li>
-            </ul>
+            <dl class="l-qa-list">
+                <dt class="c-q">Q. </dt>
+                <dd class="c-question">入場料はかかりますか？</dd>
+                <dt class="c-a">A. </dt>
+                <dd class="c-answer">入場は無料です。どなたでもご自由にお楽しみいただけます。飲食の購入は各店舗でお支払いください。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">開催時間を教えてください。</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">平日は16:00 ~ 22:00、土日祝は11:00 ~ 22:00です。各日最終入場受付は21:00、ラストオーダーは21:15です。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">雨天の場合も開催されますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">雨天決行ですが、荒天の場合は安全を考慮し中止となる場合があります。最新情報はSNSでお知らせします。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">支払い方法を教えてください。</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">現金のほか、主要な電子マネー・QRコード決済がご利用いただけます。</dd>
+            </dl>
         </section>
         <section id="venue" class="c-section">
             <h2 class="c-section-title">会場について</h2>
-            <ul class="l-qa-list">
-                <li class="c-qa">
-                    <p class="c-question">喫煙所はありますか？</p>
-                    <p class="c-answer">会場内は全面禁煙ですが、敷地外に指定の喫煙エリアを設けています。スタッフの案内に従ってご利用ください。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">授乳室やおむつ替えスペースはありますか？</p>
-                    <p class="c-answer">はい、メインゲート付近に授乳室とおむつ替え台を設置しています。小さなお子様連れでも安心してご利用いただけます。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">駐車場はありますか？</p>
-                    <p class="c-answer">専用駐車場はございません。公共交通機関のご利用をおすすめします。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">ペットを連れて入場できますか？</p>
-                    <p class="c-answer">混雑が予想されるため、ペットの同伴はご遠慮ください。ただし補助犬は入場可能です。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">ゴミはどうすればよいですか？</p>
-                    <p class="c-answer">会場内に分別ゴミ箱を設置しています。リサイクルにご協力をお願いします。</p>
-                </li>
-            </ul>
+            <dl class="l-qa-list">
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">喫煙所はありますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">会場内は全面禁煙ですが、敷地外に指定の喫煙エリアを設けています。スタッフの案内に従ってご利用ください。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">授乳室やおむつ替えスペースはありますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">はい、メインゲート付近に授乳室とおむつ替え台を設置しています。小さなお子様連れでも安心してご利用いただけます。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">駐車場はありますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">専用駐車場はございません。公共交通機関のご利用をおすすめします。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">ペットを連れて入場できますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">混雑が予想されるため、ペットの同伴はご遠慮ください。ただし補助犬は入場可能です。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">ゴミはどうすればよいですか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">会場内に分別ゴミ箱を設置しています。リサイクルにご協力をお願いします。</dd>
+            </dl>
         </section>
         <section id="others" class="c-section">
             <h2 class="c-section-title">その他</h2>
-            <ul class="l-qa-list">
-                <li class="c-qa">
-                    <p class="c-question">忘れ物をした場合はどうすればよいですか？</p>
-                    <p class="c-answer">会場本部でお預かりしています。イベント終了後は実行委員会までお問い合わせください。</p>
+            <dl class="l-qa-list">
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">忘れ物をした場合はどうすればよいですか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">会場本部でお預かりしています。イベント終了後は実行委員会までお問い合わせください。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">トイレはどこにありますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">会場内に複数の仮設トイレを設置しています。マップの「トイレ」アイコンをご確認ください。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">SNSで写真を投稿しても良いですか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">はい、大歓迎です！公式ハッシュタグ「#ふくおか餃子FES」をつけて投稿してください。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">開催中止の場合はどうなりますか？</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">安全を最優先に判断し、中止の場合は公式サイトとSNSでお知らせします。</dd>
+                <dt class="c-q">Q.</dt>
+                <dd class="c-question">問い合わせ先を教えてください。</dd>
+                <dt class="c-a">A.</dt>
+                <dd class="c-answer">「お問い合わせ」ページのフォームまたは事務局メール宛にご連絡ください。</dd>
+            </dl>
+        </section>
+        <div class="c-btn c-btn--yellowred">
+            <a class="c-btn_link c-contact-btn" href="#contact">お問い合わせ</a>
+        </div>
+    </main>
+    <footer class="l-footer">
+        <div class="l-footer__title">
+            <img src="./img/logo_01.png" alt="" />
+            <dl class="l-footer__relevant-parties-list">
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">主催</dt>
+                    <dd class="c-footer__details">ふくおか餃子FES実行委員会</dd>
+                </div>
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">協賛</dt>
+                    <dd class="c-footer__details">九州餃子部</dd>
+                </div>
+                <div class="c-footer__relevant-parties-list-item">
+                    <dt class="c-footer__term">制作協力</dt>
+                    <dd class="c-footer__details">創造社リカレントスクール 福岡校</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="l-footer__content">
+            <div class="l-footer__contact">
+                <p class="c-footer__contact-item">ふくおか餃子FES実行委員会</p>
+                <p class="c-footer__contact-item">(tel:) 000-0000-0000</p>
+                <p class="c-footer__contact-item">xxxxxxxxxxx@xxx.com</p>
+            </div>
+            <ul class="l-sns-list l-sns-list--footer">
+                <li class="c-sns-icon c-sns-icon--footer">
+                    <a href="#">
+                        <img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X" />
+                    </a>
                 </li>
-                <li class="c-qa">
-                    <p class="c-question">トイレはどこにありますか？</p>
-                    <p class="c-answer">会場内に複数の仮設トイレを設置しています。マップの「トイレ」アイコンをご確認ください。</p>
+                <li class="c-sns-icon c-sns-icon--footer">
+                    <a href="#">
+                        <img src="./img/sns_icon_instagram.png" alt="福岡餃子フェス 公式Instagram" />
+                    </a>
                 </li>
-                <li class="c-qa">
-                    <p class="c-question">SNSで写真を投稿しても良いですか？</p>
-                    <p class="c-answer">はい、大歓迎です！公式ハッシュタグ「#ふくおか餃子FES」をつけて投稿してください。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">開催中止の場合はどうなりますか？</p>
-                    <p class="c-answer">安全を最優先に判断し、中止の場合は公式サイトとSNSでお知らせします。</p>
-                </li>
-                <li class="c-qa">
-                    <p class="c-question">問い合わせ先を教えてください。</p>
-                    <p class="c-answer">「お問い合わせ」ページのフォームまたは事務局メール宛にご連絡ください。</p>
+                <li class="c-sns-icon c-sns-icon--footer">
+                    <a href="#">
+                        <img src="./img/sns_icon_line.png" alt="福岡餃子フェス 公式LINE" />
+                    </a>
                 </li>
             </ul>
-        </section>
-        <a class="c-contact-btn" href="#">お問い合わせ</a>
-    </main>
-    <footer></footer>
+        </div>
+        <a href="#" class="c-privacy">プライバシーポリシー</a>
+        <small class="c-copyright">&copy;Copyright 2025 ふくおか餃子FES実行委員会</small>
+    </footer>
+</body>
+
+</html>
 
 </body>
 
