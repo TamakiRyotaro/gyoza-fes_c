@@ -472,6 +472,53 @@ a.c-share-btn::after {
 /* privacy.html
 ------------------------------ */
 
+.c-privacy__info-text {
+    /* pc18px */
+    font-size: 16px;
+    /* pc50px */
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--black);
+}
+
+.c-privacy__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--black);
+}
+
+.c-privacy__content-title {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.c-privacy__content-index {
+    width: 20px;
+}
+
+.c-privacy__content-name {}
+
+.c-privacy__content-desc {
+    font-size: 16px;
+}
+
+.c-privacy__desc-in-list {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+}
+
+.l-privary {
+    /* TODO: 持っていけるならあとで共通化 */
+    width: min(92vw, 960px);
+    margin-inline: auto;
+    background-color: var(--childPage-bg);
+
+    margin-bottom: 60px;
+}
+
 @media (min-width: 768px) {
     /* ベース
 ------------------------------ */
