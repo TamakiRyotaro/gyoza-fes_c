@@ -611,39 +611,51 @@ a.c-share-btn::after {
 .c-privacy-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     margin-top: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--black);
+    margin-bottom: 60px;
 }
 
 .c-privacy-content__title {
     display: flex;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 16px;
 
     /* TODO nagata: 適切な数字を設定する */
-    padding-left: 2ch;
-    text-indent: -2ch;
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 .c-privacy-content__desc {
     font-size: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 20px;
 }
 
 .c-privacy-content__desc-in-list {
     /* TODO nagata: 適切な数字を設定する */
-    padding-left: 2.8ch;
-    text-indent: -2.8ch;
+    /* padding-left: 2.8ch;
+    text-indent: -2.8ch; */
+    padding-left: 1.4em;
+    text-indent: -1.4em;
 }
 
 .l-privary {
-    /* TODO: 持っていけるならあとで共通化 */
+    /* TODO nagata: 持っていけるならあとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
     background-color: var(--childPage-bg);
 
     margin-bottom: 60px;
+
+    /* TODO nagata: 共通化できる？ */
+    line-height: 1.2;
+}
+
+/* TODO nagata: 共通化できるならやる */
+.l-privary>.c-section-title {
+    margin-top: 20px;
 }
 
 @media (min-width: 768px) {
