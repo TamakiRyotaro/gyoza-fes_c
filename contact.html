@@ -50,23 +50,23 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="l-main">
         <p class="c-title-deco">Contact Us</p>
         <h1 class="c-pagetitle">お問い合わせ</h1>
         <P class="c-describe">お問い合わせは、以下のメールフォームをご利用ください。</P>
         <p class="c-caution">※回答に数日を要する場合がございますこと予めご了承ください。</p>
-        <form action="send.php" method="post">
-            <label for="name"><span class="c-required">必須</span>お名前</label><br>
+        <form class="l-form" action="send.php" method="post">
+            <label class="c-name" for="name"><span class="c-required">必須</span>お名前</label><br>
             <input type="text" id="name" name="name" placeholder="餃子 太郎" required><br>
-            <label for="kana"><span class="c-required">必須</span>フリガナ</label><br>
+            <label class="c-kana" for="kana"><span class="c-required">必須</span>フリガナ</label><br>
             <input type="text" id="kana" name="kana" placeholder="ギョウザ タロウ" required><br>
 
             <!-- メールアドレス -->
-            <label for="email"><span class="c-required">必須</span>メールアドレス</label><br>
+            <label class="c-email" for="email"><span class="c-required">必須</span>メールアドレス</label><br>
             <input type="text" id="email" name="email" placeholder="tarogyouza@xxxx.ne.jp" required><br>
 
             <!-- 問い合わせ内容 -->
-            <label for="message"><span class="c-required">必須</span>お問い合わせ内容:</label><br>
+            <label class="c-message" for="message"><span class="c-required">必須</span>お問い合わせ内容:</label><br>
             <textarea id="message" name="message" required></textarea><br>
 
             <!-- 確認ボタン -->
