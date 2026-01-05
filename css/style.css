@@ -327,11 +327,6 @@ body {}
 /* menu-b-XX.html
 ------------------------------ */
 /* 共通cssで代替される？ */
-.c-menu-b-wrapper {
-    /* width: clamp(365px, 155.493px + 55.869vw, 960px); */
-    padding-inline: clamp(15px, 13.239px + 0.469vw, 20px);
-    max-width: 960px;
-}
 
 main.l-menu-b p {
     letter-spacing: 1.6px;
@@ -351,7 +346,15 @@ main.l-menu-b p {
 main.l-menu-b .c-main-container {
     width: 100%;
     margin-inline: auto;
+    background-color: var(--black);
 }
+
+.c-menu-b-wrapper {
+    max-width: 92%;
+    margin-inline: auto;
+
+}
+
 
 /* コンポーネント */
 .c-menu-b-card h1 {
@@ -378,7 +381,7 @@ main.l-menu-b .c-main-container {
 }
 
 .c-menu-b-card {
-    background-color: var(--black);
+
     display: grid;
     grid-template-rows: 76px 310px auto;
     grid-template-columns: 1fr;
