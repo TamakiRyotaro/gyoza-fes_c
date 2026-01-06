@@ -612,7 +612,7 @@ a.c-share-btn::after {
 }
 
 .c-news-item__title {
-    font-size: 16px;
+    display: inline;
 }
 
 .c-news-item__detail {
