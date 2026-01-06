@@ -39,7 +39,7 @@
 
 
 
-  <body>
+  <body class="toppage-body">
   
   
     <header class="l-header">
@@ -67,31 +67,31 @@
           <h1>福岡餃子フェス</h1>
           <p>ひとくちごとに、新しい体験。</p>
         </div>
-        <p class="l-mv-hero-address">
-          <span class="l-mv-hero-address-title">開催会場</span>長浜公園
-        </p>
+        <dl class="l-mv-hero-address">
+          <dd class="l-mv-hero-address-title">開催会場</dd>
+          <dt class="l-mv-hero-address-detail">長浜公園</dt>
+        </dl>
       </div>
   
       <div class="l-mv-schedule">
-        <p class="l-mv-schedule-date">
-          <span class="c-mv-schedule-title c-mv-schedule-title--date">
+        <dl class="l-mv-schedule-date">
+          <dt class="c-mv-schedule-title c-mv-schedule-title--date">
             開催日程
-          </span>
-          <span class="c-mv-schedule-detail c-mv-schedule-detail--date">
+          </dt>
+          <dd class="c-mv-schedule-detail c-mv-schedule-detail--date">
             <time datetime="2030-04-27">2030年<br />4/27(日)</time>ー<time datetime="2030-05-12">5/12(日)</time>
-          </span>
-        </p>
-        <p class="l-mv-schedule-time">
-          <span class="c-mv-schedule-title c-mv-schedule-title--time">
+          </dd>
+        </dl>
+        <dl class="l-mv-schedule-time">
+          <dt class="c-mv-schedule-title c-mv-schedule-title--time">
             営業時間
-          </span>
-  
-          <span class="c-mv-schedule-detail c-mv-schedule-detail--time">
+          </dt>
+          <dd class="c-mv-schedule-detail c-mv-schedule-detail--time">
             平日 16:00 ～ 22:00<br />
             土日祝 11:00 ～ 22:00<br />
             <span class="e-last-time">最終入場受付21:00(L.O. 21:15)</span>
-          </span>
-        </p>
+          </dd>
+        </dl>
       </div>
   
       <div class="l-mv-catchcopy">
@@ -109,10 +109,10 @@
             ここはまるで餃子のテーマパーク。
           </p>
           <p class="l-catchcopy-other-desc">
-            香ばしく焼き上げられた皮の<i>パリッ</i>とした食感、<br />
-            <i>ジューシー</i>な肉汁、個性あふれるタレの<i>ハーモニー</i>&hellip;<br />
-            ひとくち食べるたびに、<b>新しい味</b>
-            、<b>新しい驚き</b>、<b>新しい発見</b>が待っています。
+            香ばしく焼き上げられた皮の<span class="c-catchcopy-sound">パリッ</span>とした食感、<br/>
+            <span class="c-catchcopy-sound">ジューシー</span>な肉汁、個性あふれるタレの<span class="c-catchcopy-sound">ハーモニー</span>&hellip;<br/>
+            ひとくち食べるたびに、新しい味
+            、新しい驚き、新しい発見が待っています。
           </p>
           <p class="l-catchcopy-other-introduction">
             さあ、あなたもこの美味しい<b>冒険</b>に出かけませんか？
@@ -239,7 +239,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659.4577417374079!2d130.3936563315363!3d33.593402390845505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541918916ac1a97%3A0x38ef1af8385772cc!2z6ZW35rWc5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1766986989523!5m2!1sja!2sjp"
                 width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <dl class="l-access-list">
+              <dl class=" ">
                 <dt class="c-access-list-title">地下鉄天神駅から徒歩10分</dt>
                 <dd><a class="c-access-list-button" target="_blank"
                     href="https://maps.app.goo.gl/q6LJtK4AdoUq5qSx7">会場までの経路</a></dd>
@@ -265,17 +265,24 @@
           <!-- attention:Newsの装飾は::before -->
           <h2 class="c-sec-title l-sec-title--news">お知らせ</h2>
           <ul class="l-news-list">
+            <!-- akntodo:永田さんのアコーディオンメニューに飛ばすのを忘れない！ -->
             <li class="c-news-list c-news-list--2030.02.25">
-              <time class="c-news-list-date" datetime="2030-02-25">2030.2.25（月）</time>
-              <p class="c-news-list-content">出店者インタビュー　博多区で人気の「博多ぎょうざ堂」</p>
+              <a href="news.html">
+                <time class="c-news-list-date" datetime="2030-02-25">2030.2.25（月）</time>
+                <p class="c-news-list-content">出店者インタビュー　博多区で人気の「博多ぎょうざ堂」</p>
+              </a>
             </li>
             <li class="c-news-list c-news-list--2030.2.23">
-              <time class="c-news-list-date" datetime="2030-02-23">2030.2.23（土）</time>
-              <p class="c-news-list-content">出店企業様募集中！</p>
+              <a href="news.html">
+                <time class="c-news-list-date" datetime="2030-02-23">2030.2.23（土）</time>
+                <p class="c-news-list-content">出店企業様募集中！</p>
+              </a>
             </li>
             <li class="c-news-list c-news-list--2030.2.16">
-              <time class="c-news-list-date" datetime="2030-02-16">2030.2.16（土）</time>
-              <p class="c-news-list-content">ふくおか餃子FES開催決定！</p>
+              <a href="news.html">
+                <time class="c-news-list-date" datetime="2030-02-16">2030.2.16（土）</time>
+                <p class="c-news-list-content">ふくおか餃子FES開催決定！</p>
+              </a>
             </li>
           </ul>
           <!-- お知らせー一覧btn -->

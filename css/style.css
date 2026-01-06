@@ -250,6 +250,11 @@ img {
 
 /* index.html(kansp)
 ------------------------------ */
+
+.toppage-body{
+    line-height:1.5;
+}
+
 .l-content-wrap {
     width: min(92vw, 960px);
     margin-inline: auto;
@@ -271,14 +276,9 @@ img {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(175, 175, 175, 0));
 }
 
-.l-mv-hero-address-title{
-    display: block;
-}
-
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #fff;
-    background-color: red;
     background: url(../img/top-mainvisual.png) no-repeat center center/cover;
     aspect-ratio: 2/1;
 }
@@ -328,6 +328,11 @@ img {
     margin-bottom: 30px;
 }
 
+.c-info-list-desc:last-child {
+    border-bottom: none;
+    padding-bottom: none;
+}
+
 .l-googlemap {
     width: min(92vw, 960px);
     height: 300px;
@@ -345,9 +350,13 @@ img {
 }
 
 .c-access-list-button::before {
+    /* kantodo:アイコンの位置が変だから変えたい */
     content: url(../img/top-ruto-sp.svg);
+    display: inline-block;
+    background-color: red;
 }
 /* kantodo:PCとレイアウトを変える */
+
 .c-access-list-button{
   font-size: 12px;
   font-weight: light;
@@ -355,7 +364,7 @@ img {
   border: 0.5px solid var(--black);
   padding: 3px 2px;
   background-color: transparent;
-  box-shadow: 2px 2px 0 0 var(--black);
+  box-shadow: 2px 2px 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
 .l-news-sec-bg {
