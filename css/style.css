@@ -654,13 +654,13 @@ a.c-share-btn::after {
     border-bottom: 1px solid var(--black);
 }
 
-.c-privacy-list {
+.c-privacy-item {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.c-privacy-list__title {
+.c-privacy-item__title {
     display: flex;
     font-size: 18px;
     font-weight: bold;
@@ -671,14 +671,14 @@ a.c-share-btn::after {
     text-indent: -1em;
 }
 
-.c-privacy-list__desc {
+.c-privacy-item__desc {
     font-size: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
     margin-bottom: 20px;
 }
 
-.c-privacy-list__desc-in-list {
+.c-privacy-item__desc-in-list {
     /* TODO nagata: 適切な数字を設定する */
     padding-left: 1.4em;
     text-indent: -1.4em;
