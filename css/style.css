@@ -484,6 +484,10 @@ main.l-menu-b p {
   color: var(--white2);
 }
 
+main.l-menu-b img {
+  aspect-ratio: 12 / 10;
+}
+
 /* メインコンテンツの幅・配置 */
 main.l-menu-b .c-main-container {
   /* width: 100%; */
@@ -492,8 +496,8 @@ main.l-menu-b .c-main-container {
 }
 
 .c-menu-b-wrapper {
-  max-width: 92%;
-  margin-inline: auto;
+  max-width: none;
+  margin: 0;
 }
 
 /* コンポーネント */
@@ -506,6 +510,7 @@ main.l-menu-b .c-main-container {
   margin: auto 0;
   gap: 8px;
   padding-block-end: 16px;
+  margin-inline: 4%;
 }
 
 .c-menu-b-card h1 span {
@@ -522,21 +527,23 @@ main.l-menu-b .c-main-container {
 
 .c-menu-b-card {
   display: grid;
-  grid-template-rows: 76px 310px auto;
+  /* grid-template-rows: 76px 310px auto; */
   grid-template-columns: 1fr;
   padding-block: 20px;
 }
 
+.c-menu-b-card_text {
+  max-width: 92%;
+  margin-inline: auto;
+}
+
 .c-menu-b-card-cnt_title {
-  place-content: center;
 }
 
 .c-menu-b-card img {
-  width: 100vw;
-  height: 310px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  position: absolute;
-  right: 0;
 }
 
 .c-menu-b-img-pc {
@@ -736,6 +743,7 @@ a.c-share-btn::after {
 ------------------------------ */
   .c-menu-b-wrapper {
     max-width: 96%;
+    margin-inline: auto;
   }
 
   main.l-menu-b {
@@ -770,7 +778,6 @@ a.c-share-btn::after {
   .c-menu-b-card-cnt_img {
     width: 100%;
     position: relative;
-    padding-block: 50%;
     grid-row: 1 / 5;
   }
 
