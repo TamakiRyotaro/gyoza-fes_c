@@ -607,13 +607,21 @@ a.c-share-btn::after {
 /* 奇数指定 */
 /* .c-news-item>*:nth-child(odd) {} */
 
-.c-news-item__data {}
+.c-news-item__data {
+    font-size: 16px;
+}
 
-.c-news-item__title {}
+.c-news-item__title {
+    font-size: 16px;
+}
 
-.c-news-item__detail {}
+.c-news-item__detail {
+    font-size: 16px;
+}
 
-.c-news-item__text {}
+.c-news-item__text {
+    font-size: 16px;
+}
 
 .l-news {
     /* TODO nagata: 持っていけるならあとで共通化 */
