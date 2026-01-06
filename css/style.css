@@ -596,6 +596,20 @@ a.c-share-btn::after {
 /* news.html
 ------------------------------ */
 
+.c-news-item {}
+
+.c-news-item__data {}
+
+.c-news-item__title {}
+
+.c-news-item__detail {}
+
+.c-news-item__text {}
+
+.l-news {}
+
+.l-news-content {}
+
 /* privacy.html
 ------------------------------ */
 
