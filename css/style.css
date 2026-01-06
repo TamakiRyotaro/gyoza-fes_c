@@ -412,14 +412,17 @@ img {
     width: clamp(21.563rem, 24.093rem + -10.798vw, 14.375rem);
     margin-inline: auto;
     line-height: 1.5;
-    padding: 10px;
+    padding: 24px 12px;
     margin-bottom: 10px;
 }
 
 .c-menu-card h2 {
     font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
     font-weight: bold;
-    margin-bottom: 34px;
+}
+
+.c-menu-card__img {
+    margin: 34px 0 20px;
 }
 
 .c-share-link {
@@ -440,9 +443,8 @@ img {
     width: clamp(15.625rem, 17.386rem + -7.512vw, 10.625rem);
     height: clamp(2.75rem, 2.926rem + -0.751vw, 2.25rem);
     background: var(--black);
-    border: var(--white) solid 1px;
-    box-shadow: 4px 4px 0 var(--black),
-        4px 4px 0 1px var(--white);
+    border: var(--white2) solid 1px;
+    box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
 }
 
 .c-button-goto-booth::before {
