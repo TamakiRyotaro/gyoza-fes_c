@@ -596,7 +596,16 @@ a.c-share-btn::after {
 /* news.html
 ------------------------------ */
 
-.c-news-item {}
+.c-news-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* PC版はこっち */
+    /* grid-template-columns: 120px 1fr; */
+    border-bottom: 1px solid var(--black);
+}
+
+/* 奇数指定 */
+/* .c-news-item>*:nth-child(odd) {} */
 
 .c-news-item__data {}
 
@@ -606,9 +615,25 @@ a.c-share-btn::after {
 
 .c-news-item__text {}
 
-.l-news {}
+.l-news {
+    /* TODO nagata: 持っていけるならあとで共通化 */
+    background: var(--childPage-bg);
+}
 
-.l-news-content {}
+.l-news-content {
+    /* TODO nagata: 持っていけるならあとで共通化 */
+    width: min(92vw, 960px);
+    margin-inline: auto;
+    padding-bottom: 60px;
+
+    /* TODO nagata: 共通化できる？ */
+    line-height: 1.2;
+}
+
+/* TODO nagata: 共通化できるならやる */
+.l-news-content>.c-section-title {
+    padding-top: 20px;
+}
 
 /* privacy.html
 ------------------------------ */
