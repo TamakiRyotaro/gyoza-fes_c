@@ -607,6 +607,53 @@ a.c-share-btn::after {
 /* news.html
 ------------------------------ */
 
+.c-news-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* PC版はこっち */
+    /* grid-template-columns: 120px 1fr; */
+    border-bottom: 1px solid var(--black);
+}
+
+/* 奇数指定 */
+/* .c-news-item>*:nth-child(odd) {} */
+
+.c-news-item__data {
+    font-size: 16px;
+}
+
+.c-news-item__title {
+    display: inline;
+}
+
+.c-news-item__detail {
+    font-size: 16px;
+}
+
+.c-news-item__text {
+    font-size: 16px;
+}
+
+.l-news {
+    /* TODO nagata: 持っていけるならあとで共通化 */
+    background: var(--childPage-bg);
+}
+
+.l-news-content {
+    /* TODO nagata: 持っていけるならあとで共通化 */
+    width: min(92vw, 960px);
+    margin-inline: auto;
+    padding-bottom: 60px;
+
+    /* TODO nagata: 共通化できる？ */
+    line-height: 1.2;
+}
+
+/* TODO nagata: 共通化できるならやる */
+.l-news-content>.c-section-title {
+    padding-top: 20px;
+}
+
 /* privacy.html
 ------------------------------ */
 
@@ -618,13 +665,13 @@ a.c-share-btn::after {
     border-bottom: 1px solid var(--black);
 }
 
-.c-privacy-list {
+.c-privacy-item {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.c-privacy-list__title {
+.c-privacy-item__title {
     display: flex;
     font-size: 18px;
     font-weight: bold;
@@ -635,14 +682,14 @@ a.c-share-btn::after {
     text-indent: -1em;
 }
 
-.c-privacy-list__desc {
+.c-privacy-item__desc {
     font-size: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
     margin-bottom: 20px;
 }
 
-.c-privacy-list__desc-in-list {
+.c-privacy-item__desc-in-list {
     /* TODO nagata: 適切な数字を設定する */
     padding-left: 1.4em;
     text-indent: -1.4em;
