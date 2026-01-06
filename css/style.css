@@ -280,8 +280,7 @@ img {
     color: #fff;
     background-color: red;
     background: url(../img/top-mainvisual.png) no-repeat center center/cover;
-    /* kantodo:背景画像が縦横いい感じになるようにする */
-    height: clamp(11.875rem, 7.804rem + 17.371vw, 23.438rem);
+    aspect-ratio: 2/1;
 }
 
 .c-mv-schedule-title{
