@@ -142,22 +142,26 @@
             if (!body) return;
 
             // 初期状態（最初からopenなら即表示）
-            if (details.open) details.classList.add("is-open");
+            if (details.open) details.classList.add("is-open", "is-icon-open");
 
             details.addEventListener("toggle", () => {
                 // 閉じるときはリセット
                 if (!details.open) {
-                    details.classList.remove("is-animation", "is-open");
+                    details.classList.remove("is-animation", "is-open", "is-icon-open");
                     return;
                 }
+
+                // 開いた瞬間にアイコンを回す（本文アニメ開始と同時）
+                details.classList.add("is-icon-open");
 
                 // アニメーション実行のためにis-animationクラスを付与
                 details.classList.remove("is-open");
                 details.classList.add("is-animation");
 
-                // 終了後の状態を固定するためにアニメーション完了後にis-openクラスを付与
+                // 終了後の状態を固定するためにアニメーション完了後にis-open, is-icon-openクラスを付与
                 body.addEventListener("animationend", (e) => {
                     if (e.target !== body) return;
+
                     details.classList.remove("is-animation");
                     details.classList.add("is-open");
                 }, { once: true });
