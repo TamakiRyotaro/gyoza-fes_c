@@ -645,6 +645,8 @@ a.c-share-btn::after {
     grid-template-columns: 1fr;
     /* PC版はこっち */
     /* grid-template-columns: 120px 1fr; */
+
+    padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
 }
 
