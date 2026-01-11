@@ -135,37 +135,32 @@
         <small class="c-copyright">&copy;Copyright&nbsp;2025&nbsp;ふくおか餃子FES実行委員会</small>
     </footer>
     <script>
+        // 雰囲気でJSを書いているので確認して外に持っていきたい（js/NewsDetailsOpenAnimation.js）
+        // 開閉状態毎にクラスを付与して、その時に合わせた表示になるように実行
         document.querySelectorAll(".c-news-item__details").forEach((details) => {
             const body = details.querySelector(".c-news-item__body");
             if (!body) return;
 
-            // ページ読み込み時に最初から open のものは、そのまま表示状態にする
+            // 初期状態（最初からopenなら即表示）
             if (details.open) details.classList.add("is-open");
 
             details.addEventListener("toggle", () => {
-                // 閉じたらクラスを掃除
+                // 閉じるときはリセット
                 if (!details.open) {
-                    details.classList.remove("is-animating", "is-open");
+                    details.classList.remove("is-animation", "is-open");
                     return;
                 }
 
-                // prefers-reduced-motion の場合は即表示
-                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-                    details.classList.add("is-open");
-                    return;
-                }
-
-                // open直後はCSSで既に opacity:0 になってるので「一瞬見える」が発生しない
+                // アニメーション実行のためにis-animationクラスを付与
                 details.classList.remove("is-open");
-                details.classList.add("is-animating");
+                details.classList.add("is-animation");
 
-                const onEnd = (e) => {
+                // 終了後の状態を固定するためにアニメーション完了後にis-openクラスを付与
+                body.addEventListener("animationend", (e) => {
                     if (e.target !== body) return;
-                    details.classList.remove("is-animating");
-                    details.classList.add("is-open"); // 最終状態へ固定
-                    body.removeEventListener("animationend", onEnd);
-                };
-                body.addEventListener("animationend", onEnd, { passive: true });
+                    details.classList.remove("is-animation");
+                    details.classList.add("is-open");
+                }, { once: true });
             });
         });
     </script>
