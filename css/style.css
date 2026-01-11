@@ -673,13 +673,9 @@ a.c-share-btn::after {
     transition: transform 0.2s ease;
 }
 
-.c-news-item__details.is-icon-open>.c-news-item__summary::before {
-    transform: rotate(90deg);
-    content: "▶";
-}
-
 /* アコーディオンOPEN時 アニメーション関連処理 */
 /* 初期位置を設定 */
+/* ちらつき防止で透明度0＋フェード初期位置に変更 */
 .c-news-item__details[open] .c-news-item__body {
     opacity: 0;
     transform: translateY(-12px);
@@ -690,11 +686,17 @@ a.c-share-btn::after {
     animation: fadeIn 0.85s ease both;
 }
 
-/* アニメーション終了時の固定 */
+/* アニメーション終了時の状態固定 */
 .c-news-item__details.is-open[open] .c-news-item__body {
     opacity: 1;
     transform: none;
     animation: none;
+}
+
+/* アイコンのアニメーション処理（回転＋アイコン変更） */
+.c-news-item__details.is-icon-open>.c-news-item__summary::before {
+    transform: rotate(90deg);
+    content: "▶";
 }
 
 @keyframes fadeIn {
