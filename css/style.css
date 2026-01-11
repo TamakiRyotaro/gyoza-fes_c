@@ -673,7 +673,7 @@ a.c-share-btn::after {
     transition: transform 0.2s ease;
 }
 
-/* アコーディオンOPEN時 アニメーション関連処理 */
+/* ----- アコーディオンOPEN時 アニメーション関連処理 -----  */
 /* 初期位置を設定 */
 /* ちらつき防止で透明度0＋フェード初期位置に変更 */
 .c-news-item__details[open] .c-news-item__body {
@@ -711,7 +711,7 @@ a.c-share-btn::after {
     }
 }
 
-/* アコーディオンオープン時アニメーション関連処理 ここまで */
+/* ----- アコーディオンオープン時アニメーション関連処理 ここまで -----  */
 
 .c-news-item__title {
     display: inline;
