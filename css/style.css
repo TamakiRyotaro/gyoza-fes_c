@@ -268,8 +268,16 @@ img {
 
 /* kantodo:PCと変更する（可変させてもいい）*/
 .c-sec-title {
-    font-size: 24px;
+    font-size: 5vw;
     font-weight: bold;
+}
+.c-sec-title::before {
+    content: attr(data-sub-title);
+    font-family: "Abhaya Libre", serif;
+    font-size: 2.5vw;
+    font-weight: 800;
+    border-bottom: 1px solid var(--black);
+    width: fit-content;
 }
 
 /* メインビジュアル設定 */
@@ -463,7 +471,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-.l-news-sec-bg {
+.l-sec--news-bg {
     background-color: #eb8e3a;
 }
 
@@ -938,7 +946,7 @@ a.c-share-btn::after {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 10%;
+        gap: 8%;
     }
     /* menu.html
 ------------------------------ */
