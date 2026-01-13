@@ -16,7 +16,7 @@
 body {
     font-family: "Zen Maru Gothic", sans-serif;
     color: var(--black);
-    letter-spacing: 1.6px;
+    letter-spacing: 0.05em line-height:1.5;
 }
 
 img {
@@ -25,7 +25,6 @@ img {
 
 /* 共通
 ------------------------------ */
-/* 提案：下層ページbody+footer */
 /* 下層ページの最背面背景色 */
 .l-body-sub {
     background: var(--childPage-bg);
@@ -193,8 +192,7 @@ img {
     gap: clamp(20px, 15.07px + 1.315vw, 34px);
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
     background-color: var(--white);
-    /* 下記margin-topは共通化したいな～の提案です */
-    /* margin-top: clamp(80px, 58.873px + 5.634vw, 140px); */
+    margin-top: clamp(80px, 58.873px + 5.634vw, 140px);
 
 }
 
@@ -281,6 +279,7 @@ img {
     position: relative;
     text-shadow: 3px 3px 9px #000000;
 }
+
 .l-mv-hero-title {
     position: absolute;
     left: 0;
@@ -291,12 +290,15 @@ img {
             rgba(175, 175, 175, 0));
     padding-left: clamp(0.313rem, -0.458rem + 3.286vw, 2.5rem);
 }
-.l-mv-hero-title h1{
-    font-size: clamp(1.5rem, -0.085rem + 6.761vw, 6rem); 
+
+.l-mv-hero-title h1 {
+    font-size: clamp(1.5rem, -0.085rem + 6.761vw, 6rem);
 }
-.l-mv-hero-title p{
+
+.l-mv-hero-title p {
     font-size: clamp(0.875rem, 0.127rem + 3.192vw, 3rem);
 }
+
 .l-mv-hero-address {
     position: absolute;
     right: 0;
@@ -307,10 +309,12 @@ img {
             rgba(175, 175, 175, 0));
     padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(1.25rem, -0.511rem + 7.512vw, 6.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
 }
-.l-mv-hero-address-title{
+
+.l-mv-hero-address-title {
     font-size: clamp(0.875rem, 0.479rem + 1.69vw, 2rem);
     font-weight: normal;
 }
+
 .l-mv-hero-address-detail {
     font-size: clamp(1.25rem, 0.282rem + 4.131vw, 4rem);
     font-weight: normal;
@@ -318,13 +322,14 @@ img {
 
 
 /* 開催日時のメインビジュアル記述 */
-.l-mv-schedule-flex{
+.l-mv-schedule-flex {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-left: clamp(0rem, 15.2vw, 3.563rem);
     margin-block: clamp(1.25rem, 0.590rem + 2.817vw, 3.125rem);
 }
+
 .c-mv-schedule-title {
     display: inline-block;
     font-size: clamp(1.25rem, 0.986rem + 1.127vw, 2rem);
@@ -333,29 +338,35 @@ img {
     padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
     background-color: #e22a00;
 }
-.c-mv-schedule-detail{
+
+.c-mv-schedule-detail {
     font-weight: bold;
 }
-.c-mv-schedule-detail--date{
+
+.c-mv-schedule-detail--date {
     font-size: clamp(1.5rem, 0.818rem + 2.911vw, 3.438rem);
 }
-.c-mv-schedule-detail--time{
+
+.c-mv-schedule-detail--time {
     font-size: clamp(1.25rem, 0.810rem + 1.878vw, 2.5rem);
 }
+
 .e-last-time {
     font-size: clamp(1.125rem, 0.817rem + 1.315vw, 2rem);
 }
 
 /* キャッチコピーのメインビジュアル記述 */
-.l-mv-catchcopy-bg{
+.l-mv-catchcopy-bg {
     background-image: var(--childPage-bg);
     aspect-ratio: 8/5;
 }
-.l-mv-catchcopy{
+
+.l-mv-catchcopy {
     position: relative;
     display: flex;
     justify-content: center;
 }
+
 .l-catchcopy-flex {
     position: absolute;
     top: 8%;
@@ -364,16 +375,19 @@ img {
     align-items: center;
     gap: 3%;
 }
+
 .l-catchcopy-img {
     aspect-ratio: 1.5/1;
     width: 50%;
 }
-.l-catchcopy-attention{
+
+.l-catchcopy-attention {
     display: inline-block;
     font-size: 4.5vw;
     font-weight: bold;
 }
-.l-catchcopy-other{
+
+.l-catchcopy-other {
     width: 78%;
     height: 40%;
     display: flex;
@@ -388,11 +402,13 @@ img {
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
-.c-catchcopy-sound{
+
+.c-catchcopy-sound {
     /* kantodo:グラデーションの下線を引く */
-    color:red;
+    color: red;
 }
-.c-catchcopy-accent{
+
+.c-catchcopy-accent {
     /* kantodo:グラデーションの下線を引く */
     color: red;
 }
@@ -940,6 +956,7 @@ a.c-share-btn::after {
         justify-content: center;
         gap: 10%;
     }
+
     /* menu.html
 ------------------------------ */
 
