@@ -24,8 +24,11 @@ img {
 
 /* 共通
 ------------------------------ */
-
-
+/* 提案：下層ページbody+footer */
+/* 下層ページの最背面背景色 */
+.l-body-sub {
+    background: var(--childPage-bg);
+}
 
 /* 下層ページ見出し */
 .c-section-title {
@@ -187,10 +190,11 @@ img {
     flex-direction: column;
     align-items: center;
     gap: clamp(20px, 15.07px + 1.315vw, 34px);
-
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
-
     background-color: var(--white);
+    /* 下記margin-topは共通化したいな～の提案です */
+    /* margin-top: clamp(80px, 58.873px + 5.634vw, 140px); */
+
 }
 
 .l-footer__title {
@@ -502,9 +506,10 @@ main.l-menu-b p {
 }
 
 /* メニュ―詳細ページ内の共通項 */
-main.l-menu-b {
+/* 下層ページ共通化提案が通れば不要になる？ */
+/* main.l-menu-b {
     background: var(--childPage-bg);
-}
+} */
 
 main.l-menu-b p {
     color: var(--white2);
@@ -627,9 +632,9 @@ a.c-share-btn::after {
     margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
 }
 
-.u-pb80tp140 {
+/* .u-pb80tp140 {
     padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
-}
+} */
 
 .u-mt10 {
     margin-block-start: 10px;
