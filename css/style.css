@@ -652,20 +652,22 @@ a.c-share-btn::after {
 .c-news-item {
     display: grid;
     grid-template-columns: 1fr;
-    /* PC版はこっち */
-    /* grid-template-columns: 120px 1fr; */
     gap: 4px;
 
+    /* 見出しの内容を共通化したら不要になるmargin */
     margin: 0;
+
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
 
-    font-size: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     font-weight: bold;
 }
 
 .c-news-item__summary {
     list-style-type: none;
+    position: relative;
+    padding-left: 20px;
 }
 
 .c-news-item__summary::-webkit-details-marker {
@@ -674,12 +676,16 @@ a.c-share-btn::after {
 
 .c-news-item__summary::before {
     content: "▷";
-    font-size: 14px;
+    font-size: clamp(14px, 13.296px + 0.188vw, 16px);
     display: inline-block;
-    margin-right: 6px;
 
     transform: rotate(0deg);
     transition: transform 0.2s ease;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
 }
 
 /* ----- アコーディオンOPEN時 アニメーション関連処理 -----  */
@@ -692,7 +698,7 @@ a.c-share-btn::after {
 
 /* アニメーション実行 */
 .c-news-item__details.is-animation[open] .c-news-item__body {
-    animation: fadeIn 0.85s ease both;
+    animation: fadeIn 0.2s ease both;
 }
 
 /* アニメーション終了時の状態固定 */
@@ -728,10 +734,10 @@ a.c-share-btn::after {
 
 .c-news-item__body {
     padding: 16px 0 0 20px;
-}
-
-.c-news-item__img {
-    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
 }
 
 .c-news-item__text {
@@ -747,13 +753,20 @@ a.c-share-btn::after {
 .l-news-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: clamp(16px, 4.028px + 3.192vw, 50px);
 
-    padding-bottom: 80px;
+    padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
 
     /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
+}
+
+.l-news-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 14.592px + 0.376vw, 20px);
+    margin: 0;
 }
 
 /* TODO nagata: 共通化できるならやる */
@@ -813,11 +826,11 @@ a.c-share-btn::after {
     gap: clamp(20px, 8.732px + 3.005vw, 52px);
     padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
 
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
     margin-inline: auto;
 
-    /* TODO nagata: 共通化できる？ */
+    /* TODO nagata: 共通化する */
     line-height: 1.2;
 }
 
@@ -912,6 +925,10 @@ a.c-share-btn::after {
 
     /* news.html
 ------------------------------ */
+    .c-news-item {
+        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
+        gap: 0;
+    }
 
     /* privacy.html
 ------------------------------ */
