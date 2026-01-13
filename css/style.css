@@ -563,6 +563,10 @@ img {
     font-weight: bold;
 }
 
+.c-menu-card-break {
+  display: none;
+}
+
 .c-menu-card__img {
     margin: 34px 0 20px;
 }
@@ -999,7 +1003,7 @@ a.c-share-btn::after {
 
     /* menu.html
 ------------------------------ */
-    /*  menu.html共通部分 */
+  /*  ・menu.html共通部分 */
     .l-main-menu {
         padding: 60px 0 140px 0;
     }
@@ -1018,8 +1022,7 @@ a.c-share-btn::after {
         width: 100%;
     }
 
-    /*  menu.htmlメニューカード */
-    /*  ・flex */
+  /*  ・menu.htmlメニューカード */
     .l-menu-list {
         display: flex;
         flex-wrap: wrap;
@@ -1030,6 +1033,10 @@ a.c-share-btn::after {
     .c-menu-card {
         width: 23%;
     }
+
+  .c-menu-card-break {
+    display: inline;
+  }
 
     /*  ・カード内の文字サイズ */
     .c-menu-card h2 {
