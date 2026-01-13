@@ -687,7 +687,7 @@ a.c-share-btn::after {
 
 /* アニメーション実行 */
 .c-news-item__details.is-animation[open] .c-news-item__body {
-    animation: fadeIn 0.85s ease both;
+    animation: fadeIn 0.2s ease both;
 }
 
 /* アニメーション終了時の状態固定 */
@@ -815,11 +815,11 @@ a.c-share-btn::after {
     gap: clamp(20px, 8.732px + 3.005vw, 52px);
     padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
 
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
     margin-inline: auto;
 
-    /* TODO nagata: 共通化できる？ */
+    /* TODO nagata: 共通化する */
     line-height: 1.2;
 }
 
@@ -918,7 +918,7 @@ a.c-share-btn::after {
     /* news.html
 ------------------------------ */
     .c-news-item {
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
         gap: 0;
     }
 
