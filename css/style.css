@@ -16,6 +16,7 @@
 body {
     font-family: "Zen Maru Gothic", sans-serif;
     color: var(--black);
+    letter-spacing: 1.6px;
 }
 
 img {
@@ -24,6 +25,12 @@ img {
 
 /* 共通
 ------------------------------ */
+/* 提案：下層ページbody+footer */
+/* 下層ページの最背面背景色 */
+.l-body-sub {
+    background: var(--childPage-bg);
+}
+
 /* 下層ページ見出し */
 .c-section-title {
     font-size: clamp(24px, 18.366px + 1.502vw, 40px);
@@ -38,10 +45,8 @@ img {
     font-size: 24px;
     font-weight: 800;
     border-bottom: 1px solid var(--black);
-    width: fit-content
+    width: fit-content;
 }
-
-
 
 /* 斜めボタン（clip-path版...borderが使えないが、文字数制限なし）*/
 /* c-btnはaタグの親につけてください */
@@ -186,10 +191,11 @@ img {
     flex-direction: column;
     align-items: center;
     gap: clamp(20px, 15.07px + 1.315vw, 34px);
-
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
-
     background-color: var(--white);
+    /* 下記margin-topは共通化したいな～の提案です */
+    /* margin-top: clamp(80px, 58.873px + 5.634vw, 140px); */
+
 }
 
 .l-footer__title {
@@ -251,8 +257,8 @@ img {
 /* index.html(kansp)
 ------------------------------ */
 
-.toppage-body{
-    line-height:1.5;
+.toppage-body {
+    line-height: 1.5;
 }
 
 .l-content-wrap {
@@ -262,43 +268,141 @@ img {
 
 /* kantodo:PCと変更する（可変させてもいい）*/
 .c-sec-title {
-    font-size: 24px;
+    font-size: 5vw;
     font-weight: bold;
 }
-
-
-.l-mv-hero-title{
-    display: inline-block;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(175, 175, 175, 0));
-}
-.l-mv-hero-address {
-    display: inline-block;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(175, 175, 175, 0));
+.c-sec-title::before {
+    content: attr(data-sub-title);
+    font-family: "Abhaya Libre", serif;
+    font-size: 2.5vw;
+    font-weight: 800;
+    border-bottom: 1px solid var(--black);
+    width: fit-content;
 }
 
+/* メインビジュアル設定 */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
-    color: #fff;
+    color: #ffffff;
     background: url(../img/top-mainvisual.png) no-repeat center center/cover;
     aspect-ratio: 2/1;
+    position: relative;
+    text-shadow: 3px 3px 9px #000000;
+}
+.l-mv-hero-title {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(175, 175, 175, 0));
+    padding-left: clamp(0.313rem, -0.458rem + 3.286vw, 2.5rem);
+}
+.l-mv-hero-title h1{
+    font-size: clamp(1.5rem, -0.085rem + 6.761vw, 6rem); 
+}
+.l-mv-hero-title p{
+    font-size: clamp(0.875rem, 0.127rem + 3.192vw, 3rem);
+}
+.l-mv-hero-address {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(175, 175, 175, 0));
+    padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(1.25rem, -0.511rem + 7.512vw, 6.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
+}
+.l-mv-hero-address-title{
+    font-size: clamp(0.875rem, 0.479rem + 1.69vw, 2rem);
+    font-weight: normal;
+}
+.l-mv-hero-address-detail {
+    font-size: clamp(1.25rem, 0.282rem + 4.131vw, 4rem);
+    font-weight: normal;
 }
 
-.c-mv-schedule-title{
+
+/* 開催日時のメインビジュアル記述 */
+.l-mv-schedule-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: clamp(0rem, 15.2vw, 3.563rem);
+    margin-block: clamp(1.25rem, 0.590rem + 2.817vw, 3.125rem);
+}
+.c-mv-schedule-title {
     display: inline-block;
-    font-size: 20px;
+    font-size: clamp(1.25rem, 0.986rem + 1.127vw, 2rem);
     font-weight: bold;
     color: var(--white2);
-    padding: 5px 5px;
-    background-color: #E22A00;
+    padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
+    background-color: #e22a00;
+}
+.c-mv-schedule-detail{
+    font-weight: bold;
+}
+.c-mv-schedule-detail--date{
+    font-size: clamp(1.5rem, 0.818rem + 2.911vw, 3.438rem);
+}
+.c-mv-schedule-detail--time{
+    font-size: clamp(1.25rem, 0.810rem + 1.878vw, 2.5rem);
+}
+.e-last-time {
+    font-size: clamp(1.125rem, 0.817rem + 1.315vw, 2rem);
 }
 
-.l-catchcopy-flex {
+/* キャッチコピーのメインビジュアル記述 */
+.l-mv-catchcopy-bg{
+    background-image: var(--childPage-bg);
+    aspect-ratio: 8/5;
+}
+.l-mv-catchcopy{
+    position: relative;
     display: flex;
+    justify-content: center;
 }
-
+.l-catchcopy-flex {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
 .l-catchcopy-img {
-    height: 120px;
-    width: 120px;
+    aspect-ratio: 1.5/1;
+    width: 50%;
+}
+.l-catchcopy-attention{
+    display: inline-block;
+    font-size: 4.5vw;
+    font-weight: bold;
+}
+.l-catchcopy-other{
+    width: 78%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    position: absolute;
+    bottom: 8%;
+    right: 4%;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: var(--white2);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.c-catchcopy-sound{
+    /* kantodo:グラデーションの下線を引く */
+    color:red;
+}
+.c-catchcopy-accent{
+    /* kantodo:グラデーションの下線を引く */
+    color: red;
 }
 
 .l-rest-image {
@@ -324,7 +428,7 @@ img {
 }
 
 .c-info-list-desc {
-    border-bottom: 1px solid #BEBEBE;
+    border-bottom: 1px solid #bebebe;
     margin-bottom: 30px;
 }
 
@@ -353,21 +457,21 @@ img {
     /* kantodo:アイコンの位置が変だから変えたい */
     content: url(../img/top-ruto-sp.svg);
     display: inline-block;
-    background-color: red;
 }
+
 /* kantodo:PCとレイアウトを変える */
 
-.c-access-list-button{
-  font-size: 12px;
-  font-weight: light;
-  display: inline-block;
-  border: 0.5px solid var(--black);
-  padding: 3px 2px;
-  background-color: transparent;
-  box-shadow: 2px 2px 0 var(--white2), 2px 2px 0 1px var(--black);
+.c-access-list-button {
+    font-size: 12px;
+    font-weight: light;
+    display: inline-block;
+    border: 0.5px solid var(--black);
+    padding: 3px 2px;
+    background-color: transparent;
+    box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-.l-news-sec-bg {
+.l-sec--news-bg {
     background-color: #eb8e3a;
 }
 
@@ -412,6 +516,31 @@ img {
 
 /*  menu一覧コンポーネント */
 /*  メニューカード */
+/*  menu一覧の共通部分 */
+.l-main-menu {
+    background: var(--childPage-bg);
+}
+
+.c-section-title+* {
+    margin-block-start: 16px;
+}
+
+.shop-map {
+    margin-bottom: 40px;
+}
+
+.shop-map img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.l-menu-list {
+    width: 92%;
+    margin: 0 auto;
+}
+
+/*  menu一覧コンポーネント */
+/*  メニューカード */
 .c-menu-card {
     display: flex;
     flex-direction: column;
@@ -435,7 +564,7 @@ img {
 }
 
 .c-share-link {
-    color: #EB8E3A;
+    color: #eb8e3a;
 }
 
 .c-share-link::before {
@@ -448,12 +577,13 @@ img {
     justify-content: center;
     align-items: center;
     align-self: center;
-    gap: 4px;
     width: clamp(15.625rem, 17.386rem + -7.512vw, 10.625rem);
     height: clamp(2.75rem, 2.926rem + -0.751vw, 2.25rem);
     background: var(--black);
     border: var(--white2) solid 1px;
     box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
+    gap: 4px;
+    margin-top: 22px;
 }
 
 .c-button-goto-booth::before {
@@ -466,45 +596,71 @@ img {
 
 main.l-menu-b p {
     letter-spacing: 1.6px;
-    line-height: 1.2;
-    padding-block-start: 13px;
+    line-height: 1.5;
 }
 
 /* メニュ―詳細ページ内の共通項 */
-main.l-menu-b {
+/* 下層ページ共通化提案が通れば不要になる？ */
+/* main.l-menu-b {
     background: var(--childPage-bg);
-}
+} */
 
 main.l-menu-b p {
     color: var(--white2);
 }
 
-/* メインコンテンツの幅・配置 */
-main.l-menu-b .c-main-container {
-    /* width: 100%; */
-    /* margin-inline: auto; */
+main.l-menu-b img {
+    aspect-ratio: 12 / 10;
+}
+
+.c-main-container {
     background-color: var(--black);
 }
 
-.c-menu-b-wrapper {
-    max-width: 92%;
+/* メインコンテンツ配置・余白 */
+.l-menu-b .c-menu-b-wrapper {
+    max-width: none;
+    margin: 0;
+}
+
+.l-menu-b-card_text {
+    width: 92%;
     margin-inline: auto;
 }
 
+.l-menu-b-card {
+    display: grid;
+    /* grid-template-rows: 76px 310px auto; */
+    grid-template-columns: 1fr;
+    padding-block: 20px;
+}
+
+.l-menu-b-card h1:first-child {
+    margin-block-end: clamp(16px, 14.592px + 0.376vw, 20px);
+}
+
+.l-menu-b-card div:nth-child(3) {
+    margin-block: 33px;
+}
+
+.l-menu-b-card a {
+    margin-block-end: 40px;
+}
 
 /* コンポーネント */
-.c-menu-b-card h1 {
+/* メニュー名 */
+.c-menu-b-card-cnt_title {
     color: var(--white);
     font-size: clamp(24px, 21.183px + 0.751vw, 32px);
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    margin: auto 0;
+    /* margin: auto 0; */
     gap: 8px;
-    padding-block-end: 16px;
+    /* margin-inline: 4%; */
 }
 
-.c-menu-b-card h1 span {
+.c-menu-b-card-cnt_title span {
     color: var(--black);
     background: var(--white);
     font-size: clamp(16px, 13.887px + 0.563vw, 22px);
@@ -516,54 +672,28 @@ main.l-menu-b .c-main-container {
     align-items: center;
 }
 
-.c-menu-b-card {
-    display: grid;
-    grid-template-rows: 76px 310px auto;
-    grid-template-columns: 1fr;
-    padding-block: 20px;
-}
-
-.c-menu-b-card-cnt_title {
-    place-content: center;
-}
-
+/* 写真 */
 .c-menu-b-card img {
-    width: 100vw;
-    height: 310px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    position: absolute;
-    right: 0;
 }
 
-.c-menu-b-img-pc {
-    display: none;
-}
-
-.c-menu-b-card-cnt_desc {
-    padding-block: 20px;
-}
-
+/* 個数と価格 */
 .c-menu-b-card-cnt_desc :last-child {
     font-weight: bold;
-    margin-block-start: 10px;
+
 }
 
-.c-menu-b-card-cnt_shop {
-    padding-block-start: 20px;
-}
-
+/* 店舗名 */
 .c-menu-b-card-cnt_shop :first-child {
     font-weight: bold;
-    margin-block-end: 10px;
-}
 
-.c-menu-b-card .c-share-btn {
-    margin-inline: auto;
 }
 
 /* 共有ボタン */
 .c-share-btn {
-    width: calc(100% - 4px);
+
     height: 62px;
     background: var(--white2);
     border: var(--black) solid 1px;
@@ -578,7 +708,6 @@ a.c-share-btn {
     color: var(--black);
     align-items: center;
     justify-content: center;
-    padding: 15px;
 }
 
 a.c-share-btn::after {
@@ -586,16 +715,23 @@ a.c-share-btn::after {
     background: url(../img/menu-b/share_black.png) no-repeat center center/cover;
     width: clamp(18px, 16.592px + 0.376vw, 22px);
     height: clamp(18px, 16.592px + 0.376vw, 22px);
+}
 
+.c-menu-b-card .c-share-btn {
+    margin-inline: auto;
 }
 
 /* 余白 */
-.mt40to50 {
+.u-mt40to50 {
     margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
 }
 
-.pb80tp140 {
+/* .u-pb80tp140 {
     padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
+} */
+
+.u-mt10 {
+    margin-block-start: 10px;
 }
 
 /* faq.html
@@ -667,89 +803,166 @@ a.c-share-btn::after {
 .c-news-item {
     display: grid;
     grid-template-columns: 1fr;
-    /* PC版はこっち */
-    /* grid-template-columns: 120px 1fr; */
+    gap: 4px;
+
+    /* 見出しの内容を共通化したら不要になるmargin */
+    margin: 0;
+
+    padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
+
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
+    font-weight: bold;
 }
 
-/* 奇数指定 */
-/* .c-news-item>*:nth-child(odd) {} */
-
-.c-news-item__data {
-    font-size: 16px;
+.c-news-item__summary {
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px;
 }
+
+.c-news-item__summary::-webkit-details-marker {
+    display: none;
+}
+
+.c-news-item__summary::before {
+    content: "▷";
+    font-size: clamp(14px, 13.296px + 0.188vw, 16px);
+    display: inline-block;
+
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14px;
+}
+
+/* ----- アコーディオンOPEN時 アニメーション関連処理 -----  */
+/* 初期位置を設定 */
+/* ちらつき防止で透明度0＋フェード初期位置に変更 */
+.c-news-item__details[open] .c-news-item__body {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+
+/* アニメーション実行 */
+.c-news-item__details.is-animation[open] .c-news-item__body {
+    animation: fadeIn 0.2s ease both;
+}
+
+/* アニメーション終了時の状態固定 */
+.c-news-item__details.is-open[open] .c-news-item__body {
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+/* アイコンのアニメーション処理（回転＋アイコン変更） */
+.c-news-item__details.is-icon-open>.c-news-item__summary::before {
+    transform: rotate(90deg);
+    content: "▶";
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ----- アコーディオンオープン時アニメーション関連処理 ここまで -----  */
 
 .c-news-item__title {
     display: inline;
 }
 
-.c-news-item__detail {
-    font-size: 16px;
+.c-news-item__body {
+    padding: 16px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
 }
 
 .c-news-item__text {
-    font-size: 16px;
+    font-weight: normal;
 }
 
 .l-news {
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    /* TODO nagata: あとで共通化 */
     background: var(--childPage-bg);
+    line-height: 1.2;
 }
 
 .l-news-content {
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4.028px + 3.192vw, 50px);
+
+    padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
+
+    /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
-    padding-bottom: 60px;
+}
 
-    /* TODO nagata: 共通化できる？ */
-    line-height: 1.2;
+.l-news-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 14.592px + 0.376vw, 20px);
+    margin: 0;
 }
 
 /* TODO nagata: 共通化できるならやる */
 .l-news-content>.c-section-title {
-    padding-top: 20px;
+    padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
 /* privacy.html
 ------------------------------ */
 
 .c-privacy-info__desc {
-    /* pc18px */
-    font-size: 16px;
-    /* pc50px */
-    padding-bottom: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
+    margin-top: clamp(16px, 4.028px + 3.192vw, 50px);
+    padding-bottom: clamp(16px, 4.028px + 3.192vw, 50px);
     border-bottom: 1px solid var(--black);
 }
 
 .c-privacy-item {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    gap: clamp(16px, 11.775px + 1.127vw, 28px);
+    border-bottom: 1px solid var(--black);
+    padding-bottom: clamp(16px, 11.775px + 1.127vw, 28px);
 }
 
 .c-privacy-item__title {
-    display: flex;
-    font-size: 18px;
+    font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    margin-bottom: 16px;
-
-    /* TODO nagata: 適切な数字を設定する */
     padding-left: 1em;
     text-indent: -1em;
 }
 
 .c-privacy-item__desc {
-    font-size: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--black);
-    margin-bottom: 20px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
 }
 
 .c-privacy-item__desc-in-list {
-    /* TODO nagata: 適切な数字を設定する */
-    padding-left: 1.4em;
-    text-indent: -1.4em;
+    list-style-type: none;
+    counter-increment: number;
+    padding-left: 1.1em;
+    text-indent: -1.1em;
+}
+
+.c-privacy-item__desc-in-list::before {
+    content: counter(number) ") ";
 }
 
 .l-privary {
@@ -758,18 +971,22 @@ a.c-share-btn::after {
 }
 
 .l-privary-content {
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 8.732px + 3.005vw, 52px);
+    padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
+
+    /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
     margin-inline: auto;
-    padding-bottom: 60px;
 
-    /* TODO nagata: 共通化できる？ */
+    /* TODO nagata: 共通化する */
     line-height: 1.2;
 }
 
 /* TODO nagata: 共通化できるならやる */
-.l-privary-content>.c-section-title {
-    padding-top: 20px;
+.l-privacy-info>.c-section-title {
+    padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
 @media (min-width: 768px) {
@@ -782,39 +999,49 @@ a.c-share-btn::after {
 
     /* index.html(kanpc)
 ------------------------------ */
-
+    .l-mv-schedule-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
+    }
     /* menu.html
 ------------------------------ */
 
     /* menu-b-XX.html
 ------------------------------ */
-    .c-menu-b-wrapper {
-        max-width: 96%;
-    }
-
     main.l-menu-b {
         padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
     }
 
-    main.l-menu-b .c-main-container {
-        width: min(60%, 960px);
+    .c-main-container {
+        width: min(96%, 960px);
         margin-inline: auto;
     }
 
+    .l-menu-b-card_text {
+        width: 100%;
+        margin-inline: 0;
+    }
+
+    /* メニュー紹介テキスト上下余白 */
+    .l-menu-b-card div:nth-child(3) {
+        margin-block: 20px;
+    }
+
+    /* 共有ボタン下部余白 */
+    .l-menu-b-card a {
+        margin-block-end: 20px;
+    }
+
+    /* メニューカードを2カラムに変更 */
     .c-menu-b-card {
         grid-template-columns: 54% 1fr;
         grid-template-rows: auto;
         column-gap: 20px;
+        padding-inline: 20px;
     }
 
-    .c-menu-b-img-pc {
-        display: block;
-        align-self: anchor-center;
-    }
-
-    .c-menu-b-img-sp {
-        display: none;
-    }
 
     .c-menu-b-card-cnt_title {
         grid-column: 2 / 3;
@@ -824,10 +1051,8 @@ a.c-share-btn::after {
     .c-menu-b-card-cnt_img {
         width: 100%;
         position: relative;
-        padding-block: 50%;
         grid-row: 1 / 5;
     }
-
 
     .c-menu-b-card-cnt_link {
         grid-column: 2 / 3;
@@ -837,19 +1062,11 @@ a.c-share-btn::after {
         grid-column: 2 / 3;
     }
 
-    main.l-menu-b p {
-        padding-block-start: 4px;
+    .c-share-btn {
+        width: calc(100% - 4px);
     }
 
 
-    .c-menu-b-card-cnt_desc {
-        padding-block: 0px;
-    }
-
-    .c-menu-b-card-cnt_desc :last-child {
-        margin-block-start: 6px;
-        margin-block-end: 20px;
-    }
 
     /* faq.html
 ------------------------------ */
@@ -859,6 +1076,10 @@ a.c-share-btn::after {
 
     /* news.html
 ------------------------------ */
+    .c-news-item {
+        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
+        gap: 0;
+    }
 
     /* privacy.html
 ------------------------------ */

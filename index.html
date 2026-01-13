@@ -25,9 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Zen+Maru+Gothic&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Zen+Antique+Soft&family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet">
     <!-- css -->
     <link
       rel="stylesheet"
@@ -43,7 +42,7 @@
   
   
     <header class="l-header">
-    <div class="c-header__title"><img src="./img/logo_line_01.png" alt="ふくおか餃子FES"></div>
+    <div class="c-header__title"><a href="index.html"><img src="./img/logo_line_01.png" alt="ふくおか餃子FES"></a></div>
       <div class="l-header__icons">
         <ul class="l-sns-list">
         <li class="c-sns-icon"><a href="#"><img src="./img/sns_icon_x.png" alt="福岡餃子フェス 公式X"></a>
@@ -64,16 +63,16 @@
   
       <div class="l-mv-hero">
         <div class="l-mv-hero-title">
-          <h1>福岡餃子フェス</h1>
+          <h1>ふくおか餃子フェス</h1>
           <p>ひとくちごとに、新しい体験。</p>
         </div>
         <dl class="l-mv-hero-address">
-          <dd class="l-mv-hero-address-title">開催会場</dd>
-          <dt class="l-mv-hero-address-detail">長浜公園</dt>
+          <dt class="l-mv-hero-address-title">開催会場</dt>
+          <dd class="l-mv-hero-address-detail">長浜公園</dd>
         </dl>
       </div>
   
-      <div class="l-mv-schedule">
+      <div class="l-mv-schedule l-mv-schedule-flex">
         <dl class="l-mv-schedule-date">
           <dt class="c-mv-schedule-title c-mv-schedule-title--date">
             開催日程
@@ -94,14 +93,14 @@
         </dl>
       </div>
   
-      <div class="l-mv-catchcopy">
+      <div class="l-mv-catchcopy l-mv-catchcopy-bg">
         <div class="l-catchcopy-flex">
           <img class="l-catchcopy-img" src="./img/top-catchcopy.png" alt="餃子の画像" />
-          <b class="l-catchcopy-attention">
+          <p class="l-catchcopy-attention">
             福岡の<br />
             餃子文化が<br />
             一堂に集結！
-          </b>
+          </p>
         </div>
         <div class="l-catchcopy-other">
           <p class="l-catchcopy-other-title">
@@ -115,15 +114,15 @@
             、新しい驚き、新しい発見が待っています。
           </p>
           <p class="l-catchcopy-other-introduction">
-            さあ、あなたもこの美味しい<b>冒険</b>に出かけませんか？
+            さあ、あなたもこの美味しい<b class="c-catchcopy-accent">冒険</b>に出かけませんか？
           </p>
         </div>
       </div>
   
-      <section class="l-menu-sec">
+      <section class="l-sec l-sec--menu">
         <div class="l-content-wrap">
           <!-- attention:Menuの装飾は::before -->
-          <h2 class="c-sec-title l-sec-title--menu">メニュー</h2>
+          <h2 class="c-sec-title l-sec-title--menu" data-sub-title="Menu">メニュー</h2>
           <ul class="l-menu-list">
             <li class="c-menu-card c-menu-card--b01">
               <h3>肉汁あふれる焼き餃子</h3>
@@ -212,10 +211,10 @@
   
       <img class="l-rest-image" src="./img/top-rest-gyoza.jpg" alt="" />
   
-      <section class="l-info-sec">
+      <section class="l-sec l-sec--info">
         <div class="l-content-wrap">
           <!-- attention:Informationの装飾は::before -->
-          <h2 class="c-sec-title l-sec-title--info">開催概要</h2>
+          <h2 class="c-sec-title l-sec-title--info"  data-sub-title="Information">開催概要</h2>
           <dl class="l-info-list">
             <dt class="c-info-list-title">期間</dt>
             <dd class="c-info-list-desc">2030.4.27(日) ～ 5.12(日)</dd>
@@ -260,26 +259,25 @@
         </div>
       </section>
   
-      <section class="l-news-sec l-news-sec-bg">
+      <section class="l-sec l-sec--news l-sec--news-bg">
         <div class="l-content-wrap">
           <!-- attention:Newsの装飾は::before -->
-          <h2 class="c-sec-title l-sec-title--news">お知らせ</h2>
+          <h2 class="c-sec-title l-sec-title--news" data-sub-title="News">お知らせ</h2>
           <ul class="l-news-list">
-            <!-- akntodo:永田さんのアコーディオンメニューに飛ばすのを忘れない！ -->
             <li class="c-news-list c-news-list--2030.02.25">
-              <a href="news.html">
+              <a href="news.html?open=news1">
                 <time class="c-news-list-date" datetime="2030-02-25">2030.2.25（月）</time>
                 <p class="c-news-list-content">出店者インタビュー　博多区で人気の「博多ぎょうざ堂」</p>
               </a>
             </li>
             <li class="c-news-list c-news-list--2030.2.23">
-              <a href="news.html">
+              <a href="news.html?open=news2">
                 <time class="c-news-list-date" datetime="2030-02-23">2030.2.23（土）</time>
                 <p class="c-news-list-content">出店企業様募集中！</p>
               </a>
             </li>
             <li class="c-news-list c-news-list--2030.2.16">
-              <a href="news.html">
+              <a href="news.html?open=news3">
                 <time class="c-news-list-date" datetime="2030-02-16">2030.2.16（土）</time>
                 <p class="c-news-list-content">ふくおか餃子FES開催決定！</p>
               </a>
