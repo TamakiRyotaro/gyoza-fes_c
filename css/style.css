@@ -601,19 +601,8 @@ img {
 
 /* menu-b-XX.html
 ------------------------------ */
-/* 共通cssで代替される？ */
-
-main.l-menu-b p {
-    letter-spacing: 1.6px;
-    line-height: 1.5;
-}
 
 /* メニュ―詳細ページ内の共通項 */
-/* 下層ページ共通化提案が通れば不要になる？ */
-/* main.l-menu-b {
-    background: var(--childPage-bg);
-} */
-
 main.l-menu-b p {
     color: var(--white2);
 }
@@ -639,7 +628,6 @@ main.l-menu-b img {
 
 .l-menu-b-card {
     display: grid;
-    /* grid-template-rows: 76px 310px auto; */
     grid-template-columns: 1fr;
     padding-block: 20px;
 }
@@ -664,9 +652,7 @@ main.l-menu-b img {
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    /* margin: auto 0; */
     gap: 8px;
-    /* margin-inline: 4%; */
 }
 
 .c-menu-b-card-cnt_title span {
@@ -734,10 +720,6 @@ a.c-share-btn::after {
 .u-mt40to50 {
     margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
 }
-
-/* .u-pb80tp140 {
-    padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
-} */
 
 .u-mt10 {
     margin-block-start: 10px;
