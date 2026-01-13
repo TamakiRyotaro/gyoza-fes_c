@@ -253,7 +253,10 @@ img {
     gap: 7px;
 }
 
-/* index.html(kansp)
+/* ------------------------------
+---------------------------------
+        index.html(kansp)
+---------------------------------
 ------------------------------ */
 
 .toppage-body {
@@ -264,22 +267,22 @@ img {
     width: min(92vw, 960px);
     margin-inline: auto;
 }
-
-/* kantodo:PCと変更する（可変させてもいい）*/
 .c-sec-title {
-    font-size: 5vw;
+    font-size: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
 }
 .c-sec-title::before {
     content: attr(data-sub-title);
     font-family: "Abhaya Libre", serif;
-    font-size: 2.5vw;
+    font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
     font-weight: 800;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 2px solid var(--black);
     width: fit-content;
 }
 
-/* メインビジュアル設定 */
+/* メインビジュアル設定  */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
@@ -406,7 +409,7 @@ img {
     position: absolute;
     bottom: 8%;
     right: 4%;
-    font-size: 2vw;
+    font-size: 1.9vw;
     font-weight: bold;
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
