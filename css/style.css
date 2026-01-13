@@ -395,66 +395,50 @@ img {
 
 /* menu.html
 ------------------------------ */
-/*  menu一覧の共通部分 */
+/*  menu.htmlの共通部分 */
 .l-main-menu {
     background: var(--childPage-bg);
+    padding: 20px 0 40px 0;
 }
 
-.c-section-title+* {
-    margin-block-start: 16px;
+.c-section-title {
+    margin-bottom: 16px;
 }
 
-.shop-map {
+.l-shop-map {
     margin-bottom: 40px;
 }
 
-.l-menu-list {
-    width: 92%;
-    margin: 0 auto;
-}
-
-/*  menu一覧コンポーネント */
-/*  メニューカード */
-/*  menu一覧の共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-}
-
-.c-section-title+* {
-    margin-block-start: 16px;
-}
-
-.shop-map {
-    margin-bottom: 40px;
-}
-
-.shop-map img {
+.l-shop-map img {
     width: 100%;
     object-fit: cover;
 }
 
-.l-menu-list {
+.menu-wrapper {
     width: 92%;
     margin: 0 auto;
 }
 
-/*  menu一覧コンポーネント */
-/*  メニューカード */
+/*  menu.htmlコンポーネント */
+/*  ・メニューカード */
 .c-menu-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--white);
     background-color: var(--black);
-    width: clamp(21.563rem, 24.093rem + -10.798vw, 14.375rem);
+    width: 100%;
     margin-inline: auto;
     line-height: 1.5;
     padding: 24px 12px;
+}
+
+.c-menu-card:nth-child(-n+6) {
     margin-bottom: 10px;
 }
 
 .c-menu-card h2 {
-    font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -464,20 +448,25 @@ img {
 
 .c-share-link {
     color: #eb8e3a;
+    font-weight: bold;
+}
+
+.c-button-goto-booth {
+    font-weight: bold;
 }
 
 .c-share-link::before {
     content: url(../img/menu/share-icon.png);
 }
 
-/*  メニューカード内の詳細ボタン */
+/*  ・メニューカード内の詳細ボタン */
 .c-button-goto-booth {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: clamp(15.625rem, 17.386rem + -7.512vw, 10.625rem);
-    height: clamp(2.75rem, 2.926rem + -0.751vw, 2.25rem);
+    width: 252px;
+    height: 44px;
     background: var(--black);
     border: var(--white2) solid 1px;
     box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
@@ -826,6 +815,65 @@ a.c-share-btn::after {
 
     /* menu.html
 ------------------------------ */
+    /*  menu.html共通部分 */
+    .l-main-menu {
+        padding: 60px 0 140px 0;
+    }
+
+    .c-section-title {
+        margin-bottom: 60px;
+    }
+
+    /*  ・menu.htmlコンテンツ幅の指定 */
+    .l-menu-contents {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+    }
+
+    /*  menu.htmlメニューカード */
+    /*  ・flex */
+    .l-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    .c-menu-card {
+        width: 23%;
+    }
+
+    /*  ・カード内の文字サイズ */
+    .c-menu-card h2 {
+        font-size: 20px;
+    }
+
+    .c-menu-card p {
+        font-size: 18px;
+    }
+
+    .c-share-link {
+        font-size: 14px;
+    }
+
+    .c-button-goto-booth {
+        font-size: 18px;
+    }
+
+    .c-menu-card:nth-child(-n+6) {
+        margin-bottom: 0px;
+    }
+
+    /*  ・メニューカード内の詳細ボタン */
+    .c-button-goto-booth {
+        width: 170px;
+        height: 36px;
+    }
+
 
     /* menu-b-XX.html
 ------------------------------ */
