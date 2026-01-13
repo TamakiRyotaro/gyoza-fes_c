@@ -281,7 +281,11 @@ img {
     border-bottom: 2px solid var(--black);
     width: fit-content;
 }
-
+.l-btn-layout {
+    margin-inline: auto;
+    width: 179px;
+    height: 56px;
+}
 /* メインビジュアル設定  */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
