@@ -685,7 +685,7 @@ a.c-share-btn::after {
     position: absolute;
     left: 0;
     top: 0;
-    width: 15px;
+    width: 14px;
 }
 
 /* ----- アコーディオンOPEN時 アニメーション関連処理 -----  */
