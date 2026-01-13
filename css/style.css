@@ -645,7 +645,9 @@ a.c-share-btn::after {
     grid-template-columns: 1fr;
     gap: 4px;
 
+    /* 見出しの内容を共通化したら不要になるmargin */
     margin: 0;
+
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
 
