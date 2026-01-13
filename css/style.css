@@ -24,6 +24,9 @@ img {
 
 /* 共通
 ------------------------------ */
+
+
+
 /* 下層ページ見出し */
 .c-section-title {
     font-size: clamp(24px, 18.366px + 1.502vw, 40px);
@@ -522,7 +525,7 @@ main.l-menu-b img {
 }
 
 .l-menu-b-card_text {
-    max-width: 92%;
+    width: 92%;
     margin-inline: auto;
 }
 
@@ -547,18 +550,18 @@ main.l-menu-b img {
 
 /* コンポーネント */
 /* メニュー名 */
-.c-menu-b-card h1 {
+.c-menu-b-card-cnt_title {
     color: var(--white);
     font-size: clamp(24px, 21.183px + 0.751vw, 32px);
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    margin: auto 0;
+    /* margin: auto 0; */
     gap: 8px;
-    margin-inline: 4%;
+    /* margin-inline: 4%; */
 }
 
-.c-menu-b-card h1 span {
+.c-menu-b-card-cnt_title span {
     color: var(--black);
     background: var(--white);
     font-size: clamp(16px, 13.887px + 0.563vw, 22px);
@@ -591,7 +594,7 @@ main.l-menu-b img {
 
 /* 共有ボタン */
 .c-share-btn {
-    width: calc(100% - 4px);
+
     height: 62px;
     background: var(--white2);
     border: var(--black) solid 1px;
@@ -842,9 +845,14 @@ a.c-share-btn::after {
         padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
     }
 
-    main.l-menu-b .c-main-container {
+    .c-main-container {
         width: min(96%, 960px);
         margin-inline: auto;
+    }
+
+    .l-menu-b-card_text {
+        width: 100%;
+        margin-inline: 0;
     }
 
     /* メニュー紹介テキスト上下余白 */
@@ -865,6 +873,7 @@ a.c-share-btn::after {
         padding-inline: 20px;
     }
 
+
     .c-menu-b-card-cnt_title {
         grid-column: 2 / 3;
         place-content: start;
@@ -883,6 +892,11 @@ a.c-share-btn::after {
     .c-menu-b-card-cnt_shop {
         grid-column: 2 / 3;
     }
+
+    .c-share-btn {
+        width: calc(100% - 4px);
+    }
+
 
 
     /* faq.html
