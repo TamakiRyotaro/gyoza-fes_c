@@ -16,7 +16,8 @@
 body {
     font-family: "Zen Maru Gothic", sans-serif;
     color: var(--black);
-    letter-spacing: 0.05em line-height:1.5;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
 }
 
 img {
