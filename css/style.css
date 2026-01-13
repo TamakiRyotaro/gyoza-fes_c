@@ -789,13 +789,12 @@ a.c-share-btn::after {
     flex-direction: column;
     gap: clamp(16px, 11.775px + 1.127vw, 28px);
     border-bottom: 1px solid var(--black);
+    padding-bottom: clamp(16px, 11.775px + 1.127vw, 28px);
 }
 
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-
-    /* TODO nagata: 適切な数字を設定する */
     padding-left: 1em;
     text-indent: -1em;
 }
@@ -837,10 +836,6 @@ a.c-share-btn::after {
 /* TODO nagata: 共通化できるならやる */
 .l-privacy-info>.c-section-title {
     padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
-}
-
-.l-privacy-item {
-    padding-bottom: clamp(16px, 11.775px + 1.127vw, 28px);
 }
 
 @media (min-width: 768px) {
