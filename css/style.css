@@ -496,7 +496,6 @@ img {
 main.l-menu-b p {
     letter-spacing: 1.6px;
     line-height: 1.2;
-    padding-block-start: 13px;
 }
 
 /* メニュ―詳細ページ内の共通項 */
@@ -512,19 +511,42 @@ main.l-menu-b img {
     aspect-ratio: 12 / 10;
 }
 
-/* メインコンテンツの幅・配置 */
-main.l-menu-b .c-main-container {
-    /* width: 100%; */
-    /* margin-inline: auto; */
+.c-main-container {
     background-color: var(--black);
 }
 
-.c-menu-b-wrapper {
+/* メインコンテンツ配置・余白 */
+.l-menu-b .c-menu-b-wrapper {
     max-width: none;
     margin: 0;
 }
 
+.l-menu-b-card_text {
+    max-width: 92%;
+    margin-inline: auto;
+}
+
+.l-menu-b-card {
+    display: grid;
+    /* grid-template-rows: 76px 310px auto; */
+    grid-template-columns: 1fr;
+    padding-block: 20px;
+}
+
+.l-menu-b-card h1:first-child {
+    margin-block-end: clamp(16px, 14.592px + 0.376vw, 20px);
+}
+
+.l-menu-b-card div:nth-child(3) {
+    margin-block: 33px;
+}
+
+.l-menu-b-card a {
+    margin-block-end: 40px;
+}
+
 /* コンポーネント */
+/* メニュー名 */
 .c-menu-b-card h1 {
     color: var(--white);
     font-size: clamp(24px, 21.183px + 0.751vw, 32px);
@@ -533,7 +555,6 @@ main.l-menu-b .c-main-container {
     flex-direction: column;
     margin: auto 0;
     gap: 8px;
-    padding-block-end: 16px;
     margin-inline: 4%;
 }
 
@@ -549,50 +570,23 @@ main.l-menu-b .c-main-container {
     align-items: center;
 }
 
-.c-menu-b-card {
-    display: grid;
-    /* grid-template-rows: 76px 310px auto; */
-    grid-template-columns: 1fr;
-    padding-block: 20px;
-}
-
-.c-menu-b-card_text {
-    max-width: 92%;
-    margin-inline: auto;
-}
-
-.c-menu-b-card-cnt_title {}
-
+/* 写真 */
 .c-menu-b-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.c-menu-b-img-pc {
-    display: none;
-}
-
-.c-menu-b-card-cnt_desc {
-    padding-block: 20px;
-}
-
+/* 個数と価格 */
 .c-menu-b-card-cnt_desc :last-child {
     font-weight: bold;
-    margin-block-start: 10px;
+
 }
 
-.c-menu-b-card-cnt_shop {
-    padding-block-start: 20px;
-}
-
+/* 店舗名 */
 .c-menu-b-card-cnt_shop :first-child {
     font-weight: bold;
-    margin-block-end: 10px;
-}
 
-.c-menu-b-card .c-share-btn {
-    margin-inline: auto;
 }
 
 /* 共有ボタン */
@@ -612,7 +606,6 @@ a.c-share-btn {
     color: var(--black);
     align-items: center;
     justify-content: center;
-    padding: 15px;
 }
 
 a.c-share-btn::after {
@@ -622,6 +615,10 @@ a.c-share-btn::after {
     height: clamp(18px, 16.592px + 0.376vw, 22px);
 }
 
+.c-menu-b-card .c-share-btn {
+    margin-inline: auto;
+}
+
 /* 余白 */
 .mt40to50 {
     margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
@@ -629,6 +626,10 @@ a.c-share-btn::after {
 
 .pb80tp140 {
     padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
+}
+
+.mt10 {
+    margin-block-start: 10px;
 }
 
 /* faq.html
@@ -829,11 +830,6 @@ a.c-share-btn::after {
 
     /* menu-b-XX.html
 ------------------------------ */
-    .c-menu-b-wrapper {
-        max-width: 96%;
-        margin-inline: auto;
-    }
-
     main.l-menu-b {
         padding-block-start: clamp(20px, 5.915px + 3.756vw, 60px);
     }
@@ -843,19 +839,22 @@ a.c-share-btn::after {
         margin-inline: auto;
     }
 
+    /* メニュー紹介テキスト上下余白 */
+    .l-menu-b-card div:nth-child(3) {
+        margin-block: 20px;
+    }
+
+    /* 共有ボタン下部余白 */
+    .l-menu-b-card a {
+        margin-block-end: 20px;
+    }
+
+    /* メニューカードを2カラムに変更 */
     .c-menu-b-card {
         grid-template-columns: 54% 1fr;
         grid-template-rows: auto;
         column-gap: 20px;
-    }
-
-    .c-menu-b-img-pc {
-        display: block;
-        align-self: anchor-center;
-    }
-
-    .c-menu-b-img-sp {
-        display: none;
+        padding-inline: 20px;
     }
 
     .c-menu-b-card-cnt_title {
@@ -877,18 +876,6 @@ a.c-share-btn::after {
         grid-column: 2 / 3;
     }
 
-    main.l-menu-b p {
-        padding-block-start: 4px;
-    }
-
-    .c-menu-b-card-cnt_desc {
-        padding-block: 0px;
-    }
-
-    .c-menu-b-card-cnt_desc :last-child {
-        margin-block-start: 6px;
-        margin-block-end: 20px;
-    }
 
     /* faq.html
 ------------------------------ */
