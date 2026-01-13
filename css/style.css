@@ -730,7 +730,7 @@ a.c-share-btn::after {
 }
 
 .l-news {
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    /* TODO nagata: あとで共通化 */
     background: var(--childPage-bg);
     line-height: 1.2;
 }
@@ -742,38 +742,36 @@ a.c-share-btn::after {
 
     padding-bottom: 80px;
 
-    /* TODO nagata: 持っていけるならあとで共通化 */
+    /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
 }
 
 /* TODO nagata: 共通化できるならやる */
 .l-news-content>.c-section-title {
-    padding-top: 20px;
+    padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
 
 /* privacy.html
 ------------------------------ */
 
 .c-privacy-info__desc {
-    /* pc18px */
-    font-size: 16px;
-    /* pc50px */
-    padding-bottom: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
+    margin-top: clamp(16px, 4.028px + 3.192vw, 50px);
+    padding-bottom: clamp(16px, 4.028px + 3.192vw, 50px);
     border-bottom: 1px solid var(--black);
 }
 
 .c-privacy-item {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    gap: clamp(16px, 11.775px + 1.127vw, 28px);
+    border-bottom: 1px solid var(--black);
 }
 
 .c-privacy-item__title {
-    display: flex;
-    font-size: 18px;
+    font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    margin-bottom: 16px;
 
     /* TODO nagata: 適切な数字を設定する */
     padding-left: 1em;
@@ -781,16 +779,18 @@ a.c-share-btn::after {
 }
 
 .c-privacy-item__desc {
-    font-size: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--black);
-    margin-bottom: 20px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
 }
 
 .c-privacy-item__desc-in-list {
-    /* TODO nagata: 適切な数字を設定する */
-    padding-left: 1.4em;
-    text-indent: -1.4em;
+    list-style-type: none;
+    counter-increment: number;
+    padding-left: 1.1em;
+    text-indent: -1.1em;
+}
+
+.c-privacy-item__desc-in-list::before {
+    content: counter(number) ") ";
 }
 
 .l-privary {
@@ -799,18 +799,26 @@ a.c-share-btn::after {
 }
 
 .l-privary-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 8.732px + 3.005vw, 52px);
+    padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
+
     /* TODO nagata: 持っていけるならあとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
-    padding-bottom: 60px;
 
     /* TODO nagata: 共通化できる？ */
     line-height: 1.2;
 }
 
 /* TODO nagata: 共通化できるならやる */
-.l-privary-content>.c-section-title {
-    padding-top: 20px;
+.l-privacy-info>.c-section-title {
+    padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
+}
+
+.l-privacy-item {
+    padding-bottom: clamp(16px, 11.775px + 1.127vw, 28px);
 }
 
 @media (min-width: 768px) {
