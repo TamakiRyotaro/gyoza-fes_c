@@ -620,15 +620,15 @@ a.c-share-btn::after {
 }
 
 /* 余白 */
-.mt40to50 {
+.u-mt40to50 {
     margin-top: clamp(40px, 36.479px + 0.939vw, 50px);
 }
 
-.pb80tp140 {
+.u-pb80tp140 {
     padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
 }
 
-.mt10 {
+.u-mt10 {
     margin-block-start: 10px;
 }
 
