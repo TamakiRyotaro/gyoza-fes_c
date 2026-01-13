@@ -264,43 +264,129 @@ img {
     font-weight: bold;
 }
 
-.l-mv-hero-title {
-    display: inline-block;
-    background-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0.7),
-            rgba(175, 175, 175, 0));
-}
-
-.l-mv-hero-address {
-    display: inline-block;
-    background-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0.7),
-            rgba(175, 175, 175, 0));
-}
-
+/* メインビジュアル設定 */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
-    color: #fff;
+    color: #ffffff;
     background: url(../img/top-mainvisual.png) no-repeat center center/cover;
     aspect-ratio: 2/1;
+    position: relative;
+    text-shadow: 3px 3px 9px #000000;
+}
+.l-mv-hero-title {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(175, 175, 175, 0));
+    padding-left: clamp(0.313rem, -0.458rem + 3.286vw, 2.5rem);
+}
+.l-mv-hero-title h1{
+    font-size: clamp(1.5rem, -0.085rem + 6.761vw, 6rem); 
+}
+.l-mv-hero-title p{
+    font-size: clamp(0.875rem, 0.127rem + 3.192vw, 3rem);
+}
+.l-mv-hero-address {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(175, 175, 175, 0));
+    padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(1.25rem, -0.511rem + 7.512vw, 6.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
+}
+.l-mv-hero-address-title{
+    font-size: clamp(0.875rem, 0.479rem + 1.69vw, 2rem);
+    font-weight: normal;
+}
+.l-mv-hero-address-detail {
+    font-size: clamp(1.25rem, 0.282rem + 4.131vw, 4rem);
+    font-weight: normal;
 }
 
+
+/* 開催日時のメインビジュアル記述 */
+.l-mv-schedule-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: clamp(0rem, 15.2vw, 3.563rem);
+    margin-block: clamp(1.25rem, 0.590rem + 2.817vw, 3.125rem);
+}
 .c-mv-schedule-title {
     display: inline-block;
-    font-size: 20px;
+    font-size: clamp(1.25rem, 0.986rem + 1.127vw, 2rem);
     font-weight: bold;
     color: var(--white2);
-    padding: 5px 5px;
+    padding: clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem) clamp(0.313rem, -0.018rem + 1.408vw, 1.25rem);
     background-color: #e22a00;
 }
-
-.l-catchcopy-flex {
-    display: flex;
+.c-mv-schedule-detail{
+    font-weight: bold;
+}
+.c-mv-schedule-detail--date{
+    font-size: clamp(1.5rem, 0.818rem + 2.911vw, 3.438rem);
+}
+.c-mv-schedule-detail--time{
+    font-size: clamp(1.25rem, 0.810rem + 1.878vw, 2.5rem);
+}
+.e-last-time {
+    font-size: clamp(1.125rem, 0.817rem + 1.315vw, 2rem);
 }
 
+/* キャッチコピーのメインビジュアル記述 */
+.l-mv-catchcopy-bg{
+    background-image: var(--childPage-bg);
+    aspect-ratio: 8/5;
+}
+.l-mv-catchcopy{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.l-catchcopy-flex {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
 .l-catchcopy-img {
-    height: 120px;
-    width: 120px;
+    aspect-ratio: 1.5/1;
+    width: 50%;
+}
+.l-catchcopy-attention{
+    display: inline-block;
+    font-size: 4.5vw;
+    font-weight: bold;
+}
+.l-catchcopy-other{
+    width: 78%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    position: absolute;
+    bottom: 8%;
+    right: 4%;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: var(--white2);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.c-catchcopy-sound{
+    /* kantodo:グラデーションの下線を引く */
+    color:red;
+}
+.c-catchcopy-accent{
+    /* kantodo:グラデーションの下線を引く */
+    color: red;
 }
 
 .l-rest-image {
@@ -355,7 +441,6 @@ img {
     /* kantodo:アイコンの位置が変だから変えたい */
     content: url(../img/top-ruto-sp.svg);
     display: inline-block;
-    background-color: red;
 }
 
 /* kantodo:PCとレイアウトを変える */
@@ -367,7 +452,7 @@ img {
     border: 0.5px solid var(--black);
     padding: 3px 2px;
     background-color: transparent;
-    box-shadow: 2px 2px 0 var(--white2), 2px 2px 0 1px var(--black);
+    box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
 .l-news-sec-bg {
@@ -823,7 +908,12 @@ a.c-share-btn::after {
 
     /* index.html(kanpc)
 ------------------------------ */
-
+    .l-mv-schedule-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+    }
     /* menu.html
 ------------------------------ */
 
