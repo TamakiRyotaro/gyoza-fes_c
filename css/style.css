@@ -180,11 +180,6 @@ img {
     justify-content: space-between;
 }
 
-.l-header+* {
-    /* ヘッダーの直下に空白作るのはページ個別で。後で消します */
-    /* margin-top: clamp(20px, 5.915px + 3.756vw, 60px); */
-}
-
 /* footer */
 .l-footer {
     display: flex;
@@ -974,8 +969,6 @@ a.c-share-btn::after {
     flex-direction: column;
     gap: clamp(16px, 4.028px + 3.192vw, 50px);
 
-    padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
-
     /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
@@ -1014,8 +1007,8 @@ a.c-share-btn::after {
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 .c-privacy-item__desc {
@@ -1025,8 +1018,8 @@ a.c-share-btn::after {
 .c-privacy-item__desc-in-list {
     list-style-type: none;
     counter-increment: number;
-    padding-left: 1.1em;
-    text-indent: -1.1em;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 .c-privacy-item__desc-in-list::before {
@@ -1042,7 +1035,6 @@ a.c-share-btn::after {
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 8.732px + 3.005vw, 52px);
-    padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
 
     /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
