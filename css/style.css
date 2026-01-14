@@ -520,13 +520,12 @@ img {
     font-weight: bold;
 }
 
-.c-news-list-content::before {
-    content: "▷";
-}
-
 .c-news-list-content {
-    font-size: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .c-news-list {
@@ -1060,6 +1059,10 @@ a.c-share-btn::after {
         flex-direction: row;
         justify-content: center;
         gap: 10%;
+    }
+
+    .c-news-list-content {
+        flex-direction: row;
     }
 
     /*------------------------------ 
