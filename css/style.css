@@ -1044,7 +1044,6 @@ a.c-share-btn::after {
     display: flex;
     flex-direction: column;
     gap: clamp(16px, 14.592px + 0.376vw, 20px);
-    margin: 0;
 }
 
 /* TODO nagata: 共通化できるならやる */
