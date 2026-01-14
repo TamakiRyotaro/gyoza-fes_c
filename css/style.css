@@ -520,90 +520,88 @@ img {
     font-weight: bold;
 }
 
-.c-news-list-content::before {
-    content: "▷";
-}
-
 .c-news-list-content {
-    font-size: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .c-news-list {
     border-bottom: 1px solid var(--black);
     padding-bottom: 16px;
 }
-/* menu.html
+
+/*------------------------------ 
+menu.html
 ------------------------------ */
-/*  menu一覧の共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
+/*  menu.htmlの共通部分 */
+.c-section-title {
+    /* mb SP:16px、PC：60px */
+    margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
+
 }
 
-.c-section-title+* {
-    margin-block-start: 16px;
+.l-shop-map {
+    /* mb SP:40px、PC：60px */
+    margin-bottom: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
 }
 
-.shop-map {
-    margin-bottom: 40px;
-}
-
-.l-menu-list {
-    width: 92%;
-    margin: 0 auto;
-}
-
-/*  menu一覧コンポーネント */
-/*  メニューカード */
-/*  menu一覧の共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-}
-
-.c-section-title+* {
-    margin-block-start: 16px;
-}
-
-.shop-map {
-    margin-bottom: 40px;
-}
-
-.shop-map img {
+.l-shop-map img {
     width: 100%;
     object-fit: cover;
 }
 
-.l-menu-list {
+.menu-wrapper {
     width: 92%;
     margin: 0 auto;
 }
 
-/*  menu一覧コンポーネント */
-/*  メニューカード */
+/*  menu.htmlコンポーネント */
+/*  ・メニューカード */
 .c-menu-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--white);
     background-color: var(--black);
-    width: clamp(21.563rem, 24.093rem + -10.798vw, 14.375rem);
-    margin-inline: auto;
-    line-height: 1.5;
+    width: 100%;
     padding: 24px 12px;
+}
+
+.c-menu-card:nth-child(-n+6) {
     margin-bottom: 10px;
 }
 
 .c-menu-card h2 {
-    font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+    /* fz SP:18px、PC：20px */
+    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+}
+
+.c-menu-card-break {
+    display: none;
 }
 
 .c-menu-card__img {
     margin: 34px 0 20px;
 }
 
+.c-menu-card p {
+    /* fz SP:16px、PC：18px */
+    font-size: clamp(1rem, 0.956rem + 0.188vw, 1.125rem);
+}
+
 .c-share-link {
     color: #eb8e3a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.c-button-goto-booth {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .c-share-link::before {
@@ -616,8 +614,9 @@ img {
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: clamp(15.625rem, 17.386rem + -7.512vw, 10.625rem);
-    height: clamp(2.75rem, 2.926rem + -0.751vw, 2.25rem);
+    width: 76%;
+    max-width: 252px;
+    height: 44px;
     background: var(--black);
     border: var(--white2) solid 1px;
     box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
@@ -757,6 +756,9 @@ a.c-share-btn::after {
 
 /* faq.html
 ------------------------------ */
+.l-main {
+    background: linear-gradient(to right, #fff, #FFDEBF);
+}
 
 .c-answer {
     font-size: 16px;
@@ -1033,8 +1035,57 @@ a.c-share-btn::after {
         gap: 10%;
     }
 
-    /* menu.html
+    .c-news-list-content {
+        flex-direction: row;
+    }
+
+    /*------------------------------ 
+    menu.html
 ------------------------------ */
+    /*  ・menu.html共通部分 */
+    .l-main-menu {
+        padding: 60px 0 0 0;
+    }
+
+    .c-section-title {
+        margin-bottom: 60px;
+    }
+
+    /*  ・menu.htmlコンテンツ幅の指定 */
+    .l-menu-contents {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+    }
+
+    /*  ・menu.htmlメニューカード */
+    .l-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    .c-menu-card {
+        width: 23.8%;
+    }
+
+    .c-menu-card-break {
+        display: inline;
+    }
+
+    .c-menu-card:nth-child(-n+6) {
+        margin-bottom: 0px;
+    }
+
+    /*  ・メニューカード内の詳細ボタン */
+    .c-button-goto-booth {
+        min-width: 170px;
+    }
 
     /* menu-b-XX.html
 ------------------------------ */
