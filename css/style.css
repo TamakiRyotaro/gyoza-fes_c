@@ -253,10 +253,7 @@ img {
     gap: 7px;
 }
 
-/* ------------------------------
----------------------------------
-        index.html(kansp)
----------------------------------
+/* index.html(kansp)
 ------------------------------ */
 
 .toppage-body {
@@ -267,22 +264,14 @@ img {
     width: min(92vw, 960px);
     margin-inline: auto;
 }
+
+/* kantodo:PCと変更する（可変させてもいい）*/
 .c-sec-title {
-    font-size: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
+    font-size: 24px;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-}
-.c-sec-title::before {
-    content: attr(data-sub-title);
-    font-family: "Abhaya Libre", serif;
-    font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
-    font-weight: 800;
-    border-bottom: 2px solid var(--black);
-    width: fit-content;
 }
 
-/* メインビジュアル設定  */
+/* メインビジュアル設定 */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
@@ -409,7 +398,7 @@ img {
     position: absolute;
     bottom: 8%;
     right: 4%;
-    font-size: 1.9vw;
+    font-size: 2vw;
     font-weight: bold;
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
@@ -491,7 +480,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-.l-sec--news-bg {
+.l-news-sec-bg {
     background-color: #eb8e3a;
 }
 
@@ -516,55 +505,67 @@ img {
 
 /* menu.html
 ------------------------------ */
-/*  menu.htmlの共通部分 */
+/*  menu一覧の共通部分 */
 .l-main-menu {
     background: var(--childPage-bg);
-    padding: 20px 0 40px 0;
 }
 
-.c-section-title {
-    margin-bottom: 16px;
+.c-section-title+* {
+    margin-block-start: 16px;
 }
 
-.l-shop-map {
+.shop-map {
     margin-bottom: 40px;
 }
 
-.l-shop-map img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.menu-wrapper {
+.l-menu-list {
     width: 92%;
     margin: 0 auto;
 }
 
-/*  menu.htmlコンポーネント */
-/*  ・メニューカード */
+/*  menu一覧コンポーネント */
+/*  メニューカード */
+/*  menu一覧の共通部分 */
+.l-main-menu {
+    background: var(--childPage-bg);
+}
+
+.c-section-title+* {
+    margin-block-start: 16px;
+}
+
+.shop-map {
+    margin-bottom: 40px;
+}
+
+.shop-map img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.l-menu-list {
+    width: 92%;
+    margin: 0 auto;
+}
+
+/*  menu一覧コンポーネント */
+/*  メニューカード */
 .c-menu-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--white);
     background-color: var(--black);
-    width: 100%;
+    width: clamp(21.563rem, 24.093rem + -10.798vw, 14.375rem);
     margin-inline: auto;
     line-height: 1.5;
     padding: 24px 12px;
-}
-
-.c-menu-card:nth-child(-n+6) {
     margin-bottom: 10px;
 }
 
 .c-menu-card h2 {
-    font-size: 18px;
+    font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
     font-weight: bold;
-}
-
-.c-menu-card-break {
-  display: none;
 }
 
 .c-menu-card__img {
@@ -573,25 +574,20 @@ img {
 
 .c-share-link {
     color: #eb8e3a;
-    font-weight: bold;
-}
-
-.c-button-goto-booth {
-    font-weight: bold;
 }
 
 .c-share-link::before {
     content: url(../img/menu/share-icon.png);
 }
 
-/*  ・メニューカード内の詳細ボタン */
+/*  メニューカード内の詳細ボタン */
 .c-button-goto-booth {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: 252px;
-    height: 44px;
+    width: clamp(15.625rem, 17.386rem + -7.512vw, 10.625rem);
+    height: clamp(2.75rem, 2.926rem + -0.751vw, 2.25rem);
     background: var(--black);
     border: var(--white2) solid 1px;
     box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
@@ -732,7 +728,7 @@ a.c-share-btn::after {
 /* faq.html
 ------------------------------ */
 
-.c-answer{
+.c-answer {
     font-size: 16px;
     width: 100%;
     padding: 5px;
@@ -741,7 +737,7 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-section-btn{
+.c-section-btn {
     font-weight: bold;
     width: fit-content;
     background-color: #fff;
@@ -750,7 +746,7 @@ a.c-share-btn::after {
     margin: 0 auto 7px 15px;
 }
 
-.c-subsection-title{
+.c-subsection-title {
     font-size: 24px;
     width: fit-content;
     background-color: #fff;
@@ -759,7 +755,7 @@ a.c-share-btn::after {
     margin: 36px auto 5px 15px;
 }
 
-.c-question{
+.c-question {
     font-size: 18px;
     width: 100%;
     padding: 5px;
@@ -768,17 +764,17 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-q{
+.c-q {
     width: 23px;
     margin-right: 5px;
 }
 
-.c-a{
+.c-a {
     width: 23px;
     margin-right: 5px;
 }
 
-.c-contact-btn{
+.c-contact-btn {
     margin: 45px auto 0 auto;
     padding: 45px auto 80px auto;
 }
@@ -788,12 +784,12 @@ a.c-share-btn::after {
 /* contact.html
 ------------------------------ */
 
-.c-describe{
+.c-describe {
     font-size: 16px;
     margin-left: 15px;
 }
 
-.c-caution{
+.c-caution {
     font-size: 14px;
     margin-left: 15px;
 }
@@ -947,8 +943,8 @@ a.c-share-btn::after {
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    padding-left: 1.3em;
-    text-indent: -1.3em;
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 .c-privacy-item__desc {
@@ -958,8 +954,8 @@ a.c-share-btn::after {
 .c-privacy-item__desc-in-list {
     list-style-type: none;
     counter-increment: number;
-    padding-left: 1.3em;
-    text-indent: -1.3em;
+    padding-left: 1.1em;
+    text-indent: -1.1em;
 }
 
 .c-privacy-item__desc-in-list::before {
@@ -1004,73 +1000,11 @@ a.c-share-btn::after {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 8%;
+        gap: 10%;
     }
 
     /* menu.html
 ------------------------------ */
-  /*  ・menu.html共通部分 */
-    .l-main-menu {
-        padding: 60px 0 140px 0;
-    }
-
-    .c-section-title {
-        margin-bottom: 60px;
-    }
-
-    /*  ・menu.htmlコンテンツ幅の指定 */
-    .l-menu-contents {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    .menu-wrapper {
-        width: 100%;
-    }
-
-  /*  ・menu.htmlメニューカード */
-    .l-menu-list {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 30px;
-        justify-content: center;
-    }
-
-    .c-menu-card {
-        width: 23%;
-    }
-
-  .c-menu-card-break {
-    display: inline;
-  }
-
-    /*  ・カード内の文字サイズ */
-    .c-menu-card h2 {
-        font-size: 20px;
-    }
-
-    .c-menu-card p {
-        font-size: 18px;
-    }
-
-    .c-share-link {
-        font-size: 14px;
-    }
-
-    .c-button-goto-booth {
-        font-size: 18px;
-    }
-
-    .c-menu-card:nth-child(-n+6) {
-        margin-bottom: 0px;
-    }
-
-    /*  ・メニューカード内の詳細ボタン */
-    .c-button-goto-booth {
-        width: 170px;
-        height: 36px;
-    }
-
 
     /* menu-b-XX.html
 ------------------------------ */
@@ -1141,7 +1075,7 @@ a.c-share-btn::after {
     /* news.html
 ------------------------------ */
     .c-news-item {
-        grid-template-columns: clamp(140px, 71.429px + 8.929vw, 200px) 1fr;
+        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
         gap: 0;
     }
 
