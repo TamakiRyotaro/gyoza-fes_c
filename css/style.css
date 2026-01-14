@@ -564,13 +564,11 @@ menu.html
 /*  menu.htmlの共通部分 */
 .l-main-menu {
     margin-top: clamp(1.25rem, 0.370rem + 3.756vw, 3.75rem);
-    ;
 }
 
 .c-section-title {
     /* mb SP:16px、PC：60px */
     margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
-
 }
 
 .l-shop-map {
@@ -667,6 +665,7 @@ menu.html
 
 .c-button-goto-booth::before {
     content: url(../img/menu/triangle-icon.png);
+    margin-right: 10px;
 }
 
 
