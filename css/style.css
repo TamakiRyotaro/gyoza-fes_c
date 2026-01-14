@@ -253,8 +253,6 @@ img {
 }
 
 /* トップに戻るボタン */
-.c-pagetop-btn {}
-
 .c-pagetop-btn-position {
     position: fixed;
     right: 15px;
@@ -279,6 +277,7 @@ img {
     color: var(--white2);
     background-color: var(--red);
 }
+
 .c-sec-title {
     font-size: 24px;
     font-weight: bold;
@@ -488,9 +487,10 @@ img {
     height: 300px;
 }
 
- .l-access-list-flex {
-     margin-top: 15px;
- }
+.l-access-list-flex {
+    margin-top: 15px;
+}
+
 /* kantodo:見出し文の「・」の方法を考える */
 .c-access-list-title::before {
     content: "・";
@@ -1090,7 +1090,8 @@ a.c-share-btn::after {
         justify-content: center;
         gap: 10%;
     }
-    .l-access-list-flex{
+
+    .l-access-list-flex {
         display: flex;
         flex-direction: row;
         gap: 20px;
