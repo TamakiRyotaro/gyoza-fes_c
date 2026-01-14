@@ -429,6 +429,7 @@ img {
 
 .l-catchcopy-attention {
     display: inline-block;
+    line-height: 1.2;
     font-size: 4.5vw;
     font-weight: bold;
 }
@@ -443,23 +444,32 @@ img {
     position: absolute;
     bottom: 8%;
     right: 4%;
-    font-size: 2vw;
+    font-size: 1.9vw;
     font-weight: bold;
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-.c-catchcopy-sound {
-    /* kantodo:グラデーションの下線を引く */
-    color: red;
+.c-catchcopy-sound--pari {
+    font-family: "Zen Antique Soft", serif;
+    display: inline-block;
+    transform: rotate(5deg);
 }
-
 .c-catchcopy-accent {
-    /* kantodo:グラデーションの下線を引く */
-    color: red;
+    font-size: 2.2vw;
+    background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 50%;
 }
 
 /* メニューセクション記述は梅崎さんのものをそのまま！ */
+.c-menu-card h3 {
+    /* fz SP:18px、PC：20px */
+    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
+    font-weight: bold;
+}
+/* 餃子の差し画像 */
 .l-rest-image {
     aspect-ratio: 5 / 2;
     width: 100vw;
