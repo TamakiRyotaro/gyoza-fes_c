@@ -514,20 +514,19 @@ img {
     padding-bottom: 16px;
 }
 
-/* menu.html
+/*------------------------------ 
+menu.html
 ------------------------------ */
 /*  menu.htmlの共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-    padding: 20px 0 40px 0;
-}
-
 .c-section-title {
-    margin-bottom: 16px;
+    /* mb SP:16px、PC：60px */
+    margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
+
 }
 
 .l-shop-map {
-    margin-bottom: 40px;
+    /* mb SP:40px、PC：60px */
+    margin-bottom: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
 }
 
 .l-shop-map img {
@@ -549,8 +548,6 @@ img {
     color: var(--white);
     background-color: var(--black);
     width: 100%;
-    margin-inline: auto;
-    line-height: 1.5;
     padding: 24px 12px;
 }
 
@@ -559,7 +556,8 @@ img {
 }
 
 .c-menu-card h2 {
-    font-size: 18px;
+    /* fz SP:18px、PC：20px */
+    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
 }
 
@@ -571,12 +569,19 @@ img {
     margin: 34px 0 20px;
 }
 
+.c-menu-card p {
+    /* fz SP:16px、PC：18px */
+    font-size: clamp(1rem, 0.956rem + 0.188vw, 1.125rem);
+}
+
 .c-share-link {
     color: #eb8e3a;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .c-button-goto-booth {
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -590,7 +595,8 @@ img {
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: 252px;
+    width: 76%;
+    max-width: 252px;
     height: 44px;
     background: var(--black);
     border: var(--white2) solid 1px;
@@ -732,11 +738,11 @@ a.c-share-btn::after {
 /* faq.html
 ------------------------------ */
 
-.l-main{
+.l-main {
     background: linear-gradient(to right, #fff, #FFDEBF);
 }
 
-.c-answer{
+.c-answer {
     font-size: 16px;
     width: 100%;
     padding: 5px;
@@ -745,7 +751,7 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-section-btn{
+.c-section-btn {
     font-weight: bold;
     width: fit-content;
     background-color: #fff;
@@ -754,7 +760,7 @@ a.c-share-btn::after {
     margin: 0 auto 7px 15px;
 }
 
-.c-subsection-title{
+.c-subsection-title {
     font-size: 24px;
     width: fit-content;
     background-color: #fff;
@@ -763,7 +769,7 @@ a.c-share-btn::after {
     margin: 36px auto 5px 15px;
 }
 
-.c-question{
+.c-question {
     font-size: 18px;
     width: 100%;
     padding: 5px;
@@ -772,17 +778,17 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-q{
+.c-q {
     width: 23px;
     margin-right: 5px;
 }
 
-.c-a{
+.c-a {
     width: 23px;
     margin-right: 5px;
 }
 
-.c-contact-btn{
+.c-contact-btn {
     margin: 45px auto 0 auto;
     padding: 45px auto 80px auto;
 }
@@ -1001,11 +1007,12 @@ a.c-share-btn::after {
         gap: 8%;
     }
 
-    /* menu.html
+    /*------------------------------ 
+    menu.html
 ------------------------------ */
   /*  ・menu.html共通部分 */
     .l-main-menu {
-        padding: 60px 0 140px 0;
+        padding: 60px 0 0 0;
     }
 
     .c-section-title {
@@ -1026,33 +1033,17 @@ a.c-share-btn::after {
     .l-menu-list {
         display: flex;
         flex-wrap: wrap;
+        column-gap: 15px;
         row-gap: 30px;
         justify-content: center;
     }
 
     .c-menu-card {
-        width: 23%;
+        width: 23.8%;
     }
 
   .c-menu-card-break {
     display: inline;
-  }
-
-    /*  ・カード内の文字サイズ */
-    .c-menu-card h2 {
-        font-size: 20px;
-    }
-
-    .c-menu-card p {
-        font-size: 18px;
-    }
-
-    .c-share-link {
-        font-size: 14px;
-    }
-
-    .c-button-goto-booth {
-        font-size: 18px;
     }
 
     .c-menu-card:nth-child(-n+6) {
@@ -1061,8 +1052,7 @@ a.c-share-btn::after {
 
     /*  ・メニューカード内の詳細ボタン */
     .c-button-goto-booth {
-        width: 170px;
-        height: 36px;
+        min-width: 170px;
     }
 
 
