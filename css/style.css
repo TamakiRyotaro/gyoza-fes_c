@@ -549,51 +549,18 @@ menu.html
     margin-bottom: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
 }
 
-/*  menu一覧の共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-}
-
-.c-section-title+* {
-    margin-block-start: 16px;
-}
-
-.shop-map {
-    margin-bottom: 40px;
-}
-
-.l-menu-list {
-    width: 92%;
-    margin: 0 auto;
-}
-
-/*  menu一覧コンポーネント */
-/*  メニューカード */
-/*  menu一覧の共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-}
-
-.c-section-title+* {
-    margin-block-start: 16px;
-}
-
-.shop-map {
-    margin-bottom: 40px;
-}
-
-.shop-map img {
+.l-shop-map img {
     width: 100%;
     object-fit: cover;
 }
 
-.l-menu-list {
+.menu-wrapper {
     width: 92%;
     margin: 0 auto;
 }
 
-/*  menu一覧コンポーネント */
-/*  メニューカード */
+/*  menu.htmlコンポーネント */
+/*  ・メニューカード */
 .c-menu-card {
     display: flex;
     flex-direction: column;
@@ -602,6 +569,9 @@ menu.html
     background-color: var(--black);
     width: 100%;
     padding: 24px 12px;
+}
+
+.c-menu-card:nth-child(-n+6) {
     margin-bottom: 10px;
 }
 
@@ -609,6 +579,10 @@ menu.html
     /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+}
+
+.c-menu-card-break {
+    display: none;
 }
 
 .c-menu-card__img {
