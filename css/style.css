@@ -270,7 +270,15 @@ img {
     margin-inline: auto;
 }
 
-/* kantodo:PCと変更する（可変させてもいい）*/
+/* 斜めボタン　赤メイン・白影 */
+.c-btn--whitered {
+    filter: drop-shadow(-10px 10px 0 var(--white2));
+}
+
+.c-btn_link--whitered {
+    color: var(--white2);
+    background-color: var(--red);
+}
 .c-sec-title {
     font-size: 24px;
     font-weight: bold;
@@ -304,7 +312,7 @@ img {
     height: 56px;
 }
 
-.l-footer--toppage {
+.l-footer--top {
     margin-top: 0;
 }
 
@@ -451,20 +459,11 @@ img {
     color: red;
 }
 
+/* メニューセクション記述は梅崎さんのものをそのまま！ */
 .l-rest-image {
     aspect-ratio: 5 / 2;
     width: 100vw;
     object-fit: cover;
-}
-
-/* 斜めボタン　赤メイン・白影 */
-.c-btn--whitered {
-    filter: drop-shadow(-10px 10px 0 var(--white2));
-}
-
-.c-btn_link--whitered {
-    color: var(--white2);
-    background-color: var(--red);
 }
 
 /* 開催概要セクション記述 */
@@ -489,9 +488,13 @@ img {
     height: 300px;
 }
 
+ .l-access-list-flex {
+     margin-top: 15px;
+ }
 /* kantodo:見出し文の「・」の方法を考える */
 .c-access-list-title::before {
     content: "・";
+    position: relative;
 }
 
 .c-access-list-title {
@@ -502,13 +505,16 @@ img {
 
 .c-access-list-button::before {
     /* kantodo:アイコンの位置が変だから変えたい */
-    content: url(../img/top-ruto-sp.svg);
+    position: absolute;
+    display: inline;
+    left: -18px;
+    content: url(../img/ruto_icon.svg);
     display: inline-block;
 }
 
-/* kantodo:PCとレイアウトを変える */
-
 .c-access-list-button {
+    position: relative;
+    text-indent: 20px;
     font-size: 12px;
     font-weight: light;
     display: inline-block;
@@ -518,7 +524,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-/* お知らせセクション記述 */
+/* お知らせセクション記述（永田さんに投げる） */
 .l-sec--news-bg {
     background-color: #eb8e3a;
 }
@@ -764,9 +770,6 @@ a.c-share-btn::after {
 
 /* faq.html
 ------------------------------ */
-.l-main {
-    background: linear-gradient(to right, #fff, #FFDEBF);
-}
 
 .c-faq-cu {
     margin-top: 20px;
@@ -851,6 +854,7 @@ a.c-share-btn::after {
     color: #fff;
     background-color: #E22A00;
     padding: 3px;
+    margin-right: 10px;
 }
 
 #name,
@@ -1086,13 +1090,13 @@ a.c-share-btn::after {
         justify-content: center;
         gap: 10%;
     }
-
-    .c-news-list-content {
+    .l-access-list-flex{
+        display: flex;
         flex-direction: row;
+        gap: 20px;
     }
 
-    /*------------------------------ 
-    menu.html
+    /* menu.html
 ------------------------------ */
     /*  ・menu.html共通部分 */
     .l-main-menu {
