@@ -42,7 +42,7 @@ img {
 .c-section-title::before {
     content: attr(data-sub-title);
     font-family: "Abhaya Libre", serif;
-    font-size: 24px;
+    font-size: clamp(16px, 13.183px + 0.751vw, 24px);
     font-weight: 800;
     border-bottom: 1px solid var(--black);
     width: fit-content;
