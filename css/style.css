@@ -286,7 +286,7 @@ img {
     margin-inline: auto;
 }
 
-/* 斜めボタン　赤メイン・白影 */
+/*  斜めボタン　赤メイン・白影 */
 .c-btn--whitered {
     filter: drop-shadow(-10px 10px 0 var(--white2));
 }
