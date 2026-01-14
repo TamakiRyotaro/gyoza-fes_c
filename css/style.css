@@ -193,7 +193,7 @@ img {
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
     background-color: var(--white);
     margin-top: clamp(80px, 58.873px + 5.634vw, 140px);
-
+    letter-spacing: 0em;
 }
 
 .l-footer__title {
@@ -228,7 +228,7 @@ img {
 }
 
 .c-footer__contact-item {
-    font-size: clamp(14px, 12.592px + 0.376vw, 18px);
+    font-size: clamp(14px, 13.296px + 0.188vw, 16px);
 }
 
 .c-privacy {
@@ -244,6 +244,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
 }
 
 .l-footer__contact {
