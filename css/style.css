@@ -757,9 +757,6 @@ a.c-share-btn::after {
 
 /* faq.html
 ------------------------------ */
-.l-main {
-    background: linear-gradient(to right, #fff, #FFDEBF);
-}
 
 .c-faq-cu{
     margin-top: 20px;
@@ -844,6 +841,7 @@ a.c-share-btn::after {
     color: #fff;
     background-color: #E22A00;
     padding: 3px;
+    margin-right: 10px;
 }
 
 #name, #kana, #mail{
