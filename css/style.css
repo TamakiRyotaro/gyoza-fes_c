@@ -728,10 +728,6 @@ a.c-share-btn::after {
 /* faq.html
 ------------------------------ */
 
-.l-main{
-    background: linear-gradient(to right, #fff, #FFDEBF);
-}
-
 .c-answer{
     font-size: 16px;
     width: 100%;
@@ -787,6 +783,16 @@ a.c-share-btn::after {
 
 /* contact.html
 ------------------------------ */
+
+.c-describe{
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.c-caution{
+    font-size: 14px;
+    margin-left: 15px;
+}
 
 /* news.html
 ------------------------------ */
