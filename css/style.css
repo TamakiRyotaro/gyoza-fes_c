@@ -760,11 +760,16 @@ a.c-share-btn::after {
     background: linear-gradient(to right, #fff, #FFDEBF);
 }
 
-.c-answer {
+.c-faq-cu{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.c-answer{
     font-size: 16px;
     width: 100%;
-    padding: 5px;
-    margin: 0 15px;
+    padding: 5px 15px;
+    margin-right: 15px;
     display: flex;
     justify-content: start;
 }
@@ -803,7 +808,7 @@ a.c-share-btn::after {
 
 .c-a {
     width: 23px;
-    margin-right: 5px;
+    margin: 0 5px 0 15px;
 }
 
 .c-contact-btn {
@@ -824,6 +829,40 @@ a.c-share-btn::after {
 .c-caution {
     font-size: 14px;
     margin-left: 15px;
+}
+
+.l-form-main{
+    font-size: 16px;
+    background-color: #B8B8B8;
+    color: #000;
+    padding: 10px 15px;
+}
+
+.c-required{
+    font-size: 14px;
+    color: #fff;
+    background-color: #E22A00;
+    padding: 3px;
+}
+
+#name, #kana, #mail{
+    width: 100%;
+    height: 42px;
+    color: #B8B8B8;
+    background-color: #fff;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+#message{
+    width: 100%;
+    height: 135px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.c-btn-confirm{
+    margin: 50px auto 80px auto;
 }
 
 /* news.html
