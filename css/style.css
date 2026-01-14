@@ -24,6 +24,7 @@ body {
     line-height: 1.5;
 }
 
+
 img {
     max-width: 100%;
 }
@@ -33,7 +34,23 @@ img {
 /* 下層ページの最背面背景色 */
 .l-body-sub {
     background: var(--childPage-bg);
+    z-index: -10;
 }
+
+/* 背景に煙動画追加（適用させたい部分はz-indexを-10にしてください） */
+.c-smoke {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    mix-blend-mode: color-burn;
+    z-index: -1;
+    opacity: 0.5;
+}
+
 
 /* 下層ページ見出し */
 .c-section-title {
@@ -455,6 +472,7 @@ img {
     display: inline-block;
     transform: rotate(5deg);
 }
+
 .c-catchcopy-accent {
     font-size: 2.2vw;
     background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
@@ -469,6 +487,7 @@ img {
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
 }
+
 /* 餃子の差し画像 */
 .l-rest-image {
     aspect-ratio: 5 / 2;
