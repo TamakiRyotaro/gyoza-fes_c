@@ -585,7 +585,7 @@ menu.html
     margin-top: clamp(1.25rem, 0.370rem + 3.756vw, 3.75rem);
 }
 
-.c-section-title {
+.l-main-menu .c-section-title {
     /* mb SP:16px、PC：60px */
     margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
 }
@@ -651,7 +651,7 @@ menu.html
 }
 
 .c-share-link:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .c-button-goto-booth {
@@ -679,7 +679,7 @@ menu.html
 }
 
 .c-button-goto-booth:hover {
-    color: var(--red);
+    opacity: 0.7;
 }
 
 .c-button-goto-booth::before {
@@ -1192,6 +1192,7 @@ a.c-share-btn::after {
     /*  ・メニューカード内の詳細ボタン */
     .c-button-goto-booth {
         min-width: 170px;
+        min-height: 36px;
         margin-top: 12px;
     }
 
