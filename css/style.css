@@ -733,14 +733,15 @@ a.c-share-btn::after {
 ------------------------------ */
 
 .c-faq-cu{
+    margin-top: 20px;
     margin-left: 15px;
 }
 
 .c-answer{
     font-size: 16px;
     width: 100%;
-    padding: 5px;
-    margin: 0 15px;
+    padding: 5px 15px;
+    margin-right: 15px;
     display: flex;
     justify-content: start;
 }
@@ -779,7 +780,7 @@ a.c-share-btn::after {
 
 .c-a{
     width: 23px;
-    margin-right: 5px;
+    margin: 0 5px 0 15px;
 }
 
 .c-contact-btn{
@@ -830,6 +831,10 @@ a.c-share-btn::after {
     height: 135px;
     background-color: #fff;
     margin: 10px 0;
+}
+
+.c-btn-confirm{
+    margin: 50px auto 80px auto;
 }
 
 /* news.html
