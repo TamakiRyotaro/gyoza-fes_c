@@ -563,6 +563,10 @@ img {
     font-weight: bold;
 }
 
+.c-menu-card-break {
+  display: none;
+}
+
 .c-menu-card__img {
     margin: 34px 0 20px;
 }
@@ -943,8 +947,8 @@ a.c-share-btn::after {
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 1.3em;
+    text-indent: -1.3em;
 }
 
 .c-privacy-item__desc {
@@ -954,8 +958,8 @@ a.c-share-btn::after {
 .c-privacy-item__desc-in-list {
     list-style-type: none;
     counter-increment: number;
-    padding-left: 1.1em;
-    text-indent: -1.1em;
+    padding-left: 1.3em;
+    text-indent: -1.3em;
 }
 
 .c-privacy-item__desc-in-list::before {
@@ -1005,7 +1009,7 @@ a.c-share-btn::after {
 
     /* menu.html
 ------------------------------ */
-    /*  menu.html共通部分 */
+  /*  ・menu.html共通部分 */
     .l-main-menu {
         padding: 60px 0 140px 0;
     }
@@ -1024,8 +1028,7 @@ a.c-share-btn::after {
         width: 100%;
     }
 
-    /*  menu.htmlメニューカード */
-    /*  ・flex */
+  /*  ・menu.htmlメニューカード */
     .l-menu-list {
         display: flex;
         flex-wrap: wrap;
@@ -1036,6 +1039,10 @@ a.c-share-btn::after {
     .c-menu-card {
         width: 23%;
     }
+
+  .c-menu-card-break {
+    display: inline;
+  }
 
     /*  ・カード内の文字サイズ */
     .c-menu-card h2 {
@@ -1134,7 +1141,7 @@ a.c-share-btn::after {
     /* news.html
 ------------------------------ */
     .c-news-item {
-        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
+        grid-template-columns: clamp(140px, 71.429px + 8.929vw, 200px) 1fr;
         gap: 0;
     }
 
