@@ -90,7 +90,7 @@ img {
     margin-inline: auto;
     padding-block: 10px 0;
     position: relative;
-    width: 179px;
+    width: 185px;
     height: 56px;
 }
 
@@ -193,7 +193,7 @@ img {
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
     background-color: var(--white);
     margin-top: clamp(80px, 58.873px + 5.634vw, 140px);
-
+    letter-spacing: 0em;
 }
 
 .l-footer__title {
@@ -228,7 +228,7 @@ img {
 }
 
 .c-footer__contact-item {
-    font-size: clamp(14px, 12.592px + 0.376vw, 18px);
+    font-size: clamp(14px, 13.296px + 0.188vw, 16px);
 }
 
 .c-privacy {
@@ -244,6 +244,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
 }
 
 .l-footer__contact {
@@ -714,7 +715,7 @@ main.l-menu-b img {
     font-size: clamp(16px, 13.887px + 0.563vw, 22px);
     width: clamp(52px, 47.423px + 1.221vw, 65px);
     height: clamp(25px, 20.775px + 1.127vw, 37px);
-    padding-inline: 8px;
+    padding-inline: 7px;
     letter-spacing: 0.96px;
     display: flex;
     align-items: center;
@@ -1105,6 +1106,10 @@ a.c-share-btn::after {
         display: flex;
         flex-direction: row;
         gap: 20px;
+    }
+
+    .c-news-list-content {
+        flex-direction: row;
     }
 
     /* menu.html
