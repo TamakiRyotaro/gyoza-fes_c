@@ -42,7 +42,7 @@ img {
 .c-section-title::before {
     content: attr(data-sub-title);
     font-family: "Abhaya Libre", serif;
-    font-size: 24px;
+    font-size: clamp(16px, 13.183px + 0.751vw, 24px);
     font-weight: 800;
     border-bottom: 1px solid var(--black);
     width: fit-content;
@@ -253,33 +253,51 @@ img {
     gap: 7px;
 }
 
-/* ------------------------------
----------------------------------
-        index.html(kansp)
----------------------------------
------------------------------- */
-
-.toppage-body {
-    line-height: 1.5;
-}
-
+/*------------------------------------------------------------
+ index.html(kansp)
+------------------------------------------------------------ */
+/* 共通設定（toppage） */
 .l-content-wrap {
     width: min(92vw, 960px);
     margin-inline: auto;
 }
+
+/* kantodo:PCと変更する（可変させてもいい）*/
 .c-sec-title {
-    font-size: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
+    font-size: 24px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
 }
+
 .c-sec-title::before {
     content: attr(data-sub-title);
     font-family: "Abhaya Libre", serif;
     font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+    line-height: normal;
     font-weight: 800;
     border-bottom: 2px solid var(--black);
     width: fit-content;
+}
+
+.l-sec {
+    padding-top: clamp(3.75rem, 2.870rem + 3.756vw, 6.25rem);
+    padding-bottom: clamp(5rem, 4.560rem + 1.878vw, 6.25rem);
+}
+
+.c-sec-title+* {
+    margin-top: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
+}
+
+.l-btn-layout {
+    margin-top: clamp(3.125rem, 2.465rem + 2.817vw, 5rem);
+    margin-inline: auto;
+    width: 179px;
+    height: 56px;
+}
+
+.l-footer--toppage {
+    margin-top: 0;
 }
 
 /* メインビジュアル設定  */
@@ -409,7 +427,7 @@ img {
     position: absolute;
     bottom: 8%;
     right: 4%;
-    font-size: 1.9vw;
+    font-size: 2vw;
     font-weight: bold;
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
@@ -426,7 +444,7 @@ img {
 }
 
 .l-rest-image {
-    aspect-ratio: 4 / 1;
+    aspect-ratio: 5 / 2;
     width: 100vw;
     object-fit: cover;
 }
@@ -441,6 +459,7 @@ img {
     background-color: var(--red);
 }
 
+/* 開催概要セクション記述 */
 .c-info-list-title {
     display: inline-block;
     border-bottom: 1px solid var(--black);
@@ -491,6 +510,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
+/* お知らせセクション記述 */
 .l-sec--news-bg {
     background-color: #eb8e3a;
 }
@@ -500,13 +520,12 @@ img {
     font-weight: bold;
 }
 
-.c-news-list-content::before {
-    content: "▷";
-}
-
 .c-news-list-content {
-    font-size: 16px;
+    font-size: clamp(16px, 15.296px + 0.188vw, 18px);
     font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .c-news-list {
@@ -514,20 +533,19 @@ img {
     padding-bottom: 16px;
 }
 
-/* menu.html
+/*------------------------------ 
+menu.html
 ------------------------------ */
 /*  menu.htmlの共通部分 */
-.l-main-menu {
-    background: var(--childPage-bg);
-    padding: 20px 0 40px 0;
-}
-
 .c-section-title {
-    margin-bottom: 16px;
+    /* mb SP:16px、PC：60px */
+    margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
+
 }
 
 .l-shop-map {
-    margin-bottom: 40px;
+    /* mb SP:40px、PC：60px */
+    margin-bottom: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
 }
 
 .l-shop-map img {
@@ -549,8 +567,6 @@ img {
     color: var(--white);
     background-color: var(--black);
     width: 100%;
-    margin-inline: auto;
-    line-height: 1.5;
     padding: 24px 12px;
 }
 
@@ -559,24 +575,32 @@ img {
 }
 
 .c-menu-card h2 {
-    font-size: 18px;
+    /* fz SP:18px、PC：20px */
+    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
 }
 
 .c-menu-card-break {
-  display: none;
+    display: none;
 }
 
 .c-menu-card__img {
     margin: 34px 0 20px;
 }
 
+.c-menu-card p {
+    /* fz SP:16px、PC：18px */
+    font-size: clamp(1rem, 0.956rem + 0.188vw, 1.125rem);
+}
+
 .c-share-link {
     color: #eb8e3a;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .c-button-goto-booth {
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -584,13 +608,14 @@ img {
     content: url(../img/menu/share-icon.png);
 }
 
-/*  ・メニューカード内の詳細ボタン */
+/*  メニューカード内の詳細ボタン */
 .c-button-goto-booth {
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
-    width: 252px;
+    width: 76%;
+    max-width: 252px;
     height: 44px;
     background: var(--black);
     border: var(--white2) solid 1px;
@@ -731,6 +756,9 @@ a.c-share-btn::after {
 
 /* faq.html
 ------------------------------ */
+.l-main {
+    background: linear-gradient(to right, #fff, #FFDEBF);
+}
 
 .c-faq-cu{
     margin-top: 20px;
@@ -746,7 +774,7 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-section-btn{
+.c-section-btn {
     font-weight: bold;
     width: fit-content;
     background-color: #fff;
@@ -755,7 +783,7 @@ a.c-share-btn::after {
     margin: 0 auto 7px 15px;
 }
 
-.c-subsection-title{
+.c-subsection-title {
     font-size: 24px;
     width: fit-content;
     background-color: #fff;
@@ -764,7 +792,7 @@ a.c-share-btn::after {
     margin: 36px auto 5px 15px;
 }
 
-.c-question{
+.c-question {
     font-size: 18px;
     width: 100%;
     padding: 5px;
@@ -773,17 +801,17 @@ a.c-share-btn::after {
     justify-content: start;
 }
 
-.c-q{
+.c-q {
     width: 23px;
     margin-right: 5px;
 }
 
-.c-a{
+.c-a {
     width: 23px;
     margin: 0 5px 0 15px;
 }
 
-.c-contact-btn{
+.c-contact-btn {
     margin: 45px auto 0 auto;
     padding: 45px auto 80px auto;
 }
@@ -793,12 +821,12 @@ a.c-share-btn::after {
 /* contact.html
 ------------------------------ */
 
-.c-describe{
+.c-describe {
     font-size: 16px;
     margin-left: 15px;
 }
 
-.c-caution{
+.c-caution {
     font-size: 14px;
     margin-left: 15px;
 }
@@ -986,8 +1014,8 @@ a.c-share-btn::after {
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    padding-left: 1.3em;
-    text-indent: -1.3em;
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 .c-privacy-item__desc {
@@ -997,8 +1025,8 @@ a.c-share-btn::after {
 .c-privacy-item__desc-in-list {
     list-style-type: none;
     counter-increment: number;
-    padding-left: 1.3em;
-    text-indent: -1.3em;
+    padding-left: 1.1em;
+    text-indent: -1.1em;
 }
 
 .c-privacy-item__desc-in-list::before {
@@ -1043,14 +1071,19 @@ a.c-share-btn::after {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 8%;
+        gap: 10%;
     }
 
-    /* menu.html
+    .c-news-list-content {
+        flex-direction: row;
+    }
+
+    /*------------------------------ 
+    menu.html
 ------------------------------ */
-  /*  ・menu.html共通部分 */
+    /*  ・menu.html共通部分 */
     .l-main-menu {
-        padding: 60px 0 140px 0;
+        padding: 60px 0 0 0;
     }
 
     .c-section-title {
@@ -1067,37 +1100,21 @@ a.c-share-btn::after {
         width: 100%;
     }
 
-  /*  ・menu.htmlメニューカード */
+    /*  ・menu.htmlメニューカード */
     .l-menu-list {
         display: flex;
         flex-wrap: wrap;
+        column-gap: 15px;
         row-gap: 30px;
         justify-content: center;
     }
 
     .c-menu-card {
-        width: 23%;
+        width: 23.8%;
     }
 
-  .c-menu-card-break {
-    display: inline;
-  }
-
-    /*  ・カード内の文字サイズ */
-    .c-menu-card h2 {
-        font-size: 20px;
-    }
-
-    .c-menu-card p {
-        font-size: 18px;
-    }
-
-    .c-share-link {
-        font-size: 14px;
-    }
-
-    .c-button-goto-booth {
-        font-size: 18px;
+    .c-menu-card-break {
+        display: inline;
     }
 
     .c-menu-card:nth-child(-n+6) {
@@ -1106,10 +1123,8 @@ a.c-share-btn::after {
 
     /*  ・メニューカード内の詳細ボタン */
     .c-button-goto-booth {
-        width: 170px;
-        height: 36px;
+        min-width: 170px;
     }
-
 
     /* menu-b-XX.html
 ------------------------------ */
@@ -1180,7 +1195,7 @@ a.c-share-btn::after {
     /* news.html
 ------------------------------ */
     .c-news-item {
-        grid-template-columns: clamp(140px, 71.429px + 8.929vw, 200px) 1fr;
+        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
         gap: 0;
     }
 
