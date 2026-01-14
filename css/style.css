@@ -705,7 +705,7 @@ main.l-menu-b img {
     font-size: clamp(16px, 13.887px + 0.563vw, 22px);
     width: clamp(52px, 47.423px + 1.221vw, 65px);
     height: clamp(25px, 20.775px + 1.127vw, 37px);
-    padding-inline: 8px;
+    padding-inline: 7px;
     letter-spacing: 0.96px;
     display: flex;
     align-items: center;
