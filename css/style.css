@@ -256,10 +256,7 @@ img {
 /* index.html(kansp)
 ------------------------------ */
 
-.toppage-body {
-    line-height: 1.5;
-}
-
+/* 共通設定（toppage） */
 .l-content-wrap {
     width: min(92vw, 960px);
     margin-inline: auto;
@@ -269,9 +266,35 @@ img {
 .c-sec-title {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
 }
-
-/* メインビジュアル設定 */
+.c-sec-title::before {
+    content: attr(data-sub-title);
+    font-family: "Abhaya Libre", serif;
+    font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+    line-height: normal;
+    font-weight: 800;
+    border-bottom: 2px solid var(--black);
+    width: fit-content;
+}
+.l-sec{
+    padding-top: clamp(3.75rem, 2.870rem + 3.756vw, 6.25rem);
+    padding-bottom: clamp(5rem, 4.560rem + 1.878vw, 6.25rem);
+}
+.c-sec-title + *{
+    margin-top: clamp(2.5rem, 2.060rem + 1.878vw, 3.75rem);
+}
+.l-btn-layout {
+    margin-top: clamp(3.125rem, 2.465rem + 2.817vw, 5rem);
+    margin-inline: auto;
+    width: 179px;
+    height: 56px;
+}
+.l-footer--toppage{
+    margin-top: 0;
+}
+/* メインビジュアル設定  */
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
@@ -415,7 +438,7 @@ img {
 }
 
 .l-rest-image {
-    aspect-ratio: 4 / 1;
+    aspect-ratio: 5 / 2;
     width: 100vw;
     object-fit: cover;
 }
@@ -430,6 +453,7 @@ img {
     background-color: var(--red);
 }
 
+/* 開催概要セクション記述 */
 .c-info-list-title {
     display: inline-block;
     border-bottom: 1px solid var(--black);
@@ -480,7 +504,8 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-.l-news-sec-bg {
+/* お知らせセクション記述 */
+.l-sec--news-bg {
     background-color: #eb8e3a;
 }
 
