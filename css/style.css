@@ -202,7 +202,6 @@ img {
     justify-content: space-between;
 }
 
-
 /* ハンバーガーメニュー */
 .l-hamberger-content {
     position: fixed;
@@ -227,14 +226,11 @@ img {
 }
 
 .c-hambueger__list-link-item {
-    /* height: 38px; */
     padding-right: 15px;
     padding-left: 15px;
 
     width: 100%;
-
     border-bottom: 7px solid var(--white);
-
 }
 
 .c-hambueger__list-link-item>a {
@@ -260,18 +256,15 @@ img {
 .c-header__hamburger-menu {
     z-index: 20;
     position: fixed;
-    top: 0;
-    right: 0;
-}
+    top: clamp(9px, calc(27.930px + -1.315vw), 23px);
+    right: 5px;
 
-.c-header__hamburger-menu img {
-    padding-top: clamp(32px, 37.986px + -1.596vw, 15px);
-    padding-right: clamp(15px, 16.761px + -0.469vw, 10px);
+    background-color: var(--white);
+    padding: 10px;
 }
 
 .c-hambueger__bottom-content {
     display: block;
-    /* background-color: linear-gradient(0deg, #E22A00, #FFE100); */
 }
 
 /* footer */
