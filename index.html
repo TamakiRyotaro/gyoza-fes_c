@@ -20,7 +20,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <!-- ファビコン -->
-  <link rel="icon" href="" type="image/png" />
+  <link rel="icon" href="./img/fav/favc.png" type="image/png">
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,12 +34,10 @@
 </head>
 
 
-
-
 <body>
 
 
-  <header class="l-header">
+<header class="l-header" id="pagetop">
     <div class="c-header__title"><a href="index.html"><img src="./img/logo_line_01.png" alt="ふくおか餃子FES"></a></div>
     <div class="l-header__icons">
       <ul class="l-sns-list">
@@ -55,6 +53,8 @@
       </div>
     </div>
   </header>
+
+
 
 
   <main>
@@ -120,11 +120,10 @@
 
     <section class="l-sec l-sec--menu">
       <div class="l-content-wrap">
-        <!-- attention:Menuの装飾は::before -->
         <h2 class="c-sec-title l-sec-title--menu" data-sub-title="Menu">メニュー</h2>
         <ul class="l-menu-list">
           <li class="c-menu-card c-menu-card--b01">
-            <h3>肉汁あふれる焼き餃子</h3>
+            <h3>肉汁あふれる<br class="c-menu-card-break">焼き餃子</h3>
             <img class="c-menu-card__img" src="./img/menu/menu-01.png" alt="肉汁あふれる焼き餃子" />
             <p class="c-menu-card-price">6個入り&nbsp;580円（税込）</p>
             <p class="c-menu-card-shopname">博多ぎょうざ堂</p>
@@ -132,7 +131,7 @@
             <a class="c-button-goto-booth" href="./menu-b-01.html">詳細はこちら</a>
           </li>
           <li class="c-menu-card c-menu-card--b02">
-            <h3>ふっくら蒸しあげ餃子</h3>
+            <h3>ふっくら<br class="c-menu-card-break">蒸しあげ餃子</h3>
             <img class="c-menu-card__img" src="./img/menu/menu-02.png" alt="ふっくら蒸しあげ餃子" />
             <p class="c-menu-card-price">5個入り&nbsp;600円（税込）</p>
             <p class="c-menu-card-shopname">中華食堂&nbsp;蒸々屋</p>           
@@ -156,7 +155,7 @@
             <a class="c-button-goto-booth" href="./menu-b-04.html">詳細はこちら</a>
           </li>
           <li class="c-menu-card c-menu-card--b05">
-            <h3>お口に広がる地中海の風</h3>
+            <h3>お口に広がる<br class="c-menu-card-break">地中海の風</h3>
             <img class="c-menu-card__img" src="./img/menu/menu-05.png" alt="お口に広がる地中海の風" />
             <p class="c-menu-card-price">5個入り&nbsp;720円（税込）</p>
             <p class="c-menu-card-shopname">Mediterraneo Gyoza</p>
@@ -164,7 +163,7 @@
             <a class="c-button-goto-booth" href="./menu-b-05.html">詳細はこちら</a>
           </li>
           <li class="c-menu-card c-menu-card--b06">
-            <h3>素材の旨味ひきたつ水餃子</h3>
+            <h3>素材の旨味ひきたつ<br class="c-menu-card-break">水餃子</h3>
             <img class="c-menu-card__img" src="./img/menu/menu-06.png" alt="素材の旨味ひきたつ水餃子" />
             <p class="c-menu-card-price">6個入り&nbsp;580円（税込）</p>
             <p class="c-menu-card-shopname">餃子処&nbsp;湯心</p>
@@ -323,6 +322,14 @@
     <a href="./privacy.html" class="c-privacy">プライバシーポリシー</a>
     <small class="c-copyright">&copy;Copyright&nbsp;2025&nbsp;ふくおか餃子FES実行委員会</small>
   </footer>
+  <div id="page-top">
+    <a href="#pagetop" class="c-pagetop-btn c-pagetop-btn-position"><img src="./img/top.svg" alt="トップへ戻る"></a>
+  </div>
+  <!-- js -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/pagetop-btn.js"></script>
 </body>
 
 </html>
