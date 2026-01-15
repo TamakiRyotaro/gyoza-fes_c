@@ -599,6 +599,10 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
+.c-access-list-button:hover {
+    text-decoration: underline;
+}
+
 /* お知らせセクション記述 */
 .l-sec--news-bg {
     background-color: #eb8e3a;
