@@ -312,7 +312,7 @@ img {
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
-    background: url(../img/top-mainvisual.png) no-repeat center center/cover;
+    background: url(../img/top-mainvisual.jpg) no-repeat center center/cover;
     aspect-ratio: 2/1;
     position: relative;
     text-shadow: 3px 3px 9px #000000;
@@ -461,12 +461,10 @@ img {
     font-size: 2.2vw;
 }
 
-/* メニューセクション記述は梅崎さんのものをそのまま！ */
+/* メニューセクション記述 */
 .c-menu-card h3 {
-    /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
-    /* h SP:30px、PC：60px */
     height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
@@ -503,7 +501,7 @@ img {
     margin-top: 15px;
 }
 
-/* kantodo:見出し文の「・」の方法を考える */
+
 .c-access-list-title::before {
     content: "・";
     position: relative;
@@ -516,7 +514,6 @@ img {
 }
 
 .c-access-list-button::before {
-    /* kantodo:アイコンの位置が変だから変えたい */
     position: absolute;
     display: inline;
     left: -18px;
@@ -536,7 +533,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-/* お知らせセクション記述（永田さんに投げる） */
+/* お知らせセクション記述 */
 .l-sec--news-bg {
     background-color: #eb8e3a;
 }
