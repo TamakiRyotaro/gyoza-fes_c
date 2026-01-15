@@ -159,6 +159,7 @@ img {
 
 .l-sns-list--footer {
     gap: 25px;
+    padding-right: 0;
 }
 
 .l-header {
