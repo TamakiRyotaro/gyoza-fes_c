@@ -37,21 +37,6 @@ img {
     z-index: -10;
 }
 
-/* 背景に煙動画追加（適用させたい部分はz-indexを-10にしてください） */
-.c-smoke {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    mix-blend-mode: color-burn;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-
 /* 下層ページ見出し */
 .c-section-title {
     font-size: clamp(24px, 18.366px + 1.502vw, 40px);
@@ -70,12 +55,10 @@ img {
 }
 
 /* 斜めボタン（clip-path版...borderが使えないが、文字数制限なし）*/
-/* c-btnはaタグの親につけてください */
 .c-btn {
     filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
     width: 179px;
     height: 56px;
@@ -90,19 +73,8 @@ img {
     justify-content: center;
 }
 
-/* 斜めボタン　白メイン・赤影 */
-/* .c-btn--redWhite {
-  filter: drop-shadow(-10px 10px 0 var(--red));
-} */
-
-/* .c-btn_link--redWhite {
-  color: var(--red);
-  background-color: var(--white);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-} */
 
 /* 斜めボタン2(transform版...borderを使えるが、7文字限定用) */
-/* c-btnはc-btm_boxとc-btn_linkをまとめる親にしてください */
 .c-btn2 {
     margin-inline: auto;
     padding-block: 10px 0;
@@ -111,7 +83,6 @@ img {
     height: 56px;
 }
 
-/* c-btn_boxはc-btnの子ども、c-btn_linkと兄弟にしてください */
 .c-btn2_box {
     background: var(--yellow);
     transform: skewX(-12deg);
@@ -129,7 +100,6 @@ img {
     height: 56px;
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn2_link {
     position: absolute;
     top: 15px;
@@ -140,7 +110,6 @@ img {
 }
 
 /* 斜めボタン2　白メイン・赤影 */
-
 .c-btn2--red .c-btn2_box {
     background: var(--red);
 }
@@ -197,7 +166,6 @@ img {
     align-items: center;
     background-color: var(--white);
     padding: 0 15px;
-
     justify-content: space-between;
 }
 
@@ -273,7 +241,6 @@ img {
 /* トップに戻るボタン */
 .c-pagetop-btn {
     background: #ffffffba;
-
 }
 
 .c-pagetop-btn-position {
@@ -487,7 +454,7 @@ img {
     background-size: 100% 50%;
 }
 
-.l-catchcopy-other-introduction{
+.l-catchcopy-other-introduction {
     font-size: 2.2vw;
 }
 
