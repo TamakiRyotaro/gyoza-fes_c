@@ -37,21 +37,6 @@ img {
     z-index: -10;
 }
 
-/* 背景に煙動画追加（適用させたい部分はz-indexを-10にしてください） */
-.c-smoke {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    mix-blend-mode: color-burn;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-
 /* 下層ページ見出し */
 .c-section-title {
     font-size: clamp(24px, 18.366px + 1.502vw, 40px);
@@ -70,12 +55,10 @@ img {
 }
 
 /* 斜めボタン（clip-path版...borderが使えないが、文字数制限なし）*/
-/* c-btnはaタグの親につけてください */
 .c-btn {
     filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
     width: 179px;
     height: 56px;
@@ -90,19 +73,8 @@ img {
     justify-content: center;
 }
 
-/* 斜めボタン　白メイン・赤影 */
-/* .c-btn--redWhite {
-  filter: drop-shadow(-10px 10px 0 var(--red));
-} */
-
-/* .c-btn_link--redWhite {
-  color: var(--red);
-  background-color: var(--white);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-} */
 
 /* 斜めボタン2(transform版...borderを使えるが、7文字限定用) */
-/* c-btnはc-btm_boxとc-btn_linkをまとめる親にしてください */
 .c-btn2 {
     margin-inline: auto;
     padding-block: 10px 0;
@@ -111,7 +83,6 @@ img {
     height: 56px;
 }
 
-/* c-btn_boxはc-btnの子ども、c-btn_linkと兄弟にしてください */
 .c-btn2_box {
     background: var(--yellow);
     transform: skewX(-12deg);
@@ -129,7 +100,6 @@ img {
     height: 56px;
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn2_link {
     position: absolute;
     top: 15px;
@@ -140,7 +110,6 @@ img {
 }
 
 /* 斜めボタン2　白メイン・赤影 */
-
 .c-btn2--red .c-btn2_box {
     background: var(--red);
 }
@@ -198,7 +167,6 @@ img {
     align-items: center;
     background-color: var(--white);
     padding: 0 15px;
-
     justify-content: space-between;
 }
 
@@ -339,7 +307,6 @@ img {
 /* トップに戻るボタン */
 .c-pagetop-btn {
     background: #ffffffba;
-
 }
 
 .c-pagetop-btn-position {
@@ -399,6 +366,9 @@ img {
     width: 179px;
     height: 56px;
 }
+.l-btn-layout:hover{
+    opacity: 0.7;
+}
 
 .l-footer--top {
     margin-top: 0;
@@ -408,7 +378,7 @@ img {
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
-    background: url(../img/top-mainvisual.png) no-repeat center center/cover;
+    background: url(../img/top-mainvisual.jpg) no-repeat center center/cover;
     aspect-ratio: 2/1;
     position: relative;
     text-shadow: 3px 3px 9px #000000;
@@ -553,16 +523,14 @@ img {
     background-size: 100% 50%;
 }
 
-.l-catchcopy-other-introduction{
+.l-catchcopy-other-introduction {
     font-size: 2.2vw;
 }
 
-/* メニューセクション記述は梅崎さんのものをそのまま！ */
+/* メニューセクション記述 */
 .c-menu-card h3 {
-    /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
-    /* h SP:30px、PC：60px */
     height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
@@ -599,7 +567,7 @@ img {
     margin-top: 15px;
 }
 
-/* kantodo:見出し文の「・」の方法を考える */
+
 .c-access-list-title::before {
     content: "・";
     position: relative;
@@ -612,7 +580,6 @@ img {
 }
 
 .c-access-list-button::before {
-    /* kantodo:アイコンの位置が変だから変えたい */
     position: absolute;
     display: inline;
     left: -18px;
@@ -632,7 +599,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-/* お知らせセクション記述（永田さんに投げる） */
+/* お知らせセクション記述 */
 .l-sec--news-bg {
     background-color: #eb8e3a;
 }
@@ -896,16 +863,21 @@ a.c-share-btn::after {
 /* faq.html
 ------------------------------ */
 
+.l-main-faq-cu{
+    width: min(92vw, 960px);
+    margin: 0 auto;
+    /* margin-left: clamp(15px, 4vw, calc((100vw - 960px) / 2)); */
+    /* margin-right: clamp(15px, 4%, calc((100vw - 960px) / 2)); */
+}
+
 .c-faq-cu {
     margin-top: 20px;
-    margin-left: 15px;
 }
 
 .c-answer {
     font-size: 16px;
     width: 100%;
-    padding: 5px 15px;
-    margin-right: 15px;
+    padding: 5px;
     display: flex;
     justify-content: start;
 }
@@ -916,23 +888,23 @@ a.c-share-btn::after {
     background-color: #fff;
     border: 1px solid #000;
     padding: 5px;
-    margin: 0 auto 7px 15px;
+    margin-bottom: 7px;
 }
 
 .c-subsection-title {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
     width: fit-content;
     background-color: #fff;
     border: 1px solid #000;
     padding: 5px;
-    margin: 36px auto 5px 15px;
+    margin: 36px auto 5px 0;
 }
 
 .c-question {
     font-size: 18px;
     width: 100%;
     padding: 5px;
-    margin: 0 15px;
     display: flex;
     justify-content: start;
 }
@@ -944,7 +916,8 @@ a.c-share-btn::after {
 
 .c-a {
     width: 23px;
-    margin: 0 5px 0 15px;
+    padding-right: 20px;
+    margin-right: 5px;
 }
 
 .c-contact-btn {
@@ -959,19 +932,18 @@ a.c-share-btn::after {
 
 .c-describe {
     font-size: 16px;
-    margin-left: 15px;
 }
 
 .c-caution {
     font-size: 14px;
-    margin-left: 15px;
+    margin-bottom: 16px;
 }
 
 .l-form-main {
     font-size: 16px;
     background-color: #B8B8B8;
     color: #000;
-    padding: 10px 15px;
+    padding: 20px 15px 16px;
 }
 
 .c-required {
@@ -987,17 +959,21 @@ a.c-share-btn::after {
 #mail {
     width: 100%;
     height: 42px;
-    color: #B8B8B8;
     background-color: #fff;
     padding-left: 10px;
-    margin: 10px 0;
+    margin: 12px 0 16px;
+}
+
+::placeholder {
+    color: #B8B8B8
 }
 
 #message {
     width: 100%;
     height: 135px;
     background-color: #fff;
-    margin: 10px 0;
+    padding: 10px;
+    margin: 10px 0 0;
 }
 
 .c-btn-confirm {
@@ -1246,7 +1222,9 @@ a.c-share-btn::after {
         display: flex;
         flex-wrap: wrap;
         gap: 30px 15px;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 92%;
+        margin: 0 auto;
     }
 
     .c-menu-card {
@@ -1342,6 +1320,42 @@ a.c-share-btn::after {
 
     /* faq.html
 ------------------------------ */
+    .c-faq-cu {
+        /* margin-left: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+    }
+
+    .l-section-list {
+        display: flex;
+        justify-content: flex-start;
+        /* margin-left: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+    }
+
+    .c-section-btn {
+        font-size: 18px;
+        margin-right: min(2.778%, 40px);
+    }
+
+    .c-subsection-title {
+        font-size: 22px;
+        /* margin-left: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+    }
+
+    .c-question {
+        font-size: 20px;
+        /* margin-left: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+        /* margin-right: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+    }
+
+    .c-answer {
+        font-size: 18px;
+        /* margin-left: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+        /* margin-right: clamp(40px, 16.667vw, calc((100vw - 960px) / 2)); */
+    }
+
+    .c-a {
+    margin: 0 5px 0 0;
+    padding-right: 25px;
+}
 
     /* contact.html
 ------------------------------ */
@@ -1363,7 +1377,28 @@ a.c-share-btn::after {
     /*----------------------------
      menu.html
     *----------------------------*/
-    /*  menu.html2つ目のブレークポイント  */
+    /*  menu.html：2つ目のブレークポイント  */
+    .l-menu-list {
+        justify-content: flex-start;
+        width: 92%;
+    }
+
+    .c-menu-card {
+        width: 32%;
+    }
+}
+
+@media (min-width: 950px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html：3つ目のブレークポイント  */
+    .l-menu-list {
+        justify-content: center;
+        width: 100%;
+    }
+
     .c-menu-card {
         width: 23.8%;
     }
