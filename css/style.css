@@ -37,21 +37,6 @@ img {
     z-index: -10;
 }
 
-/* 背景に煙動画追加（適用させたい部分はz-indexを-10にしてください） */
-.c-smoke {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    mix-blend-mode: color-burn;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-
 /* 下層ページ見出し */
 .c-section-title {
     font-size: clamp(24px, 18.366px + 1.502vw, 40px);
@@ -70,12 +55,10 @@ img {
 }
 
 /* 斜めボタン（clip-path版...borderが使えないが、文字数制限なし）*/
-/* c-btnはaタグの親につけてください */
 .c-btn {
     filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
     width: 179px;
     height: 56px;
@@ -90,19 +73,8 @@ img {
     justify-content: center;
 }
 
-/* 斜めボタン　白メイン・赤影 */
-/* .c-btn--redWhite {
-  filter: drop-shadow(-10px 10px 0 var(--red));
-} */
-
-/* .c-btn_link--redWhite {
-  color: var(--red);
-  background-color: var(--white);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-} */
 
 /* 斜めボタン2(transform版...borderを使えるが、7文字限定用) */
-/* c-btnはc-btm_boxとc-btn_linkをまとめる親にしてください */
 .c-btn2 {
     margin-inline: auto;
     padding-block: 10px 0;
@@ -111,7 +83,6 @@ img {
     height: 56px;
 }
 
-/* c-btn_boxはc-btnの子ども、c-btn_linkと兄弟にしてください */
 .c-btn2_box {
     background: var(--yellow);
     transform: skewX(-12deg);
@@ -129,7 +100,6 @@ img {
     height: 56px;
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn2_link {
     position: absolute;
     top: 15px;
@@ -140,7 +110,6 @@ img {
 }
 
 /* 斜めボタン2　白メイン・赤影 */
-
 .c-btn2--red .c-btn2_box {
     background: var(--red);
 }
@@ -197,7 +166,6 @@ img {
     align-items: center;
     background-color: var(--white);
     padding: 0 15px;
-
     justify-content: space-between;
 }
 
@@ -271,6 +239,10 @@ img {
 }
 
 /* トップに戻るボタン */
+.c-pagetop-btn {
+    background: #ffffffba;
+}
+
 .c-pagetop-btn-position {
     position: fixed;
     right: 15px;
@@ -328,6 +300,9 @@ img {
     width: 179px;
     height: 56px;
 }
+.l-btn-layout:hover{
+    opacity: 0.7;
+}
 
 .l-footer--top {
     margin-top: 0;
@@ -337,7 +312,7 @@ img {
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
-    background: url(../img/top-mainvisual.png) no-repeat center center/cover;
+    background: url(../img/top-mainvisual.jpg) no-repeat center center/cover;
     aspect-ratio: 2/1;
     position: relative;
     text-shadow: 3px 3px 9px #000000;
@@ -452,6 +427,7 @@ img {
 }
 
 .l-catchcopy-other {
+    gap: clamp(5px, 1.479px + 0.939vw, 15px);
     width: 78%;
     height: 40%;
     display: flex;
@@ -474,18 +450,22 @@ img {
 }
 
 .c-catchcopy-accent {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100% 50%;
 }
 
-/* メニューセクション記述は梅崎さんのものをそのまま！ */
+.l-catchcopy-other-introduction {
+    font-size: 2.2vw;
+}
+
+/* メニューセクション記述 */
 .c-menu-card h3 {
-    /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
 /* 餃子の差し画像 */
@@ -514,14 +494,14 @@ img {
 
 .l-googlemap {
     width: min(92vw, 960px);
-    height: 300px;
+    aspect-ratio: 5/2;
 }
 
 .l-access-list-flex {
     margin-top: 15px;
 }
 
-/* kantodo:見出し文の「・」の方法を考える */
+
 .c-access-list-title::before {
     content: "・";
     position: relative;
@@ -534,7 +514,6 @@ img {
 }
 
 .c-access-list-button::before {
-    /* kantodo:アイコンの位置が変だから変えたい */
     position: absolute;
     display: inline;
     left: -18px;
@@ -554,7 +533,7 @@ img {
     box-shadow: 2px 2px 0 0 var(--white2), 2px 2px 0 1px var(--black);
 }
 
-/* お知らせセクション記述（永田さんに投げる） */
+/* お知らせセクション記述 */
 .l-sec--news-bg {
     background-color: #eb8e3a;
 }
@@ -1175,7 +1154,7 @@ a.c-share-btn::after {
     }
 
     .c-menu-card {
-        width: 23.8%;
+        width: 48%;
     }
 
     .c-menu-card--b03 h2,
@@ -1306,4 +1285,16 @@ a.c-share-btn::after {
 
     /* privacy.html
 ------------------------------ */
+}
+
+
+@media (min-width: 850px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html2つ目のブレークポイント  */
+    .c-menu-card {
+        width: 23.8%;
+    }
 }
