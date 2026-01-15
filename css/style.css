@@ -333,6 +333,9 @@ img {
     width: 179px;
     height: 56px;
 }
+.l-btn-layout:hover{
+    opacity: 0.7;
+}
 
 .l-footer--top {
     margin-top: 0;
