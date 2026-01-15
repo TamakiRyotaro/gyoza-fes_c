@@ -630,6 +630,12 @@ menu.html
     margin-top: clamp(1.25rem, 0.370rem + 3.756vw, 3.75rem);
 }
 
+.l-menu-contents {
+    width: 92%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 .l-main-menu .c-section-title {
     /* mb SP:16px、PC：60px */
     margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
@@ -643,12 +649,6 @@ menu.html
 .l-shop-map img {
     width: 100%;
     object-fit: cover;
-}
-
-/*  ・menu.htmlコンテンツ幅 */
-.menu-wrapper {
-    width: 92%;
-    margin: 0 auto;
 }
 
 /*  menu.htmlコンポーネント */
@@ -731,7 +731,6 @@ menu.html
     content: url(../img/menu/triangle-icon.png);
     margin-right: 10px;
 }
-
 
 
 /* menu-b-XX.html
@@ -1209,12 +1208,13 @@ a.c-share-btn::after {
 ------------------------------ */
     /*  ・menu.htmlコンテンツ幅 */
     .l-menu-contents {
-        max-width: 960px;
-        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
     }
 
-    .menu-wrapper {
-        width: 100%;
+    .l-shop-map {
+        max-width: 960px;
+        margin-inline: auto;
     }
 
     /*  ・menu.htmlメニューカード */
@@ -1223,8 +1223,7 @@ a.c-share-btn::after {
         flex-wrap: wrap;
         gap: 30px 15px;
         justify-content: flex-start;
-        width: 92%;
-        margin: 0 auto;
+        margin-inline: auto;
     }
 
     .c-menu-card {
@@ -1380,7 +1379,6 @@ a.c-share-btn::after {
     /*  menu.html：2つ目のブレークポイント  */
     .l-menu-list {
         justify-content: flex-start;
-        width: 92%;
     }
 
     .c-menu-card {
