@@ -337,6 +337,11 @@ img {
 }
 
 /* トップに戻るボタン */
+.c-pagetop-btn {
+    background: #ffffffba;
+
+}
+
 .c-pagetop-btn-position {
     position: fixed;
     right: 15px;
@@ -352,7 +357,7 @@ img {
     margin-inline: auto;
 }
 
-/* 斜めボタン　赤メイン・白影 */
+/*  斜めボタン　赤メイン・白影 */
 .c-btn--whitered {
     filter: drop-shadow(-10px 10px 0 var(--white2));
 }
@@ -518,6 +523,7 @@ img {
 }
 
 .l-catchcopy-other {
+    gap: clamp(5px, 1.479px + 0.939vw, 15px);
     width: 78%;
     height: 40%;
     display: flex;
@@ -540,11 +546,15 @@ img {
 }
 
 .c-catchcopy-accent {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100% 50%;
+}
+
+.l-catchcopy-other-introduction{
+    font-size: 2.2vw;
 }
 
 /* メニューセクション記述は梅崎さんのものをそのまま！ */
@@ -552,6 +562,8 @@ img {
     /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+    /* h SP:30px、PC：60px */
+    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
 /* 餃子の差し画像 */
@@ -580,7 +592,7 @@ img {
 
 .l-googlemap {
     width: min(92vw, 960px);
-    height: 300px;
+    aspect-ratio: 5/2;
 }
 
 .l-access-list-flex {
@@ -651,7 +663,7 @@ menu.html
     margin-top: clamp(1.25rem, 0.370rem + 3.756vw, 3.75rem);
 }
 
-.c-section-title {
+.l-main-menu .c-section-title {
     /* mb SP:16px、PC：60px */
     margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
 }
@@ -717,7 +729,7 @@ menu.html
 }
 
 .c-share-link:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .c-button-goto-booth {
@@ -745,7 +757,7 @@ menu.html
 }
 
 .c-button-goto-booth:hover {
-    color: var(--red);
+    opacity: 0.7;
 }
 
 .c-button-goto-booth::before {
@@ -1238,7 +1250,7 @@ a.c-share-btn::after {
     }
 
     .c-menu-card {
-        width: 23.8%;
+        width: 48%;
     }
 
     .c-menu-card--b03 h2,
@@ -1262,6 +1274,7 @@ a.c-share-btn::after {
     /*  ・メニューカード内の詳細ボタン */
     .c-button-goto-booth {
         min-width: 170px;
+        min-height: 36px;
         margin-top: 12px;
     }
 
@@ -1342,4 +1355,16 @@ a.c-share-btn::after {
 
     /* privacy.html
 ------------------------------ */
+}
+
+
+@media (min-width: 850px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html2つ目のブレークポイント  */
+    .c-menu-card {
+        width: 23.8%;
+    }
 }
