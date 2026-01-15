@@ -18,6 +18,8 @@
     <meta property="og:image:alt" content="お問い合わせ｜ふくおか餃子FES">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <!-- ファビコン -->
+    <link rel="icon" href="./img/fav/favc.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -66,18 +68,18 @@
         <p class="c-caution">※回答に数日を要する場合がございますこと予めご了承ください。</p>
         <form class="l-form" action="send.php" method="post">
             <div class="l-form-main">
-            <label class="c-label" for="name"><span class="c-required">必須</span>お名前</label><br>
-            <input type="text" id="name" name="name" placeholder="餃子 太郎" required><br>
-            <label class="c-label" for="kana"><span class="c-required">必須</span>フリガナ</label><br>
-            <input type="text" id="kana" name="kana" placeholder="ギョウザ タロウ" required><br>
+                <label class="c-label" for="name"><span class="c-required">必須</span>お名前</label><br>
+                <input type="text" id="name" name="name" placeholder="餃子 太郎" required><br>
+                <label class="c-label" for="kana"><span class="c-required">必須</span>フリガナ</label><br>
+                <input type="text" id="kana" name="kana" placeholder="ギョウザ タロウ" required><br>
 
-            <!-- メールアドレス -->
-            <label class="c-label" for="email"><span class="c-required">必須</span>メールアドレス</label><br>
-            <input type="email" id="mail" name="mail" placeholder="tarogyouza@xxxx.ne.jp" required><br>
+                <!-- メールアドレス -->
+                <label class="c-label" for="email"><span class="c-required">必須</span>メールアドレス</label><br>
+                <input type="email" id="mail" name="mail" placeholder="tarogyouza@xxxx.ne.jp" required><br>
 
-            <!-- 問い合わせ内容 -->
-            <label class="c-message" for="message"><span class="c-required">必須</span>お問い合わせ内容:</label><br>
-            <textarea id="message" name="message" required></textarea>
+                <!-- 問い合わせ内容 -->
+                <label class="c-message" for="message"><span class="c-required">必須</span>お問い合わせ内容:</label><br>
+                <textarea id="message" name="message" required></textarea>
             </div>
 
             <!-- 確認ボタン -->
@@ -125,6 +127,10 @@
         <a href="./privacy.html" class="c-privacy">プライバシーポリシー</a>
         <small class="c-copyright">&copy;Copyright&nbsp;2025&nbsp;ふくおか餃子FES実行委員会</small>
     </footer>
+    <!-- トップに戻るボタン -->
+    <div id="page-top">
+        <a href="#pagetop" class="c-pagetop-btn c-pagetop-btn-position"><img src="./img/top.svg" alt="トップへ戻る"></a>
+    </div>
     <script src="./js/humberger-menu.js"></script>
 </body>
 
