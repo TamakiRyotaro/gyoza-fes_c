@@ -159,6 +159,7 @@ img {
 
 .l-sns-list--footer {
     gap: 25px;
+    padding-right: 0;
 }
 
 .l-header {
@@ -991,9 +992,6 @@ a.c-share-btn::after {
     grid-template-columns: 1fr;
     gap: 4px;
 
-    /* 見出しの内容を共通化したら不要になるmargin */
-    margin: 0;
-
     padding-bottom: 16px;
     border-bottom: 1px solid var(--black);
 
@@ -1082,7 +1080,6 @@ a.c-share-btn::after {
 }
 
 .l-news {
-    /* TODO nagata: あとで共通化 */
     background: var(--childPage-bg);
     line-height: 1.2;
 }
@@ -1092,7 +1089,6 @@ a.c-share-btn::after {
     flex-direction: column;
     gap: clamp(16px, 4.028px + 3.192vw, 50px);
 
-    /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
 }
@@ -1103,7 +1099,6 @@ a.c-share-btn::after {
     gap: clamp(16px, 14.592px + 0.376vw, 20px);
 }
 
-/* TODO nagata: 共通化できるならやる */
 .l-news-content>.c-section-title {
     padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
@@ -1206,6 +1201,7 @@ a.c-share-btn::after {
 
     .c-news-list-content {
         flex-direction: row;
+        gap: clamp(10px, -58.571px + 8.929vw, 70px);
     }
 
     /* menu.html
@@ -1366,7 +1362,7 @@ a.c-share-btn::after {
     /* news.html
 ------------------------------ */
     .c-news-item {
-        grid-template-columns: clamp(120px, 28.571px + 11.905vw, 200px) 1fr;
+        grid-template-columns: clamp(125px, 39.286px + 11.161vw, 200px) 1fr;
         gap: 0;
     }
 
