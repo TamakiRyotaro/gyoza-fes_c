@@ -1143,7 +1143,9 @@ a.c-share-btn::after {
         display: flex;
         flex-wrap: wrap;
         gap: 30px 15px;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 92%;
+        margin: 0 auto;
     }
 
     .c-menu-card {
@@ -1260,7 +1262,28 @@ a.c-share-btn::after {
     /*----------------------------
      menu.html
     *----------------------------*/
-    /*  menu.html2つ目のブレークポイント  */
+    /*  menu.html：2つ目のブレークポイント  */
+    .l-menu-list {
+        justify-content: flex-start;
+        width: 92%;
+    }
+
+    .c-menu-card {
+        width: 32%;
+    }
+}
+
+@media (min-width: 950px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html：3つ目のブレークポイント  */
+    .l-menu-list {
+        justify-content: center;
+        width: 100%;
+    }
+
     .c-menu-card {
         width: 23.8%;
     }
