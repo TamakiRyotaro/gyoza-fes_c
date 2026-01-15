@@ -1386,7 +1386,7 @@ a.c-share-btn::after {
     }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1019px) {
 
     /*----------------------------
      menu.html
@@ -1394,7 +1394,6 @@ a.c-share-btn::after {
     /*  menu.html：3つ目のブレークポイント  */
     .l-menu-list {
         justify-content: center;
-        width: 100%;
     }
 
     .c-menu-card {
