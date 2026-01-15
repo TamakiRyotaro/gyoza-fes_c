@@ -75,19 +75,22 @@
             <div class="l-shop-map">
                 <img src="img/menu/menu-shopMap.png" usemap="#ImageMap" alt="店舗の地図" />
                 <map name="ImageMap">
-                    <area shape="rect" coords="24,150,79,203" href="./menu-b-01.html" alt="ブース1の詳細ページへとぶ" />
+                    <!-- SP （どちらの座標が正しいか不明のため履歴を残す）-->
+                    <!-- <area shape="rect" coords="28,154,76,198" href="./menu-b-01.html" alt="ブース1の詳細ページへとぶ" />
+                    <area shape="rect" coords="79,130,131,181" href="./menu-b-02.html" alt="ブース2の詳細ページへとぶ" />
+                    <area shape="rect" coords="134,129,189,178" href="./menu-b-03.html" alt="ブース3の詳細ページへとぶ" />
+                    <area shape="rect" coords="156,177,214,225" href="./menu-b-04.html" alt="ブース4の詳細ページへとぶ" />
+                    <area shape="rect" coords="137,226,193,271" href="./menu-b-05.html" alt="ブース5の詳細ページへとぶ" />
+                    <area shape="rect" coords="89,231,134,277" href="./menu-b-06.html" alt="ブース6の詳細ページへとぶ" />
+                    <area shape="rect" coords="36,208,90,254" href="./menu-b-07.html" alt="ブース7の詳細ページへとぶ" /> -->
+
+                    <!-- PC -->
                     <area shape="rect" coords="85,401,191,500" href="./menu-b-01.html" alt="ブース1の詳細ページへとぶ" />
-                    <area shape="rect" coords="80,131,129,183" href="./menu-b-02.html" alt="ブース2の詳細ページへとぶ" />
-                    <area shape="rect" coords="207,347,322,454" href="./menu-b-02.html" alt="ース2の詳細ページへとぶ" />
-                    <area shape="rect" coords="139,126,184,179" href="./menu-b-03.html" alt="ブース3の詳細ページへとぶ" />
+                    <area shape="rect" coords="207,347,322,454" href="./menu-b-02.html" alt="ブース2の詳細ページへとぶ" />
                     <area shape="rect" coords="354,339,466,446" href="./menu-b-03.html" alt="ブース3の詳細ページへとぶ" />
-                    <area shape="rect" coords="160,184,218,222" href="./menu-b-04.html" alt="ブース4の詳細ページへとぶ" />
                     <area shape="rect" coords="410,463,533,565" href="./menu-b-04.html" alt="ブース4の詳細ページへとぶ" />
-                    <area shape="rect" coords="141,225,190,271" href="./menu-b-05.html" alt="ブース5の詳細ページへとぶ" />
                     <area shape="rect" coords="364,586,473,686" href="./menu-b-05.html" alt="ブース5の詳細ページへとぶ" />
-                    <area shape="rect" coords="90,230,133,277" href="./menu-b-06.html" alt="ブース6の詳細ページへとぶ" />
                     <area shape="rect" coords="232,601,332,699" href="./menu-b-06.html" alt="ブース6の詳細ページへとぶ" />
-                    <area shape="rect" coords="41,207,88,252" href="./menu-b-07.html" alt="ブース7の詳細ページへとぶ" />
                     <area shape="rect" coords="108,537,220,633" href="./menu-b-07.html" alt="ース7の詳細ページへとぶ" />
                 </map>
             </div>
@@ -244,6 +247,10 @@
         <script src="./js/pagetop-btn.js"></script>
         <script src="./js/humberger-menu.js"></script>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <script>
+        imageMapResize();
+    </script>
 </body>
 
 </html>
