@@ -452,6 +452,7 @@ img {
 }
 
 .l-catchcopy-other {
+    gap: clamp(5px, 1.479px + 0.939vw, 15px);
     width: 78%;
     height: 40%;
     display: flex;
@@ -474,11 +475,15 @@ img {
 }
 
 .c-catchcopy-accent {
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100% 50%;
+}
+
+.l-catchcopy-other-introduction{
+    font-size: 2.2vw;
 }
 
 /* メニューセクション記述は梅崎さんのものをそのまま！ */
@@ -486,6 +491,8 @@ img {
     /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+    /* h SP:30px、PC：60px */
+    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
 /* 餃子の差し画像 */
@@ -514,7 +521,7 @@ img {
 
 .l-googlemap {
     width: min(92vw, 960px);
-    height: 300px;
+    aspect-ratio: 5/2;
 }
 
 .l-access-list-flex {
