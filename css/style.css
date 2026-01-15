@@ -185,6 +185,7 @@ img {
     display: flex;
     gap: clamp(10px, 4.014px + 1.596vw, 27px);
     align-items: center;
+    padding-right: clamp(47px, 19.183px + 7.418vw, 126px);
 }
 
 .l-sns-list--footer {
@@ -211,16 +212,12 @@ img {
     background-color: var(--white);
     transition: all 0.5s;
 
-    /* width: min(92vw, 960px); */
-
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .c-hambueger__list {
-    /* height: 0;
-    overflow: hidden; */
     transition: 3s;
     list-style: none;
     right: -100%;
@@ -236,7 +233,6 @@ img {
 
     width: 100%;
 
-
     border-bottom: 7px solid var(--white);
 
 }
@@ -249,9 +245,7 @@ img {
 }
 
 .c-hambueger {
-    position: absolute;
-    /* top: 32px; */
-    /* right: 32px; */
+    position: fixed;
     cursor: pointer;
     z-index: 10;
 
@@ -265,32 +259,20 @@ img {
 
 .c-header__hamburger-menu {
     z-index: 20;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.c-header__hamburger-menu img {
+    padding-top: clamp(32px, 37.986px + -1.596vw, 15px);
+    padding-right: clamp(15px, 16.761px + -0.469vw, 10px);
 }
 
 .c-hambueger__bottom-content {
     display: block;
     /* background-color: linear-gradient(0deg, #E22A00, #FFE100); */
 }
-
-/* 
-ハンバーガーメニュー、実装を考慮したら気になった疑問まとめ
-
-1. 現在のメニューのデザインは「ヘッダー全体が追従する」前提のデザインになっていた？
-
-- ハンバーガーアイコンだけ追従される？と思ったけど、ヘッダー部分に生まれる隙間はどうなる？（今のデザインだとヘッダー分だけ余白を取っている。上になったときだけ寄せる？めんどくさそう）
-
-→ アイコンだけ追従（ヘッダー全体は追従させない）なら上にぴったり合わせても良いかも
-ヘッダーも隠すようにメニューを出す
-
-2. ハンバーガーメニュー縦長すぎ問題
-
-sp版 横375に対して縦730になっている
-縦横比が大体1:2
-これだと中途半端なサイズ（タブレット）の時に下が表示されない可能性が高いかも？
-
-→ 各領域の余白をすべて詰めて、全体的に狭くする。
-もしくは下のシェアボタンをSP版の時は消す（ボダンだけなら入りそう...？正直それもちょっと厳しい...？）
-*/
 
 /* footer */
 .l-footer {
