@@ -1144,7 +1144,6 @@ a.c-share-btn::after {
 }
 
 .l-privary {
-    /* TODO nagata: 持っていけるならあとで共通化 */
     background: var(--childPage-bg);
 }
 
@@ -1153,15 +1152,12 @@ a.c-share-btn::after {
     flex-direction: column;
     gap: clamp(20px, 8.732px + 3.005vw, 52px);
 
-    /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
     margin-inline: auto;
 
-    /* TODO nagata: 共通化する */
     line-height: 1.2;
 }
 
-/* TODO nagata: 共通化できるならやる */
 .l-privacy-info>.c-section-title {
     padding-top: clamp(20px, 5.915px + 3.756vw, 60px);
 }
