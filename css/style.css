@@ -460,12 +460,11 @@ img {
 .l-catchcopy-other-introduction {
     font-size: 2.2vw;
 }
-
 /* メニューセクション記述 */
-.c-menu-card h3 {
-    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
-    font-weight: bold;
-    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
+.c-menu-card--b03 h3,
+.c-menu-card--b04 h3,
+.c-menu-card--b07 h3 {
+    padding: 15px 0;
 }
 
 /* 餃子の差し画像 */
