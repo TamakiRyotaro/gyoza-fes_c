@@ -1168,7 +1168,7 @@ a.c-share-btn::after {
     }
 
     .c-menu-card {
-        width: 23.8%;
+        width: 48%;
     }
 
     .c-menu-card--b03 h2,
@@ -1273,4 +1273,16 @@ a.c-share-btn::after {
 
     /* privacy.html
 ------------------------------ */
+}
+
+
+@media (min-width: 850px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html2つ目のブレークポイント  */
+    .c-menu-card {
+        width: 23.8%;
+    }
 }
