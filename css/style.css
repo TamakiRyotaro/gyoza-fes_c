@@ -271,6 +271,11 @@ img {
 }
 
 /* トップに戻るボタン */
+.c-pagetop-btn {
+    background: #ffffffba;
+
+}
+
 .c-pagetop-btn-position {
     position: fixed;
     right: 15px;
