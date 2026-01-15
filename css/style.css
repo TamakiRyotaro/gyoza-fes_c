@@ -13,12 +13,17 @@
     --childPage-bg: linear-gradient(90deg, #fff, #fff8f2, #ffdebf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Zen Maru Gothic", sans-serif;
     color: var(--black);
     letter-spacing: 0.05em;
     line-height: 1.5;
 }
+
 
 img {
     max-width: 100%;
@@ -29,6 +34,7 @@ img {
 /* 下層ページの最背面背景色 */
 .l-body-sub {
     background: var(--childPage-bg);
+    z-index: -10;
 }
 
 /* 下層ページ見出し */
@@ -49,12 +55,10 @@ img {
 }
 
 /* 斜めボタン（clip-path版...borderが使えないが、文字数制限なし）*/
-/* c-btnはaタグの親につけてください */
 .c-btn {
     filter: drop-shadow(-10px 10px 0 var(--yellow));
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn_link {
     width: 179px;
     height: 56px;
@@ -69,28 +73,16 @@ img {
     justify-content: center;
 }
 
-/* 斜めボタン　白メイン・赤影 */
-/* .c-btn--redWhite {
-  filter: drop-shadow(-10px 10px 0 var(--red));
-} */
-
-/* .c-btn_link--redWhite {
-  color: var(--red);
-  background-color: var(--white);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-} */
 
 /* 斜めボタン2(transform版...borderを使えるが、7文字限定用) */
-/* c-btnはc-btm_boxとc-btn_linkをまとめる親にしてください */
 .c-btn2 {
     margin-inline: auto;
     padding-block: 10px 0;
     position: relative;
-    width: 179px;
+    width: 185px;
     height: 56px;
 }
 
-/* c-btn_boxはc-btnの子ども、c-btn_linkと兄弟にしてください */
 .c-btn2_box {
     background: var(--yellow);
     transform: skewX(-12deg);
@@ -108,7 +100,6 @@ img {
     height: 56px;
 }
 
-/* .c-btn_linkはaタグにつけてください */
 .c-btn2_link {
     position: absolute;
     top: 15px;
@@ -119,7 +110,6 @@ img {
 }
 
 /* 斜めボタン2　白メイン・赤影 */
-
 .c-btn2--red .c-btn2_box {
     background: var(--red);
 }
@@ -176,13 +166,7 @@ img {
     align-items: center;
     background-color: var(--white);
     padding: 0 15px;
-
     justify-content: space-between;
-}
-
-.l-header+* {
-    /* ヘッダーの直下に空白作るのはページ個別で。後で消します */
-    /* margin-top: clamp(20px, 5.915px + 3.756vw, 60px); */
 }
 
 /* footer */
@@ -194,7 +178,7 @@ img {
     padding: clamp(60px, 45.915px + 3.756vw, 100px) 0;
     background-color: var(--white);
     margin-top: clamp(80px, 58.873px + 5.634vw, 140px);
-
+    letter-spacing: 0em;
 }
 
 .l-footer__title {
@@ -229,7 +213,7 @@ img {
 }
 
 .c-footer__contact-item {
-    font-size: clamp(14px, 12.592px + 0.376vw, 18px);
+    font-size: clamp(14px, 13.296px + 0.188vw, 16px);
 }
 
 .c-privacy {
@@ -245,12 +229,24 @@ img {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
 }
 
 .l-footer__contact {
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+/* トップに戻るボタン */
+.c-pagetop-btn {
+    background: #ffffffba;
+}
+
+.c-pagetop-btn-position {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
 }
 
 /*------------------------------------------------------------
@@ -262,7 +258,16 @@ img {
     margin-inline: auto;
 }
 
-/* kantodo:PCと変更する（可変させてもいい）*/
+/*  斜めボタン　赤メイン・白影 */
+.c-btn--whitered {
+    filter: drop-shadow(-10px 10px 0 var(--white2));
+}
+
+.c-btn_link--whitered {
+    color: var(--white2);
+    background-color: var(--red);
+}
+
 .c-sec-title {
     font-size: 24px;
     font-weight: bold;
@@ -295,8 +300,11 @@ img {
     width: 179px;
     height: 56px;
 }
+.l-btn-layout:hover{
+    opacity: 0.7;
+}
 
-.l-footer--toppage {
+.l-footer--top {
     margin-top: 0;
 }
 
@@ -304,7 +312,7 @@ img {
 .l-mv-hero {
     font-family: "Zen Antique Soft", serif;
     color: #ffffff;
-    background: url(../img/top-mainvisual.png) no-repeat center center/cover;
+    background: url(../img/top-mainvisual.jpg) no-repeat center center/cover;
     aspect-ratio: 2/1;
     position: relative;
     text-shadow: 3px 3px 9px #000000;
@@ -413,11 +421,13 @@ img {
 
 .l-catchcopy-attention {
     display: inline-block;
+    line-height: 1.2;
     font-size: 4.5vw;
     font-weight: bold;
 }
 
 .l-catchcopy-other {
+    gap: clamp(5px, 1.479px + 0.939vw, 15px);
     width: 78%;
     height: 40%;
     display: flex;
@@ -427,36 +437,42 @@ img {
     position: absolute;
     bottom: 8%;
     right: 4%;
-    font-size: 2vw;
+    font-size: 1.9vw;
     font-weight: bold;
     background-color: var(--white2);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
-.c-catchcopy-sound {
-    /* kantodo:グラデーションの下線を引く */
-    color: red;
+.c-catchcopy-sound--pari {
+    font-family: "Zen Antique Soft", serif;
+    display: inline-block;
+    transform: rotate(5deg);
 }
 
 .c-catchcopy-accent {
-    /* kantodo:グラデーションの下線を引く */
-    color: red;
+    font-size: 2.5vw;
+    background: linear-gradient(to right, rgba(28, 255, 40, 0.87) 0%, rgba(255, 249, 71, 0.87) 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 50%;
 }
 
+.l-catchcopy-other-introduction {
+    font-size: 2.2vw;
+}
+
+/* メニューセクション記述 */
+.c-menu-card h3 {
+    font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
+    font-weight: bold;
+    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
+}
+
+/* 餃子の差し画像 */
 .l-rest-image {
     aspect-ratio: 5 / 2;
     width: 100vw;
     object-fit: cover;
-}
-
-/* 斜めボタン　赤メイン・白影 */
-.c-btn--whitered {
-    filter: drop-shadow(-10px 10px 0 var(--white2));
-}
-
-.c-btn_link--whitered {
-    color: var(--white2);
-    background-color: var(--red);
 }
 
 /* 開催概要セクション記述 */
@@ -478,12 +494,17 @@ img {
 
 .l-googlemap {
     width: min(92vw, 960px);
-    height: 300px;
+    aspect-ratio: 5/2;
 }
 
-/* kantodo:見出し文の「・」の方法を考える */
+.l-access-list-flex {
+    margin-top: 15px;
+}
+
+
 .c-access-list-title::before {
     content: "・";
+    position: relative;
 }
 
 .c-access-list-title {
@@ -493,14 +514,16 @@ img {
 }
 
 .c-access-list-button::before {
-    /* kantodo:アイコンの位置が変だから変えたい */
-    content: url(../img/top-ruto-sp.svg);
+    position: absolute;
+    display: inline;
+    left: -18px;
+    content: url(../img/ruto_icon.svg);
     display: inline-block;
 }
 
-/* kantodo:PCとレイアウトを変える */
-
 .c-access-list-button {
+    position: relative;
+    text-indent: 20px;
     font-size: 12px;
     font-weight: light;
     display: inline-block;
@@ -537,10 +560,13 @@ img {
 menu.html
 ------------------------------ */
 /*  menu.htmlの共通部分 */
-.c-section-title {
+.l-main-menu {
+    margin-top: clamp(1.25rem, 0.370rem + 3.756vw, 3.75rem);
+}
+
+.l-main-menu .c-section-title {
     /* mb SP:16px、PC：60px */
     margin-bottom: clamp(1rem, 0.032rem + 4.131vw, 3.75rem);
-
 }
 
 .l-shop-map {
@@ -553,6 +579,7 @@ menu.html
     object-fit: cover;
 }
 
+/*  ・menu.htmlコンテンツ幅 */
 .menu-wrapper {
     width: 92%;
     margin: 0 auto;
@@ -578,6 +605,8 @@ menu.html
     /* fz SP:18px、PC：20px */
     font-size: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem);
     font-weight: bold;
+    /* h SP:30px、PC：60px */
+    height: clamp(1.875rem, 1.215rem + 2.817vw, 3.75rem);
 }
 
 .c-menu-card-break {
@@ -595,8 +624,13 @@ menu.html
 
 .c-share-link {
     color: #eb8e3a;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
+    line-height: 2;
+}
+
+.c-share-link:hover {
+    opacity: 0.7;
 }
 
 .c-button-goto-booth {
@@ -620,13 +654,19 @@ menu.html
     background: var(--black);
     border: var(--white2) solid 1px;
     box-shadow: 4px 4px 0 var(--black), 4px 4px 0 1px var(--white2);
-    gap: 4px;
     margin-top: 22px;
+}
+
+.c-button-goto-booth:hover {
+    opacity: 0.7;
 }
 
 .c-button-goto-booth::before {
     content: url(../img/menu/triangle-icon.png);
+    margin-right: 10px;
 }
+
+
 
 /* menu-b-XX.html
 ------------------------------ */
@@ -690,7 +730,7 @@ main.l-menu-b img {
     font-size: clamp(16px, 13.887px + 0.563vw, 22px);
     width: clamp(52px, 47.423px + 1.221vw, 65px);
     height: clamp(25px, 20.775px + 1.127vw, 37px);
-    padding-inline: 8px;
+    padding-inline: 7px;
     letter-spacing: 0.96px;
     display: flex;
     align-items: center;
@@ -983,8 +1023,6 @@ a.c-share-btn::after {
     flex-direction: column;
     gap: clamp(16px, 4.028px + 3.192vw, 50px);
 
-    padding-bottom: clamp(80px, 58.873px + 5.634vw, 140px);
-
     /* TODO nagata: あとで共通化 */
     width: min(92vw, 960px);
     margin-inline: auto;
@@ -994,7 +1032,6 @@ a.c-share-btn::after {
     display: flex;
     flex-direction: column;
     gap: clamp(16px, 14.592px + 0.376vw, 20px);
-    margin: 0;
 }
 
 /* TODO nagata: 共通化できるならやる */
@@ -1023,8 +1060,8 @@ a.c-share-btn::after {
 .c-privacy-item__title {
     font-size: clamp(18px, 17.296px + 0.188vw, 20px);
     font-weight: bold;
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 .c-privacy-item__desc {
@@ -1034,8 +1071,8 @@ a.c-share-btn::after {
 .c-privacy-item__desc-in-list {
     list-style-type: none;
     counter-increment: number;
-    padding-left: 1.1em;
-    text-indent: -1.1em;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
 }
 
 .c-privacy-item__desc-in-list::before {
@@ -1051,7 +1088,6 @@ a.c-share-btn::after {
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 8.732px + 3.005vw, 52px);
-    padding-bottom: clamp(60px, 31.831px + 7.512vw, 140px);
 
     /* TODO nagata: 持っていけるならあとで共通化（Body） */
     width: min(92vw, 960px);
@@ -1072,7 +1108,13 @@ a.c-share-btn::after {
 
     /* 共通
 ------------------------------ */
-    /* 斜めボタン */
+
+    /* トップに戻るボタン */
+    .c-pagetop-btn-position {
+        position: fixed;
+        right: 87px;
+        bottom: 92px;
+    }
 
     /* index.html(kanpc)
 ------------------------------ */
@@ -1083,23 +1125,19 @@ a.c-share-btn::after {
         gap: 10%;
     }
 
+    .l-access-list-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
     .c-news-list-content {
         flex-direction: row;
     }
 
-    /*------------------------------ 
-    menu.html
+    /* menu.html
 ------------------------------ */
-    /*  ・menu.html共通部分 */
-    .l-main-menu {
-        padding: 60px 0 0 0;
-    }
-
-    .c-section-title {
-        margin-bottom: 60px;
-    }
-
-    /*  ・menu.htmlコンテンツ幅の指定 */
+    /*  ・menu.htmlコンテンツ幅 */
     .l-menu-contents {
         max-width: 960px;
         margin: 0 auto;
@@ -1113,13 +1151,22 @@ a.c-share-btn::after {
     .l-menu-list {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 15px;
-        row-gap: 30px;
+        gap: 30px 15px;
         justify-content: center;
     }
 
     .c-menu-card {
-        width: 23.8%;
+        width: 48%;
+    }
+
+    .c-menu-card--b03 h2,
+    .c-menu-card--b04 h2,
+    .c-menu-card--b07 h2 {
+        padding: 15px 0;
+    }
+
+    .c-share-link {
+        font-size: 13px;
     }
 
     .c-menu-card-break {
@@ -1133,7 +1180,11 @@ a.c-share-btn::after {
     /*  ・メニューカード内の詳細ボタン */
     .c-button-goto-booth {
         min-width: 170px;
+        min-height: 36px;
+        margin-top: 12px;
     }
+
+
 
     /* menu-b-XX.html
 ------------------------------ */
@@ -1246,4 +1297,16 @@ a.c-share-btn::after {
 
     /* privacy.html
 ------------------------------ */
+}
+
+
+@media (min-width: 850px) {
+
+    /*----------------------------
+     menu.html
+    *----------------------------*/
+    /*  menu.html2つ目のブレークポイント  */
+    .c-menu-card {
+        width: 23.8%;
+    }
 }
