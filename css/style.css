@@ -209,7 +209,7 @@ img {
     top: 0%;
     right: -100%;
     background-color: var(--white);
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     display: flex;
     flex-direction: column;
@@ -1192,6 +1192,10 @@ a.c-share-btn::after {
         position: fixed;
         right: 87px;
         bottom: 92px;
+    }
+
+    .l-hamberger-content {
+        width: 356px;
     }
 
     /* index.html(kanpc)
